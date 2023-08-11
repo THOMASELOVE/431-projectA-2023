@@ -1,0 +1,17 @@
+---
+title: "Sample Project A Proposal"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
+
+## Project Proposal Example using 2019 Data
+
+Dr. Love has completed an R Markdown file and compiled it into an HTML result which you can view now, and which he **strongly** encourages you to use in developing your own proposal. 
+
+- Dr. Love's [R Markdown file](https://github.com/THOMASELOVE/431-projectA-sample-proposal/blob/main/love_sample_projA_proposal.Rmd) is a strong starting point for the development of your proposal.
+    - Remember to click Raw if you want to download the R Markdown file from that link.
+    - This file is also part of the [431-data repository](https://github.com/THOMASELOVE/431-data) we've used for labs and other data and code, so you can also get it from there.
+- The resulting HTML file can be viewed at <https://rpubs.com/TELOVE/projA-sample-proposal-431-2022>, which may be easier for you to read and will also show you what your final result should look like.
+

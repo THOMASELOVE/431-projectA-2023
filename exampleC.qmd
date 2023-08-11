@@ -1,0 +1,24 @@
+---
+title: "Sample Project A"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
+
+## Project Example using 2019 Data
+
+Dr. Love has completed four (differently themed but otherwise identical) R Markdown files and compiled each into an HTML result which you can view now, and which he **strongly** encourages you to use in developing your final document.
+
+Essentially, these documents take the initial proposal document and make some tweaks, then add the outline for the analyses, with some light revisions to the instructions.
+
+Theme | R Markdown code | HTML Results
+:-------: | ------------: | --------------
+[readthedown](https://github.com/juba/rmdformats#readthedown) | [Rmd file](https://github.com/THOMASELOVE/431-projectA-sample-proposal/blob/main/love_new_sample_projA_readthedown.Rmd) | [View HTML](https://rpubs.com/TELOVE/projA-sample-readthedown-2022)
+[html_clean](https://github.com/juba/rmdformats#html_clean) | [Rmd file](https://github.com/THOMASELOVE/431-projectA-sample-proposal/blob/main/love_new_sample_projA_html_clean.Rmd) | [View HTML](https://rpubs.com/TELOVE/projA-sample-html_clean-2022)
+[downcute](https://github.com/juba/rmdformats#downcute) | [Rmd file](https://github.com/THOMASELOVE/431-projectA-sample-proposal/blob/main/love_new_sample_projA_downcute.Rmd) | [View HTML](https://rpubs.com/TELOVE/projA-sample-downcute-2022)
+[robobook](https://github.com/juba/rmdformats#robobook) | [Rmd file](https://github.com/THOMASELOVE/431-projectA-sample-proposal/blob/main/love_new_sample_projA_robobook.Rmd) | [View HTML](https://rpubs.com/TELOVE/projA-sample-robobook-432)
+
+- Remember to click **Raw** if you want to download the R Markdown file from that link.
+- These R Markdown files are also part of the [431-data repository](https://github.com/THOMASELOVE/431-data) we've used for labs and other data and code, so you can also get them there.
+

@@ -1,0 +1,96 @@
+---
+title: "Cleaning Your Variables"
+---
+
+This page was last updated: `r Sys.time()`.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
+
+Check your five variables on the lists below. You should find all five. 
+
+- If you plan to use the variable as quantitative, do what is suggested as part of your data development work, and use that version in your codebook.
+- If you plan to use the variable as a categorical predictor, keep with what you did before for that variable, unless you prefer to make a change as indicated below.
+
+## Variables that are Proportions should be converted to Percentages
+
+Each of the variables listed below are proportions (between 0 and 1). Before you use them in any analyses, we encourage you strongly to multiply them by 100 in your data development (using mutate) to turn their values into percentages (between 0 and 100) and this will seriously ease the interpretation of slopes and transformations for these variables.
+
+Code | Variable Description
+---: | ---------------------------------------------
+v002 |	Poor or fair health
+v003 |  Uninsured adults (pick v003 or v085, but not both)
+v009 |	Adult smoking
+v011 |	Adult obesity
+v021 |	High school graduation
+v023 |	Unemployment
+v024 |	Children in poverty
+v037 |	Low birthweight
+v049 |	Excessive drinking
+v052 |	Proportion below 18 years of age
+v057 |	Proportion Females
+v058 |	Proportion Rural
+v059 |  Proportion not proficient in English
+v060 |	Diabetes prevalence
+v067 |	Driving alone to work
+v069 |	Some college
+v070 |	Physical inactivity
+v082 |	Children in single-parent households
+v083 |	Limited access to healthy foods
+v085 |  Uninsured (pick v003 or v085, but not both)
+v122 |  Uninsured children (pick v085 or v122, but not both)
+v132 |	Access to exercise opportunities
+v136 |	Severe housing problems
+v139 |	Food insecurity
+v143 |	Insufficient sleep
+v144 |  Frequent physical distress (pick v036 or v144, but not both)
+v145 |  Frequent mental distress (pick v042 or v145, but not both)
+v153 |	Homeownership
+v155 |	Flu vaccinations
+
+## Ratios That Need Converting
+
+These two variables are specified as providers per population in the raw data. You will want to multiply the values by 100,000 in order to providers per 100,000 population and get more interpretable results.
+
+Code | Variable Description
+---: | ---------------------------------------------
+v004 |	Primary care physicians
+v062 |	Mental health providers
+
+## Demographics that need attention
+
+Code | Variable Description | What to do?
+---: | ----------- | ---------------
+v001 |	Premature death	| Consider dividing by 100 to represent losses per 1000 population
+v063 |	Median household income | Divide by 1000 to represent in thousands of dollars
+v051 |	Population |	Either use log10(population), or divide population by 1000 to represent population in thousands.
+
+## Variables that should be OK as is
+
+The variables listed below should be fine as they are. Most of them are ratios, although a few are averages or indexes. The main issue for these variables is correctly specifying the units of measurement (note that the indexes don't have units.)
+
+Code | Variable Description
+---: | ---------------------------------------------
+v005 |	Preventable hospital stays
+v014 |	Teen births
+v036 |	Poor physical health days (pick v036 or v144, but not both)
+v039 |	Motor vehicle crash deaths
+v042 |	Poor mental health days (pick v042 or v145, but not both)
+v043 |	Violent crime
+v044 |	Income inequality
+v045 |	Sexually transmitted infections
+v125 |	Air pollution - particulate matter
+v127 |	Premature age-adjusted mortality
+v128 |	Child mortality
+v133 |	Food environment index
+v135 |	Injury deaths
+v140 |	Social associations
+v141 |  Residential segregation - Black/White (pick v141 or v142, not both)
+v142 |  Residential segregation - non-White/White (pick v141 or v142, not both)
+v147 |	Life expectancy
+v148 |	Firearm fatalities
+v156 |	Traffic volume
+v159 |	Reading scores
+v160 |	Math scores
+v161 |	Suicides

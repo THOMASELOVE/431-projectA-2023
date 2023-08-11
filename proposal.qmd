@@ -1,0 +1,127 @@
+---
+title: "Project A Proposal"
+author: "431 Staff"
+date: last-modified
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
+
+# This material is under revision. Please ignore it for now, until new material is posted.
+
+You will submit a proposal document to Canvas (both in R Markdown and HTML) providing the answers to a series of questions related to your Data Development work. 
+
+- You will need to have completed all seven Tasks listed on [the Data page](data.qmd) in order to finish the proposal, but none of the work described on [the Analysis page](analysis.qmd).
+- You will also need to have come up with a meaningful title: do not use the terms "Project" or "Project A" or "431" in your title. You can use "CHR-2022" as the abbreviation in your title for "County Health Rankings, 2022." Your title should be no longer than 80 characters.
+- All of the work needed in this proposal can be accomplished in September, and doing so will help you with Quiz 1. 
+- To encourage an early start, proposals submitted to Canvas **prior to Monday 2021-10-03 at noon** will be reviewed quickly by Dr. Love and the TAs, and if a redo is required, you'll hear back quickly enough that you should be able to accomplish it before the final proposal deadline, and thus still have a chance to earn full credit.
+- Dr. Love created a [Sample Project A proposal](https://github.com/THOMASELOVE/431-projectA-sample-proposal) which should serve as your template for writing the proposal. 
+
+### Proposal Requirements
+
+Your project proposal requires you to create the tibble you plan to use and then send (via Canvas) an R Markdown file and HTML result that contains these five elements:
+
+1. A sentence or two (or small table) specifying the 4-6 states you chose, and the number of counties you are studying in total and within each state. The codebook you built in Task 6 of the Data work is appropriate here. In an additional sentence or two, provide some motivation for why you chose those states.
+2. A list of the five variables (including their original raw names and your renamed versions) you are studying, with a clear indication of the cutpoints you chose to create the binary categories out of variable 4 and the multiple categories out of variable 5. The codebook you built in Task 6 of the Data work is appropriate here. For each variable, provide a sentence describing your motivation for why this variable was interesting to you.
+3. A print-out of your cleaned up `chr_2022` tibble, to prove it is a tibble, with 11 columns (variables) and 200-400 rows (counties). No writing is required here - just the result of the code.
+4. The `Hmisc::describe` result for your `chr_2022` tibble. As in element 3, code alone is sufficient for this element.
+5. In a paragraph, describe the most challenging (or difficult) part of completing the work so far, and how you were able to overcome whatever it was that was difficult. 
+
+## Project Proposal Example using 2019 Data
+
+Dr. Love has completed an R Markdown file and compiled it into an HTML result which you can view now, and which he **strongly** encourages you to use in developing your own proposal. The most important recommendation we have is to use this file as a starting point for your own data and proposal development.
+
+The files may be found in [our Github Repository](https://github.com/THOMASELOVE/431-projectA-sample-proposal)
+
+- Dr. Love's [R Markdown file](https://github.com/THOMASELOVE/431-projectA-sample-proposal/blob/main/love_sample_projA_proposal.Rmd) is a strong starting point for the development of your proposal.
+    - Remember to click Raw if you want to download the R Markdown file from that link.
+    - This file is also part of the [431-data repository](https://github.com/THOMASELOVE/431-data) we've used for labs and other data and code, so you can also get it from there.
+- The resulting HTML file can be viewed at <https://rpubs.com/TELOVE/projA-sample-proposal-431-2022>, which may be easier for you to read and will also show you what your final result should look like.
+
+### Submission Instructions
+
+- Your proposal (R Markdown and HTML file) should be submitted to Canvas. 
+- Be sure that your proposal includes your name (names if you are working with a partner) as the author in R Markdown.
+- If you are working with a partner, exactly one of you should submit the materials to Canvas, and the other partner should submit a text document (Word or PDF is fine) to Canvas that reads: "My name is [YOUR NAME]. I am working on Project A with [INSERT FULL NAME OF YOUR PARTNER], and they will submit the materials for the proposal."
+
+
+### Grading
+
+- After the deadline, the TAs and Dr. Love will review your submissions quickly to ensure that your proposed plan meets the requirements for this project, and either approve the plan, or request changes. 
+- If changes are requested, you'll have a very short time window (at most 24 hours) to make those changes and resubmit until your plan is, eventually, approved. 
+- Successful completion of the proposal by the deadline will receive full credit (25 points.)
+    - Proposals that require revisions after the deadline will lose 10% of the possible credit for each revision.
+- **Please** meet the deadline, and don't wait until the last minute to do the work.
+    - To encourage an early start, proposals submitted **prior to Monday 2021-10-03 at noon** will be reviewed quickly by Dr. Love and the TAs, and if a redo is required, you'll hear back quickly enough that you should be able to accomplish it before the final proposal deadline, and thus still have a chance to earn full credit.
+
+### Grading the Proposal: 13 Things We're Looking for
+
+1.	The complete proposal is submitted on time.
+    - On time for the initial submission means R Markdown and HTML on Canvas by the deadline on the [Course Calendar](https://thomaselove.github.io/431-2022/calendar.html). If it's late, it will lose credit for that (2.5 points out of 25), and be reviewed last.
+    - If you worked with a partner, both names are in the author section of the R Markdown and HTML submitted by one of you, while the other submitted a note to Canvas meeting the specifications described in the Project A instructions.
+    - When we run the R Markdown file, does it produce the HTML file without errors? (Note: warnings or messages are OK at this stage, but it has to work.)
+    
+2.	The YAML in the R Markdown file produces what we want in the HTML
+    - There's a real title that does not include Project A or Proposal and that is correctly spelled, and fits in the available space in the HTML.
+    - The author name(s) appears in the HTML correctly.
+    - The date is properly formatted in the HTML (achieve this most easily by using the **r Sys.Date()** command within the date section of the YAML as Dr. Love does in his work.)
+    - There is a table of contents (doesn't have to float, although we prefer this) which appears in the HTML and has section names that are appropriately and automatically numbered.
+        - To achieve this, use **number_sections: TRUE** in the YAML.
+    - The easiest approach to accomplish all of this is to use the readthedown template as Dr. Love did in the Example.
+    
+3.	The project ingests the data properly.
+    - Eliminating the correct row (in any way that works), and 
+    - Using `read_csv()` to read in the data, thus creating a tibble
+
+4.	All section headings are correctly numbered and formatted, and describe effectively the contents of the material contained in that section.
+    - Reusing Dr. Love's headings from the example proposal is a good option, but it's OK if you want to take a different approach, so long as we can find everything.
+    - Again, you need to be using `toc: TRUE` and `number_sections: TRUE` in your YAML if you are building an html_document and not using the readthedown template that Dr. Love used in his example.
+    - If you're using the readthedown template, then you need number_sections: TRUE, but **not** toc:TRUE since that will be done automatically by the readthedown template.
+
+
+5.	You have an attractively formatted, readable codebook that looks nice in your HTML.
+    - The example proposal provides an example, but you can come up with something better if you like. It must be run within R Markdown though - you cannot submit an image instead of getting the codebook through code.
+
+6.	Which states were chosen is clear, and there is a sentence about why they were chosen.
+    - There must be 4-6 states, including Ohio
+    - This must lead to 200-400 counties, and this number must be clear from the document (both the number of rows in the final tibble and in writing.)
+    - You should not drop any counties from any of the states you selected in the development of your tibble.
+    
+7.	Your selected five variables are clear, and there is information about what the variables mean and why you chose them, and the role they will play in your eventual analyses
+    - You clearly specify which of your 5 variables is the outcome
+    - You clearly specify which variable will be treated as a binary categorical variable, and which will be treated as a multi-categorical variable, specifying how many categories will be used, and why you made the choices you did about splitting those variables into categories.
+    - For each of your quantitative variables (outcome and the two predictors) you specify their units in appropriate language drawn from the measure specifications at County Health Rankings.
+    - You specify all variables using the name you will use in your final tibble, the `vXXX` code from the original data, and show that you have some understanding of what the variable means, how it was collected and why it is important in your sentences surrounding your codebook.
+    - You have eleven variables in total in your tibble.
+
+8.	The results of your missingness check and your # of distinct values check are clear, and meet the specifications described in the instructions. 
+    - You've written a sentence (at least) in response to the results of each check that makes sense.
+
+9.	You've printed your final tibble by typing in its name, and it appears as a tibble.
+
+10.	`Hmisc::describe` results for your final tibble including 11 variables, with minimum and maximum values that make sense, and that show the correct number of counties and states. 
+
+11.	Your response to question 5 is a paragraph (or more) written in English, with attention paid to grammar, syntax and spelling. 
+    - It is clear to us what your biggest issue was, and how you tried to address it.
+    
+12.	There is a Session Information section at the end of the document.
+    - This should indicate that R version 4.2.1. or later is used.
+    
+13.	You don't have more than 3 spelling, typographical or grammatical errors in the document as a whole that we catch.
+
+## Grading Clarification
+
+Dr. Love and the TAs will review your proposal and either ACCEPT it or ask for a REDO.
+
+- ACCEPT means you're done, and should move on the rest of Project A, perhaps while making some small changes that we request of you in your submission on Canvas.
+- REDO means you'll need to fix the problems we've identified (plus make sure you've done all of the things on this checklist) and resubmit by the deadline we give you.
+    - If your proposal is accepted on the initial submission and was on time, you'll receive 25 points.
+    - If your proposal is accepted on the first REDO (submission 2), you'll receive 22.5 points.
+    - If your proposal is accepted on the second REDO (submission 3), you'll receive 20 points.
+    - We hope we won't have to go further than 3 attempts for anyone.
+
+If you don't have some feature that we "prefer" we may mention this and ask you to fix it in the final version of the complete Project A, but that alone wouldn't necessitate a REDO.
+
+
+

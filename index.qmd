@@ -4,21 +4,101 @@ author: "431 Staff"
 date: last-modified
 ---
 
-# Detailed Instructions Coming soon!
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
 
-## What is Project A?
+# This material is under revision. Please ignore it for now, until new material is posted.
 
-Project A is the first of two real data science projects you'll be doing this semester. For Project A, Professor Love has provided a lot of information but also much less flexibility than you'll have in Project B. In particular, you'll each be working with part of the same data set (the [County Health Rankings 2023](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation) data.) The three key analytic tasks you'll complete are:
+# What is on this Website
+
+- The [Data page](data.qmd) contains information on the data you'll use, and on the required cleaning and development of your final project tibble. You'll need to complete these data management tasks to be ready to write the Proposal.
+- The [Proposal page](proposal.qmd) describes the proposal, which you will submit in early October, according to the deadline on the [Course Calendar](https://thomaselove.github.io/431-2023/calendar.html). 
+    - You will do all of the work for the Proposal in **September**.
+- The [Analyses page](analyses.qmd) contains information on the analyses you'll include in your final submission after we accept your Proposal.
+- The [Portfolio page](portfolio.qmd) describes the elements of the final Project A submission, which includes the final report, the video and the self-evaluation. You will build these items in **October**. This page also provides submission instructions.
+- The [Examples page](examples.qmd) includes information on sample work and other tips we've prepared to help you through Project A.
+- The top menu also provides links to [contact us](https://thomaselove.github.io/431-2023/contact.html), and to [the 431 home page](https://thomaselove.github.io/431-2023).
+
+# What is Project A?
+
+Project A is the first of two real data science projects you’ll be doing this semester. For Project A, Professor Love has provided a lot of guidance and much less flexibility than you’ll have in Project B. Each of you will be working with part of the same data set (the [County Health Rankings 2023](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation) data.) 
+
+You can work alone, or with one other person on this project. If you work as a pair, you create one project together, and each of you receive the same grade on the proposal and final report.
+
+## Deliverables
+
+There are two deadlines, each of which is specified on the [Course Calendar](https://thomaselove.github.io/431-2022/calendar.html).
+
+- The [Proposal](proposal.qmd) is due at the start of October. Here you will answer a few specific questions after creating a clean "tibble" for the project, including rows ("counties") and columns ("variables") you will choose from options we provide.
+  - You'll also need to tell us in the Proposal whether you are working alone or with another person.
+- The [Portfolio](portfolio.qmd) is due at the end of October, and includes:
+  - a report in Quarto, rendered as HTML of all of your work,
+  - a short video which highlights some key findings from your report, and
+  - a self-evaluation form, which you'll complete after submitting the report and video
+
+# The Data
+
+You will be working with data from the 2023 edition of [County Health Rankings](https://www.countyhealthrankings.org/).
+
+- These data describe most counties in the United States. Counties are located within states in the US. There are 88 counties, for instance, in Ohio.
+- The data are available now (along with extensive additional information) at the [County Health Rankings website](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation).
+- Everyone in the class will start with the same data set, but will pick a subset of that data that will be different for each project.
+
+## Cleaning the Data
+
+To build your data set, which will be a sample of the full data, you will do a series of things in R.
+
+- You'll select a subset of six states (Ohio will automatically be one of them, so you'll be selecting five others from a list we will provide) which together include at least **300** and no more than **500** counties.
+- You'll select five different quantitative variables from the County Health Rankings data, from a list of options we provide for you.
+  - One of these variables will serve as your outcome for Task 1.
+  - Another will serve as your predictor for Task 1.
+  - A third will serve as your outcome for Task 2.
+  - Your fourth variable will serve (after categorizing^[Note: Categorizing quantitative information like this turns out to be a terrible idea in practical model-building. We're doing this here for pedagogical reasons that will, in time, become clearer.]) as your predictor for Task 2.
+  - The fifth variable (different from the other four) will serve as an alternative choice, should one of your other four variables prove to be unsuitable for its planned role.
+- In addition to the five analytic variables listed above, you will add three pre-specified variables (a fips code, the state name and the county name) which will identify your observations.
+- Creating a tibble of your selected counties, and your set of variables will be necessary to complete the proposal.
+
+# Analyses You'll Do
+
+After your proposal is accepted, you will complete the two analytic tasks using your clean tibble. The observations (rows) in your data will be the counties from your set of six states.
+
+The two key analytic tasks you’ll complete are:
 
 1. Visualizing and modeling the relationship between a quantitative outcome and a quantitative predictor.
-2. Visualizing and modeling the relationship between a quantitative outcome and a categorical predictor (with 2-5 levels).
-3. Visualizing and modeling the relationship between a quantitative outcome and a quantitative predictor, after adjustment for the state in which the county is located
+2. Visualizing and modeling the relationship between a quantitative outcome and a categorical predictor with two levels.
 
-You can work alone, or with one other person on Project A. If you work as a pair, you create one project together, and each of you receive the same grade.
+## Examples from Dr. Love
 
-## Deliverables for Project A
+We have provided a sample proposal (using Quarto) that we strongly encourage you to use in motivating your data and proposal work. -We've also provided an outline of the analysis report we hope to see. These items will help ensure your final project report matches our expectations and is something to be proud of. 
 
-There are two sets of deliverables in Project A, and the deadlines for each are in the [Course Calendar](https://thomaselove.github.io/431-2023/calendar.html):
+# Project A Objectives 
 
-1. A Project A Proposal (due at the start of October) which requires you to answer a few specific questions after creating a clean data set (a “tibble” containing specific “counties” and variables you will choose from available options.) You can (and will need to) do this work in September.
-2. A Project A Portfolio (due at the end of October) which we'll describe more completely here when full Project A instructions are available. You'll build the Portfolio in October, after your Proposal has been accepted.
+It is hard to learn statistics (or anything else) passively; concurrent theory and application are essential^[Though by no means an original idea, this particular phrasing is stolen from Harry Roberts.].
+
+> "Statistics has no reason for existence except as the catalyst for investigation and discovery." [George E. P. Box](https://en.wikipedia.org/wiki/George_E._P._Box)
+
+I am primarily interested in your learning something interesting, useful and even valuable from your project experiences in 431. In particular, an effective Project A will demonstrate:
+
+1. The ability to create and formulate research questions that are statistically and scientifically appropriate.
+2. The ability to turn research questions into measures of interest.
+3. The ability to pull and merge and clean and tidy data, then present the data set following [Jeff Leek's guide to sharing data with a statistician](https://github.com/jtleek/datasharing).
+4. The ability to build a reasonable pair of linear models, assess the quality of the models, and use them to make predictions.
+5. The ability to identify and (with help) solve problems that crop up
+6. The ability to comment on your work within code, and in written and oral presentation.
+7. The ability to build a Quarto-based report and to give a short presentation based on key findings from that report.
+
+Project A is about building models and visualizing data from a (fairly clean) data set I provide to you. In Project A, you will complete most of the elements of a data science project designed to create a statistical model for a *quantitative* outcome, then use it for prediction, and assess the quality of those predictions. Tools necessary for Project A include:
+
+- Describing the experimental or observational study design used to gather the data, as well as the complete data collection process.
+- Sharing the process of ingesting and tidying the data, with specific reference to the decisions you make to "clean" things up.
+- Descriptive and exploratory summaries of the data across the groups for your chosen outcomes, including, of course, attractive and well-constructed visualizations, which may include both graphs and tables.
+- Developing appropriate research questions that lead to the identification of smart measures for predictors and outcomes, and then the development of a prediction model using linear regression.
+- Regression-based comparisons of mean differences for a quantitative outcome across a set of two groups, including appropriate demonstrations of the reasons behind the models you build.
+- Regression-based predictions of a quantitative outcome using a quantitative predictor.
+
+> Think of a graph as a comparison. All graphs are comparisons (indeed, all statistical analyses are comparisons). If you already have the graph in mind, think of what comparisons it's enabling. Or if you haven't settled on the graph yet, think of what comparisons you'd like to make. [Andrew Gelman](http://andrewgelman.com/2014/03/25/statistical-graphics-course-statistical-graphics-advice/)
+
+## Questions?
+
+If you have questions, let us know about them on [Campuswire](https://thomaselove.github.io/431-2023/campuswire.html) using the **projectA** folder, or speak with Dr. Love before or after class, or discuss them with the TAs during office hours.

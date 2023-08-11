@@ -3,24 +3,36 @@ project:
   output-dir: docs
 
 website:
-  title: "431-projectA"
+  title: "431 Project A"
   navbar:
+    background: primary
     left:
-      - text: "Home"
-        href: index.qmd
+      - href: index.qmd
+        text: Home
+      - href: data.qmd
+        text: Data
+      - href: proposal.qmd
+        text: Proposal
+      - href: analyses.qmd
+        text: Analyses
+      - href: portfolio.qmd
+        text: Portfolio
+      - href: examples.qmd
+        text: Examples
+
     right:
-      - text: "Contact Us"
-        href: https://thomaselove.github.io/431-2023/contact.html
-      - text: "Return to 431 main site"
-        href: https://thomaselove.github.io/431-2023/
+      - href: https://thomaselove.github.io/431-2023/contact.html
+        text: "Contact Us"
+      - href: https://thomaselove.github.io/431-2023
+        text: "431 Homepage"
 
 format:
   html:
     theme: pulse
-    date-format: iso
+    css: styles.css
     toc: true
+    date-format: iso
     link-external-icon: true
     link-external-newwindow: true
 
 editor: source
-
