@@ -4,6 +4,20 @@
     "href": "index.html",
     "title": "431 Project A Instructions",
     "section": "",
-    "text": "Coming soon!"
+    "text": "Project A is the first of two real data science projects you’ll be doing this semester. For Project A, Professor Love has provided a lot of information but also much less flexibility than you’ll have in Project B. In particular, you’ll each be working with part of the same data set (the County Health Rankings 2023 data.) The three key analytic tasks you’ll complete are:\n\nVisualizing and modeling the relationship between a quantitative outcome and a quantitative predictor.\nVisualizing and modeling the relationship between a quantitative outcome and a categorical predictor (with 2-5 levels).\nVisualizing and modeling the relationship between a quantitative outcome and a quantitative predictor, after adjustment for the state in which the county is located\n\nYou can work alone, or with one other person on Project A. If you work as a pair, you create one project together, and each of you receive the same grade.\n\n\n\nThere are two sets of deliverables in Project A, and the deadlines for each are in the Course Calendar:\n\nA Project A Proposal (due at the start of October) which requires you to answer a few specific questions after creating a clean data set (a “tibble” containing specific “counties” and variables you will choose from available options.) You can (and will need to) do this work in September.\nA Project A Portfolio (due at the end of October) which we’ll describe more completely here when full Project A instructions are available. You’ll build the Portfolio in October, after your Proposal has been accepted."
+  },
+  {
+    "objectID": "index.html#what-is-project-a",
+    "href": "index.html#what-is-project-a",
+    "title": "431 Project A Instructions",
+    "section": "",
+    "text": "Project A is the first of two real data science projects you’ll be doing this semester. For Project A, Professor Love has provided a lot of information but also much less flexibility than you’ll have in Project B. In particular, you’ll each be working with part of the same data set (the County Health Rankings 2023 data.) The three key analytic tasks you’ll complete are:\n\nVisualizing and modeling the relationship between a quantitative outcome and a quantitative predictor.\nVisualizing and modeling the relationship between a quantitative outcome and a categorical predictor (with 2-5 levels).\nVisualizing and modeling the relationship between a quantitative outcome and a quantitative predictor, after adjustment for the state in which the county is located\n\nYou can work alone, or with one other person on Project A. If you work as a pair, you create one project together, and each of you receive the same grade."
+  },
+  {
+    "objectID": "index.html#deliverables-for-project-a",
+    "href": "index.html#deliverables-for-project-a",
+    "title": "431 Project A Instructions",
+    "section": "",
+    "text": "There are two sets of deliverables in Project A, and the deadlines for each are in the Course Calendar:\n\nA Project A Proposal (due at the start of October) which requires you to answer a few specific questions after creating a clean data set (a “tibble” containing specific “counties” and variables you will choose from available options.) You can (and will need to) do this work in September.\nA Project A Portfolio (due at the end of October) which we’ll describe more completely here when full Project A instructions are available. You’ll build the Portfolio in October, after your Proposal has been accepted."
   }
 ]

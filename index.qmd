@@ -4,4 +4,21 @@ author: "431 Staff"
 date: last-modified
 ---
 
-# Coming soon!
+# Detailed Instructions Coming soon!
+
+## What is Project A?
+
+Project A is the first of two real data science projects you'll be doing this semester. For Project A, Professor Love has provided a lot of information but also much less flexibility than you'll have in Project B. In particular, you'll each be working with part of the same data set (the [County Health Rankings 2023](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation) data.) The three key analytic tasks you'll complete are:
+
+1. Visualizing and modeling the relationship between a quantitative outcome and a quantitative predictor.
+2. Visualizing and modeling the relationship between a quantitative outcome and a categorical predictor (with 2-5 levels).
+3. Visualizing and modeling the relationship between a quantitative outcome and a quantitative predictor, after adjustment for the state in which the county is located
+
+You can work alone, or with one other person on Project A. If you work as a pair, you create one project together, and each of you receive the same grade.
+
+## Deliverables for Project A
+
+There are two sets of deliverables in Project A, and the deadlines for each are in the [Course Calendar](https://thomaselove.github.io/431-2023/calendar.html):
+
+1. A Project A Proposal (due at the start of October) which requires you to answer a few specific questions after creating a clean data set (a “tibble” containing specific “counties” and variables you will choose from available options.) You can (and will need to) do this work in September.
+2. A Project A Portfolio (due at the end of October) which we'll describe more completely here when full Project A instructions are available. You'll build the Portfolio in October, after your Proposal has been accepted.
