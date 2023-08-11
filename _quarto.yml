@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "431-projectA"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+    right:
+      - text: "Contact Us"
+        href: https://thomaselove.github.io/431-2023/contact.html
+      - text: "Return to 431 main site"
+        href: https://thomaselove.github.io/431-2023/
+
+format:
+  html:
+    theme: pulse
+    date-format: iso
+    toc: true
+    link-external-icon: true
+    link-external-newwindow: true
+
+editor: source
+
