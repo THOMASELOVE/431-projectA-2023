@@ -12,35 +12,29 @@ knitr::opts_chunk$set(comment = NA)
 
 # What Data Will I Use?
 
-Your Project A will use the 2023 version of the analytic data from County Health Rankings (**CHR**). You have already seen some versions of CHR data from prior years in our Labs, but you'll create and clean a new data set of your own for Project A.
+Your Project A will use the 2023 version of the analytic data from [County Health Rankings](https://www.countyhealthrankings.org/) (**CHR 2023**). Some prior CHR data has been part of our Labs, but you'll obtain, clean and manage a new data set for Project A.
 
-- The key elements we'll use are in the [Rankings Data & Documentation section](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation), specifically the National Data & Documentation section site for the **2023 County Health Rankings**. 
-    - Do not use data from previous editions of the CHR, and do not use the trends data available on their website for this project. 
-
-Specifically, you'll need three files:
+The key elements we'll use are all found in the [Rankings Data & Documentation section](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation), specifically the National Data & Documentation section site for the 2023 County Health Rankings. Do not use data from previous editions of the CHR, and do not use the trends data available for Project A. Specifically, you'll need to download three files in order to get and use the data:
 
 - [the 2023 CHR CSV Analytic Data](https://www.countyhealthrankings.org/sites/default/files/media/document/analytic_data2023_0.csv) (a .csv file)
 - [the 2023 CHR CSV/SAS Analytic Data Documentation](https://www.countyhealthrankings.org/sites/default/files/media/document/2023%20Analytic%20Documentation.pdf) file (PDF), and
 - [the 2023 Data Dictionary](https://www.countyhealthrankings.org/sites/default/files/media/document/2023%20Data%20Dictionary%20%28PDF%29.pdf) (PDF)
 
-You'll wind up selecting five measures, which you'll also need to look up at [this CHR 2023 Measures link](https://www.countyhealthrankings.org/explore-health-rankings/county-health-rankings-measures) for further details, including who created the measure, how it is measured, and when it was measured.
+In addition, when building the Codebook in Data Task 6 below, you'll use [this CHR 2023 Measures link](https://www.countyhealthrankings.org/explore-health-rankings/county-health-rankings-measures) to obtain further details on the variables you select. 
 
-# Developing the Data: Overview
+# Developing the Data: Overview of Your Seven Tasks
 
-Obtaining and cleaning your data takes a little while, but you can start right now. There are seven main tasks to complete. You will create a clean tibble containing 300-500 rows (counties) and eight variables, and then present the data, a codebook and some brief summaries, by following the steps below. Detailed instructions follow this overview.
+Obtaining and cleaning your data takes a little while, but you can start at any time. First, in broad terms, here are the seven data tasks you need to complete in order to build your Project A Proposal.
 
-1. Ingest the data into a raw tibble in R called `chr_2023_raw`, carefully.
-2. Select the states (5 other than plus Ohio) that you want to study, creating a new `chr_2023` tibble that contains only the counties from those states, carefully.
-3. Select nine variables (4 we'll specify and 5 more you'll select), rename them in useful ways, clean up problems, and then save this smaller tibble as `chr_2023`.
-4. Create a new binary factor (categorical variable) from one of your 5 selected variables from the previous task, and add it to `chr_2023` so you now have 10 variables.
-5. Save the resulting `chr_2023` tibble, and share it with us in your Proposal.
-6. Create a codebook for your `chr_2023` tibble which briefly but sufficiently describes your selected variables and counties.
-7. Print your `chr_2023` tibble (to prove it is a tibble) and then provide a modest set of appropriate numerical summaries of each of your five selected variables.
+1. Ingest the raw data from CHR 2023 into a tibble in R called `chr_2023_raw`, then filter these raw data to only the counties actually ranked by CHR.
+2. In addition to Ohio, select five more states (from the 39 others with at least 20 ranked counties) to study, so that you wind up with at least 300 and no more than 500 counties in your study. Create a new `chr_2023` tibble that contains only the counties from your chosen six states (including Ohio).
+3. Reduce your data to a selection of nine variables (4 we specify below and 5 more you'll select from a list we provide), rename them in helpful ways, clean up problems, then save this smaller tibble as `chr_2023`.
+4. Create a new binary factor (categorical variable) from one of the 5 variables you selected in the previous task, and add it to `chr_2023` so it now contains 10 variables.
+5. Save the resulting `chr_2023` tibble as an R data set, and you will share this new `.Rds` file with us as part of your Proposal.
+6. Create a codebook for your `chr_2023` tibble which briefly but sufficiently describes your selected variables and counties. This will also form part of your Proposal.
+7. Print your `chr_2023` tibble (to prove it is a tibble) and then provide a modest set of appropriate numerical summaries describing your data. This, too, will form part of your Proposal.
 
-Here are some key additional details for each step of this process. 
-  - Please refer to Dr. Love's materials in the rest of these Project A Instructions, particularly in the Examples & Tips section for more help.
-
-# Task 1. Ingest the raw data into `chr_2023_raw`
+# Task 1. Ingest the raw data into `chr_2023_raw`, then filter to ranked counties
 
 Begin an R Project just for Project A, and create a Quarto file within that project where you will do your data development work. Working from a template, or from your own best understanding of what works well for you, start by loading the packages you'll need, including the `tidyverse` and any other packages you plan to use.
 
@@ -58,135 +52,117 @@ chr_2023_raw <- read_csv(data_url, skip = 1, guess_max = 4000,
                          show_col_types = FALSE)
 ```
 
-You should at this point have a `chr_2023_raw` tibble with 3194 rows (observations) and 720 columns (variables). 
+This code should create a `chr_2023_raw` tibble with 3194 rows (observations) and 720 columns (variables). 
 
-You should now write code to restrict the `chr_2023_raw` data to only include the **3082** rows which have "county_ranked" values of 1, since the other rows will not be used by us in this project.
+To complete Task 1, write code to restrict the `chr_2023_raw` data to include only the **3082** rows which have "county_ranked" values of 1, since the other rows will not be used by us in this project. 
 
-# Task 2. Filter your data to the counties in the states you've chosen
+::: {.callout-note}
 
-Now we'll filter the **chr_2023_raw** data containing 3082 rows and 720 columns to a new tibble called `chr_2023` which contains the 300-500 rows (counties) you will actually study in your project. Each row you'll keep should have a `county_ranked` value of 1, as we've ensured at the end of Task 1. To go from 3082 counties to our final sample, you will need to select 4-6 states, including Ohio. 
+We strongly encourage you to use the `filter()` function from the `dplyr` package in the `tidyverse` to include only the counties ranked by CHR.
 
-Your selection must include: 
+:::
+
+At the end of Task 1, your `chr_2023_raw` tibble should have 3082 rows (counties) and 720 columns (variables).
+
+# Task 2. Filter your data to the 300-500 counties in six states (including Ohio)
+
+Now we'll filter the `chr_2023_raw` data into a new tibble called **chr_2023** which contains the 300-500 rows (counties) you will actually study in your project. 
+
+Your selection must include six states, including: 
 
 - the 88 counties of Ohio, and 
-- all of the counties in five additional states in the US
+- all of the counties in **five** additional US states
 
-The number of counties (which have `county_ranked` values of 1) associated with each state (specified using its two-letter postal abbreviation code) is listed below, for your convenience. 
+::: {.callout-note}
 
-- Do not include any of the six "states" (District of Columbia, Connecticut, Delaware, Hawaii, New Hampshire and Rhode Island) with fewer than 12 counties.
+1. You will write a sentence or two in your Proposal describing the reason for your selections, so you should have one.
 
-## States You Are Permitted to Select
+2. Don't forget to filter in Task 1 so that only those rows with `county_ranked` values of 1 are included. Otherwise, your counts won't match those shown in the table below.
 
-```{r}
-#| eval: false
-chr_2023_raw |> count(statecode, state) |> filter(n > 12) |> print(n = 50)
-```
+3. The table excludes Arizona, Connecticut, Delaware, District of Columbia, Hawaii, Maine, Massachusetts, Nevada, New Hampshire,  Rhode Island and Vermont because they have fewer than 20 ranked counties.
+:::
 
-```
-# A tibble: 45 × 3
-   statecode state     n
-   <chr>     <chr> <int>
- 1 01        AL       67
- 2 02        AK       24
- 3 04        AZ       15
- 4 05        AR       75
- 5 06        CA       58
- 6 08        CO       59
- 7 12        FL       67
- 8 13        GA      159
- 9 16        ID       43
-10 17        IL      102
-11 18        IN       92
-12 19        IA       99
-13 20        KS      104
-14 21        KY      120
-15 22        LA       64
-16 23        ME       16
-17 24        MD       24
-18 25        MA       14
-19 26        MI       83
-20 27        MN       87
-21 28        MS       82
-22 29        MO      115
-23 30        MT       47
-24 31        NE       79
-25 32        NV       16
-26 34        NJ       21
-27 35        NM       32
-28 36        NY       62
-29 37        NC      100
-30 38        ND       48
-31 39        OH       88  ## note: must be selected
-32 40        OK       77
-33 41        OR       35
-34 42        PA       67
-35 45        SC       46
-36 46        SD       61
-37 47        TN       95
-38 48        TX      244
-39 49        UT       28
-40 50        VT       14
-41 51        VA      133
-42 53        WA       39
-43 54        WV       55
-44 55        WI       72
-45 56        WY       23
-```
+## States You Can Select
 
-So, including `OH`, you will need a total of 300-500 counties, from 6 states. For example,
+The number of counties (with `county_ranked` values of 1) in each state (specified using its two-digit FIPS code and two-letter postal abbreviation) is listed below, for your convenience.
 
-- one possible combination would be `PA` (67), `NY` (62), `NJ` (21), `OR` (35) and `UT` (28) in addition to `OH` (88) yielding 301 counties in 6 states.
-- another combination would be `TX` (244), `CA` (58), `MD` (24), `NV` (16) and `FL` (67) in addition to `OH` (88) yielding 497 counties in 6 states.
+`statecode` | `state` | ranked <br /> counties | State <br /> Name | `statecode` | `state` | ranked <br /> counties | State <br /> Name
+---: | ------: | -----: | ------------- | ---: | ------: | ----: | -------------
+`01` | AL | 67 | Alabama | `31` | NE | 79 | Nebraska
+`02` | AK | 24 | Alaska | `34` | NJ | 21 | New Jersey
+`05` | AR | 75 | Arkansas | `35` | NM | 32 | New Mexico
+`06` | CA | 58 | California | `36` | NY | 62 | New York
+`08` | CO | 59 | Colorado | `37` | NC | 100 | North Carolina
+`12` | FL | 67 | Florida | `38` | ND | 48 | North Dakota
+`13` | GA | 159 | Georgia | `39` | **OH** | **88** | **Ohio**
+`16` | ID | 43 | Idaho | `40` | OK | 77 | Oklahoma
+`17` | IL | 102 | Illinois | `41` | OR | 35 | Oregon
+`18` | IN | 92 | Indiana | `42` | PA | 67 | Pennsylvania
+`19` | IA | 99 | Iowa | `45` | SC | 46 | South Carolina
+`20` | KS | 104 | Kansas | `46` | SD | 61 | South Dakota
+`21` | KY | 120 | Kentucky | `47` | TN | 95 | Tennessee
+`22` | LA | 64 | Louisiana | `48` | TX | 244 | Texas
+`24` | MD | 24 | Maryland | `49` | UT | 28 | Utah
+`26` | MI | 83 | Michigan | `51` | VA | 133 | Virginia
+`27` | MN | 87 | Minnesota | `53` | WA | 39 | Washington
+`28` | MS | 82 | Mississippi | `54` | WV | 55 | West Virginia
+`29` | MO | 115 | Missouri | `55` | WI | 72 | Wisconsin
+`30` | MT | 47 | Montana | `56` | WY | 23 | Wyoming
 
-After making your selection, and applying it, you should have a tibble called `chr_2023` which contains 300-500 rows, and 720 columns. In Task 3, we'll cut down those columns.
+Select six states (including `OH`) yielding a total of 300-500 counties. 
 
-## Additional Task 2 Notes
+- For example, one possible combination would be `ID` (43), `OR` (35), `MT` (47), `ND` (48) and `WA` (39) with `OH` (88) yielding exactly 300 counties.
+- another possibility would be `GA` (159), `CA` (58), `FL` (67), `NC` (100) and `UT` (28) with `OH` (88) yielding exactly 500 counties.
 
-1. Choose your subset of states with the knowledge in mind that some variables in the CHR data are not available for some counties, and that each state you select must have more than 12 counties. 
-2. You should have some reason for selecting the states that you do, and you will need to describe that reason in a complete sentence or two in your proposal and your final report.
-3. Don't forget to filter the rows at the end of Task 1 so that only those rows with `county_ranked` values of 1 are included. Otherwise, your counts won't match those shown above, and you'll have lots of problems.
+After making your selection, and filtering the data, you should have a tibble called `chr_2023` which contains all of the 300-500 counties in your six states, and 720 columns. 
 
-# Task 3. Select five variables, add four required ones, and clean up `chr_2023`
+# Task 3. Add five selected measures to four required variables and clean up `chr_2023`
 
-Next, you will identify variables from the your existing `chr_2023` tibble describing your selected sample of counties to include only nine variables (columns) instead of the 725 you should have at the start of Task 3. These nine variables must include:
+Next, you will identify variables from the your existing `chr_2023` tibble describing your selected sample of counties. 
 
-- the five-digit fips code for the county, which will be a convenient ID variable, which is called `fipscode` in the raw data.
-- the name of the county, which will be useful for labeling and identifying the counties, and which is called `county` in the raw data.
-- the `state`, which will be a multi-categorical (with 4-6 categories) variable
-- the `county_ranked` variable, which tells us whether the row should be included in our data (all of the rows you include in your data should have `county_ranked == 1`)
-- followed by five variables you select from the 84 variables in the raw CHR data set that we have listed below.
-    - Each of these must be of the form `vXXX_rawvalue` (note: to select the entire group of 86 variables, you might try `select(ends_with("rawvalue"))` as part of a pipe.) 
-    - Note that we have not included two of these 86 in our list below of the 84 variables you can choose from.
+In particular, you will select exactly nine variables (columns) from the 720 you should have at the start of Task 3. These nine variables must include the following four:
 
-## The 84 variables you must select five from
+Variable <br /> Name | Description
+-----------: | -------------------------------------------------------------
+`fipscode` | the five-digit FIPS code for the county, which will be a convenient ID variable that is distinct for each row in your tibble
+`county` | the name of the county, which will be useful for labeling and identifying the counties
+`state` | a multi-categorical (with 6 levels) variable of two-letter postal abbreviations for your six selected states
+`county_ranked` | tells us whether the row should be included in our data <br /> (all rows should have `county_ranked == 1`)
 
-You must select your five variables from the 84 variables in the raw (.csv) data file listed below. We show them here in the order in which they appear in the raw file. The listing "v001" in this table actually refers to the variable named "**v001_rawvalue**".
+This set of four variables will then be followed by five variables that you will select from among the 50 listed below.
+
+- Each of these must be of the form `vXXX_rawvalue` (note: to select the entire group of raw value variables, you might try `select(ends_with("rawvalue"))` as part of a pipe.) 
+- There are many `vXXX_rawvalue` variables in the CHR data which we don't include in the list below, usually because of substantial missing data.
+
+## Select five of these 50 variables
+
+You must select your five variables from the 50 variables listed below. We show them here in the order in which they appear in the raw file. The listing "v001" in this table actually refers to the variable named "**v001_rawvalue**".
 
 ```
  [1] "v001" "v002" "v036" "v042" "v037" "v009" "v011" "v133" "v070" "v132"
-[11] "v049" "v134" "v045" "v014" "v085" "v004" "v088" "v062" "v005" "v050"
-[21] "v155" "v168" "v069" "v023" "v024" "v044" "v082" "v140" "v043" "v135"
-[31] "v125" "v124" "v136" "v067" "v137" "v173" "v147" "v127" "v128" "v129"
-[41] "v144" "v145" "v060" "v061" "v139" "v083" "v138" "v039" "v143" "v003"
-[51] "v122" "v021" "v149" "v159" "v160" "v167" "v169" "v151" "v063" "v065"
-[61] "v141" "v142" "v171" "v172" "v015" "v161" "v148" "v158" "v156" "v153"
-[71] "v154" "v166" "v051" "v052" "v053" "v054" "v055" "v081" "v080" "v056"
-[81] "v126" "v059" "v057" "v058"
+[11] "v049" "v134" "v045" "v085" "v004" "v088" "v005" "v050" "v155" "v168"
+[21] "v023" "v024" "v044" "v140" "v135" "v125" "v136" "v067" "v147" "v127"
+[31] "v060" "v139" "v083" "v143" "v169" "v151" "v063" "v177" "v178" "v156" 
+[41] "v153" "v154" "v166" "v053" "v054" "v056" "v126" "v059" "v057" "v058"
 ```
 
 For example, `v001_rawvalue` shows the raw values for the premature death measure. If you select this variable, it is up to you to use the documentation in the two PDF files I have linked to, as well as the information on the County Health Rankings website, to get a reasonable understanding of what the variable measures, and how it was collected.
 
+::: {.callout-note}
+
 The [2023 CHR Analytic Data Documentation](https://www.countyhealthrankings.org/sites/default/files/media/document/2023%20Analytic%20Documentation.pdf) file (PDF), and the [2023 Data Dictionary](https://www.countyhealthrankings.org/sites/default/files/media/document/DataDictionary_2023.pdf) file (also PDF) are crucial here, as those are the ones that explain what the available variables mean, and how they should be labeled. 
 
-As noted below, you will also need look up each measure you wind up selecting to learn more about it at [this CHR 2023 Measures link](https://www.countyhealthrankings.org/2023-measures).
+In building your codebook, you will also need look up each measure you select at [this CHR 2023 Measures link](https://www.countyhealthrankings.org/2023-measures).
+
+:::
 
 ## Some important notes for Task 3
 
-1. Be sure to read this entire Data page (especially the material on How to Clean Your Variables) before selecting your variables, so you are aware of some features of the data we disclose below.
+1. Be sure to read this entire Data page before selecting your variables, so you are aware of some features of the data we disclose below.
 
-2. The five variables you select must be five different variables selected from the 84 variables listed above. Some variables in that set of 84 are better choices than others.
+2. The five variables you select must be five different variables selected from the variables listed above. Some variables in that set of 50 will lead to more straightforward analyses than others.
 
-3. Each variable you select should be of some interest to you on its own, in terms of either providing a health outcome of interest, or potentially providing useful information about a feature of the county that might relate to that health outcome. Your five selected quantitative variables, selected by you from the 84 available "raw value" CHR variables, will need be treated as follows:
+3. Each variable you select should be of some interest to you on its own, in terms of either providing a health outcome of interest, or potentially providing useful information about a feature of the county that might relate to that health outcome. Your five selected quantitative variables, selected by you from the 50 available "raw value" CHR variables, will need be treated as follows:
 
 - variable 1 will be treated as quantitative, and as an outcome of interest
 - two others (variables 2 and 3) will be treated as quantitative predictors of interest for variable 1
@@ -198,41 +174,16 @@ As noted below, you will also need look up each measure you wind up selecting to
 
 4. Each of the five variables you select must have data for at least 75% of the counties in each state you plan to study. This is something you will have to check on, in R, and you'll have to present the code, and demonstrate with complete English sentences that you've verified this. The use of a tool (or more than one) from the `naniar` package to do this checking is encouraged. 
 
-## Caution: Some Variables have Lots of Missing Data
-
-The variables listed below have more than 10% missing values across all 3082 ranked counties in the US. While you are welcome to use any of these variables, you may want to look elsewhere to avoid problems with the "minimum 75% complete data" requirement. (Note that variable `v170_rawvalue` is missing for all counties in the data so we don't allow its use.)
-
-Variable | Description | % missing
-:-------: | :------------: | :----------:
-`v129_rawvalue` | infant mortality | 60.5
-`v149_rawvalue` | disconnected youth | 60.4
-`v015_rawvalue` | homicides | 57.0
-`v138_rawvalue` | drug overdose deaths | 41.7
-`v128_rawvalue` | child mortality | 38.9
-`v158_rawvalue` | juvenile arrests | 37.3
-`v141_rawvalue` | residential segregation | 32.6
-`v148_rawvalue` | firearm fatalities | 26.3
-`v161_rawvalue` | suicides | 21.1
-`v021_rawvalue` | High School graduation | 19.5
-`v173_rawvalue` | COVID-19 age-adjusted mortality | 16.8
-`v061_rawvalue` | HIV prevalence | 14.2
-`v160_rawvalue` | Math scores | 12.8
-`v039_rawvalue` | Motor vehicle crash deaths | 12.7
-
 5. The descriptions provided in these instructions associated with each variable are available as the first (deleted in R) row in the .csv file, and are also specified in the [2023 CHR Analytic Data Documentation](https://www.countyhealthrankings.org/sites/default/files/media/document/2023%20Analytic%20Documentation.pdf) PDF file.
 
-6. Across your complete set of 4-6 selected states, the raw versions of each of your five selected variables must have at least **ten** distinct non-missing values. You'll need to show R code to do this checking (the best choice is often `Hmisc::describe` since you'll run that anyway), and you'll need to demonstrate with a complete English sentence or two that you have checked this to be true.
+6. Across your complete set of 6 selected states, the raw versions of each of your five selected variables must have at least **ten** distinct non-missing values. You'll need to show R code to do this checking (the best choice is often `Hmisc::describe()` since you'll run that anyway), and you'll need to demonstrate with a complete English sentence or two that you have checked this to be true.
 
 # How To Clean Your Selected Variables
 
 Find each of your five selected variables on one of the lists below.
 
 - If you plan to use the variable as quantitative, do what is suggested below as part of your data development work, rename the variable appropriately, and use that version in your codebook.
-- If you plan to use the variable as a categorical predictor, you should still make the appropriate change to the original quantitative version as indicated below.
-
-## The Binary Category
-
-`v124` is about Drinking Water Violations, is the only binary (1 = Yes, 0 = No) variable in the data. (all other variables are quantitative.) You are permitted to use `v124` as your variable 4, if you like. `v124` may not be used as anything other than variable 4 in your work.
+- If you plan to use the variable as your categorical predictor, you should still make the appropriate change to the original quantitative version as indicated below.
 
 ## Ratios That Need Converting
 
@@ -244,19 +195,14 @@ These variables are specified as providers per population in the raw data file. 
 Code | Variable Description
 ---: | :---------------------------------------------
 v004 | Primary care physicians
-v062 | Mental health providers
 v088 | Dentists
-
-- Note that we don't allow the use of variable `v131` in Project A because of the large number of counties with very small numbers of these providers listed.
 
 ## Variables that should be rescaled
 
 Code | Variable Description | What to do?
 ---: | :----------- | :---------------
 v001 |	Premature death	| Divide by 100 to represent losses per 1000 population
-v051 |	Population | Either use log10(population), or divide population by 1000 to represent population in thousands.
-v061 |  HIV prevalence | Divide by 100 to represent cases per 1000 population (caution: substantial missing data)
-v063 |	Median household income | Divide by 1000 to represent in thousands of dollars
+v063 |	Median household income | Divide by 1000 to represent income in thousands of dollars
 
 ## Variables that are Proportions should be converted to Percentages
 
@@ -265,54 +211,39 @@ Each of the variables listed below are proportions (between 0 and 1). Before you
 Code | Variable Description
 ---: | :--------------------------------------------
 v002 |	Poor or fair health
-v003 |  Uninsured adults (pick v003 or v085, but not both)
 v009 |	Adult smoking
 v011 |	Adult obesity
-v021 |	High school graduation (pick v021 or v168, but not both, see note)
 v023 |	Unemployment
 v024 |	Children in poverty
 v037 |	Low birthweight
 v049 |	Excessive drinking
 v050 |  Mammography screening
-v052 |	Proportion below 18 years of age
-v053 |  Proportion 65 and older
+v053 |  Proportion ages 65 and older
 v054 |  Proportion Non-Hispanic Black (see note below)
-v055 |  Proportion American Indian and Alaska Native (see note below)
 v056 |  Proportion Hispanic (see note below)
-v057 |	Proportion Females
+v057 |	Proportion Female
 v058 |	Proportion Rural
 v059 |  Proportion not proficient in English
 v060 |	Diabetes prevalence
-v065 |  Children eligible for free or reduced price lunch
 v067 |	Driving alone to work
-v069 |	Some college
 v070 |	Physical inactivity
-v080 |  Proportion Native Hawaiian/Other Pacific Islander (see note below)
-v081 |  Proportion Asian (see note below)
-v082 |	Children in single-parent households
 v083 |	Limited access to healthy foods
-v085 |  Uninsured (pick v003 or v085, but not both)
-v122 |  Uninsured children (pick v085 or v122, but not both)
+v085 |  Uninsured
 v126 |  Proportion Non-Hispanic White (see note below)
 v132 |	Access to exercise opportunities
 v134 |  Proportion of driving deaths with alcohol involvement
 v136 |	Severe housing problems
-v137 |  Long commute - driving alone
 v139 |	Food insecurity
 v143 |	Insufficient sleep
-v144 |  Frequent physical distress (pick v036 or v144, but not both)
-v145 |  Frequent mental distress (pick v042 or v145, but not both)
-v149 |  Disconnected youth (caution: lots of missing data)
 v153 |	Homeownership
 v154 |  Severe housing cost burden
 v155 |	Flu vaccinations
 v166 |  Broadband access
-v168 |  High school completion (pick v021 or v168, but not both, see note)
-v171 |  Childcare cost burden
+v168 |  High school completion
+v177 |  Voter turnout
+v178 |  Census Participation
 
-- If you are interested in studying race and ethnicity and their impact on a health outcome, these data aren't particularly well suited to a detailed look. Instead we suggest using `v126` to incorporate this dimension as a predictor (or its inverse, 1 - `v126`), rather than including any of the other race/ethnicity variables, specifically `v053`, `v054`, `v055`, `v056`, `v080`, or `v081`. This is because there's more variation in the `v126` data across the reported counties. Again, a serious look at the impact of race/ethnicity is beyond the scope of Project A.
-- Note that variable `v021` generally has more missing data than `v168`, should you be trying to choose between them.
-
+- A serious look at the impact of race/ethnicity is beyond the scope of Project A. If you are interested in studying race and ethnicity and their impact on a health outcome, we strongly suggest using `v126` to incorporate this dimension as a predictor (or its inverse, 1 - `v126`), rather than including the other race/ethnicity variables, specifically `v054` and `v056`. This is because there's more variation in the `v126` data across the reported counties. 
 
 ## Variables that should be OK as is
 
@@ -321,38 +252,20 @@ The variables listed below should be useful as they are. Most of them are ratios
 Code | Variable Description
 ---: | :---------------------------------------------
 v005 |	Preventable hospital stays
-v014 |	Teen births
-v015 |  Homicide rate (caution: lots of missing data)
-v036 |	Poor physical health days (pick v036 or v144, but not both)
-v039 |	Motor vehicle crash deaths (caution: substantial missing data)
-v042 |	Poor mental health days (pick v042 or v145, but not both)
-v043 |	Violent crime
+v036 |	Poor physical health days
+v042 |	Poor mental health days
 v044 |	Income inequality
 v045 |	Sexually transmitted infections
 v125 |	Air pollution - particulate matter
 v127 |	Premature age-adjusted mortality
-v128 |	Child mortality (caution: lots of missing data)
-v129 |  Infant mortality (caution: lots of missing data)
 v133 |	Food environment index
 v135 |	Injury deaths
-v138 |  Drug overdose deaths (caution: lots of missing data)
 v140 |	Social associations
-v141 |  Residential segregation - Black/White (pick v141 or v142, see note)
-v142 |  Residential segregation - non-White/White (pick v141 or v142, see note)
 v147 |	Life expectancy
-v148 |	Firearm fatalities (caution: substantial missing data)
 v151 |  Gender pay gap
 v156 |	Traffic volume
-v158 |  Juvenile arrests (caution: lots of missing data)
-v159 |	Reading scores
-v160 |	Math scores (caution: substantial missing data)
-v161 |	Suicides (caution: substantial missing data)
-v167 |  School segregation (index from 0-1 with no units of measurement)
 v169 |  School funding adequacy (gap measured in dollars per pupil)
-v172 |  Childcare centers per 1000 population under 5 years old
-v173 |  COVID-19 age-adjusted mortality (caution: substantial missing data)
 
-- Note that variable `v141` has more missing data than `v142`, should you be trying to choose between them.
 - For any variable you select, be sure that it has at least 75% complete data across the counties in your selected states, and within each state you have selected.
 
 # Task 4. Create factors for two of the five variables you chose in Task 2

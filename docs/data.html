@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="431 Staff">
-<meta name="dcterms.date" content="2023-08-11">
+<meta name="dcterms.date" content="2023-08-15">
 
 <title>431 Project A - Project A Data</title>
 <style>
@@ -168,22 +168,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#this-material-is-under-revision.-please-ignore-it-for-now-until-new-material-is-posted." id="toc-this-material-is-under-revision.-please-ignore-it-for-now-until-new-material-is-posted." class="nav-link active" data-scroll-target="#this-material-is-under-revision.-please-ignore-it-for-now-until-new-material-is-posted.">This material is under revision. Please ignore it for now, until new material is posted.</a></li>
   <li><a href="#what-data-will-i-use" id="toc-what-data-will-i-use" class="nav-link" data-scroll-target="#what-data-will-i-use">What Data Will I Use?</a></li>
-  <li><a href="#developing-the-data-overview" id="toc-developing-the-data-overview" class="nav-link" data-scroll-target="#developing-the-data-overview">Developing the Data: Overview</a></li>
-  <li><a href="#task-1.-ingest-the-raw-data-into-chr_2023_raw" id="toc-task-1.-ingest-the-raw-data-into-chr_2023_raw" class="nav-link" data-scroll-target="#task-1.-ingest-the-raw-data-into-chr_2023_raw">Task 1. Ingest the raw data into <code>chr_2023_raw</code></a></li>
-  <li><a href="#task-2.-filter-your-data-to-the-counties-in-the-states-youve-chosen" id="toc-task-2.-filter-your-data-to-the-counties-in-the-states-youve-chosen" class="nav-link" data-scroll-target="#task-2.-filter-your-data-to-the-counties-in-the-states-youve-chosen">Task 2. Filter your data to the counties in the states you’ve chosen</a>
+  <li><a href="#developing-the-data-overview-of-your-seven-tasks" id="toc-developing-the-data-overview-of-your-seven-tasks" class="nav-link" data-scroll-target="#developing-the-data-overview-of-your-seven-tasks">Developing the Data: Overview of Your Seven Tasks</a></li>
+  <li><a href="#task-1.-ingest-the-raw-data-into-chr_2023_raw-then-filter-to-ranked-counties" id="toc-task-1.-ingest-the-raw-data-into-chr_2023_raw-then-filter-to-ranked-counties" class="nav-link" data-scroll-target="#task-1.-ingest-the-raw-data-into-chr_2023_raw-then-filter-to-ranked-counties">Task 1. Ingest the raw data into <code>chr_2023_raw</code>, then filter to ranked counties</a></li>
+  <li><a href="#task-2.-filter-your-data-to-the-300-500-counties-in-six-states-including-ohio" id="toc-task-2.-filter-your-data-to-the-300-500-counties-in-six-states-including-ohio" class="nav-link" data-scroll-target="#task-2.-filter-your-data-to-the-300-500-counties-in-six-states-including-ohio">Task 2. Filter your data to the 300-500 counties in six states (including Ohio)</a>
   <ul class="collapse">
-  <li><a href="#states-you-are-permitted-to-select" id="toc-states-you-are-permitted-to-select" class="nav-link" data-scroll-target="#states-you-are-permitted-to-select">States You Are Permitted to Select</a></li>
-  <li><a href="#additional-task-2-notes" id="toc-additional-task-2-notes" class="nav-link" data-scroll-target="#additional-task-2-notes">Additional Task 2 Notes</a></li>
+  <li><a href="#states-you-can-select" id="toc-states-you-can-select" class="nav-link" data-scroll-target="#states-you-can-select">States You Can Select</a></li>
   </ul></li>
-  <li><a href="#task-3.-select-five-variables-add-four-required-ones-and-clean-up-chr_2023" id="toc-task-3.-select-five-variables-add-four-required-ones-and-clean-up-chr_2023" class="nav-link" data-scroll-target="#task-3.-select-five-variables-add-four-required-ones-and-clean-up-chr_2023">Task 3. Select five variables, add four required ones, and clean up <code>chr_2023</code></a>
+  <li><a href="#task-3.-add-five-selected-measures-to-four-required-variables-and-clean-up-chr_2023" id="toc-task-3.-add-five-selected-measures-to-four-required-variables-and-clean-up-chr_2023" class="nav-link" data-scroll-target="#task-3.-add-five-selected-measures-to-four-required-variables-and-clean-up-chr_2023">Task 3. Add five selected measures to four required variables and clean up <code>chr_2023</code></a>
   <ul class="collapse">
-  <li><a href="#the-84-variables-you-must-select-five-from" id="toc-the-84-variables-you-must-select-five-from" class="nav-link" data-scroll-target="#the-84-variables-you-must-select-five-from">The 84 variables you must select five from</a></li>
+  <li><a href="#select-five-of-these-50-variables" id="toc-select-five-of-these-50-variables" class="nav-link" data-scroll-target="#select-five-of-these-50-variables">Select five of these 50 variables</a></li>
   <li><a href="#some-important-notes-for-task-3" id="toc-some-important-notes-for-task-3" class="nav-link" data-scroll-target="#some-important-notes-for-task-3">Some important notes for Task 3</a></li>
-  <li><a href="#caution-some-variables-have-lots-of-missing-data" id="toc-caution-some-variables-have-lots-of-missing-data" class="nav-link" data-scroll-target="#caution-some-variables-have-lots-of-missing-data">Caution: Some Variables have Lots of Missing Data</a></li>
   </ul></li>
   <li><a href="#how-to-clean-your-selected-variables" id="toc-how-to-clean-your-selected-variables" class="nav-link" data-scroll-target="#how-to-clean-your-selected-variables">How To Clean Your Selected Variables</a>
   <ul class="collapse">
-  <li><a href="#the-binary-category" id="toc-the-binary-category" class="nav-link" data-scroll-target="#the-binary-category">The Binary Category</a></li>
   <li><a href="#ratios-that-need-converting" id="toc-ratios-that-need-converting" class="nav-link" data-scroll-target="#ratios-that-need-converting">Ratios That Need Converting</a></li>
   <li><a href="#variables-that-should-be-rescaled" id="toc-variables-that-should-be-rescaled" class="nav-link" data-scroll-target="#variables-that-should-be-rescaled">Variables that should be rescaled</a></li>
   <li><a href="#variables-that-are-proportions-should-be-converted-to-percentages" id="toc-variables-that-are-proportions-should-be-converted-to-percentages" class="nav-link" data-scroll-target="#variables-that-are-proportions-should-be-converted-to-percentages">Variables that are Proportions should be converted to Percentages</a></li>
@@ -228,7 +225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2023-08-11</p>
+      <p class="date">2023-08-15</p>
     </div>
   </div>
   
@@ -243,37 +240,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="what-data-will-i-use" class="level1">
 <h1>What Data Will I Use?</h1>
-<p>Your Project A will use the 2023 version of the analytic data from County Health Rankings (<strong>CHR</strong>). You have already seen some versions of CHR data from prior years in our Labs, but you’ll create and clean a new data set of your own for Project A.</p>
-<ul>
-<li>The key elements we’ll use are in the <a href="https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation">Rankings Data &amp; Documentation section</a>, specifically the National Data &amp; Documentation section site for the <strong>2023 County Health Rankings</strong>.
-<ul>
-<li>Do not use data from previous editions of the CHR, and do not use the trends data available on their website for this project.</li>
-</ul></li>
-</ul>
-<p>Specifically, you’ll need three files:</p>
+<p>Your Project A will use the 2023 version of the analytic data from <a href="https://www.countyhealthrankings.org/">County Health Rankings</a> (<strong>CHR 2023</strong>). Some prior CHR data has been part of our Labs, but you’ll obtain, clean and manage a new data set for Project A.</p>
+<p>The key elements we’ll use are all found in the <a href="https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation">Rankings Data &amp; Documentation section</a>, specifically the National Data &amp; Documentation section site for the 2023 County Health Rankings. Do not use data from previous editions of the CHR, and do not use the trends data available for Project A. Specifically, you’ll need to download three files in order to get and use the data:</p>
 <ul>
 <li><a href="https://www.countyhealthrankings.org/sites/default/files/media/document/analytic_data2023_0.csv">the 2023 CHR CSV Analytic Data</a> (a .csv file)</li>
 <li><a href="https://www.countyhealthrankings.org/sites/default/files/media/document/2023%20Analytic%20Documentation.pdf">the 2023 CHR CSV/SAS Analytic Data Documentation</a> file (PDF), and</li>
 <li><a href="https://www.countyhealthrankings.org/sites/default/files/media/document/2023%20Data%20Dictionary%20%28PDF%29.pdf">the 2023 Data Dictionary</a> (PDF)</li>
 </ul>
-<p>You’ll wind up selecting five measures, which you’ll also need to look up at <a href="https://www.countyhealthrankings.org/explore-health-rankings/county-health-rankings-measures">this CHR 2023 Measures link</a> for further details, including who created the measure, how it is measured, and when it was measured.</p>
+<p>In addition, when building the Codebook in Data Task 6 below, you’ll use <a href="https://www.countyhealthrankings.org/explore-health-rankings/county-health-rankings-measures">this CHR 2023 Measures link</a> to obtain further details on the variables you select.</p>
 </section>
-<section id="developing-the-data-overview" class="level1">
-<h1>Developing the Data: Overview</h1>
-<p>Obtaining and cleaning your data takes a little while, but you can start right now. There are seven main tasks to complete. You will create a clean tibble containing 300-500 rows (counties) and eight variables, and then present the data, a codebook and some brief summaries, by following the steps below. Detailed instructions follow this overview.</p>
+<section id="developing-the-data-overview-of-your-seven-tasks" class="level1">
+<h1>Developing the Data: Overview of Your Seven Tasks</h1>
+<p>Obtaining and cleaning your data takes a little while, but you can start at any time. First, in broad terms, here are the seven data tasks you need to complete in order to build your Project A Proposal.</p>
 <ol type="1">
-<li>Ingest the data into a raw tibble in R called <code>chr_2023_raw</code>, carefully.</li>
-<li>Select the states (5 other than plus Ohio) that you want to study, creating a new <code>chr_2023</code> tibble that contains only the counties from those states, carefully.</li>
-<li>Select nine variables (4 we’ll specify and 5 more you’ll select), rename them in useful ways, clean up problems, and then save this smaller tibble as <code>chr_2023</code>.</li>
-<li>Create a new binary factor (categorical variable) from one of your 5 selected variables from the previous task, and add it to <code>chr_2023</code> so you now have 10 variables.</li>
-<li>Save the resulting <code>chr_2023</code> tibble, and share it with us in your Proposal.</li>
-<li>Create a codebook for your <code>chr_2023</code> tibble which briefly but sufficiently describes your selected variables and counties.</li>
-<li>Print your <code>chr_2023</code> tibble (to prove it is a tibble) and then provide a modest set of appropriate numerical summaries of each of your five selected variables.</li>
+<li>Ingest the raw data from CHR 2023 into a tibble in R called <code>chr_2023_raw</code>, then filter these raw data to only the counties actually ranked by CHR.</li>
+<li>In addition to Ohio, select five more states (from the 39 others with at least 20 ranked counties) to study, so that you wind up with at least 300 and no more than 500 counties in your study. Create a new <code>chr_2023</code> tibble that contains only the counties from your chosen six states (including Ohio).</li>
+<li>Reduce your data to a selection of nine variables (4 we specify below and 5 more you’ll select from a list we provide), rename them in helpful ways, clean up problems, then save this smaller tibble as <code>chr_2023</code>.</li>
+<li>Create a new binary factor (categorical variable) from one of the 5 variables you selected in the previous task, and add it to <code>chr_2023</code> so it now contains 10 variables.</li>
+<li>Save the resulting <code>chr_2023</code> tibble as an R data set, and you will share this new <code>.Rds</code> file with us as part of your Proposal.</li>
+<li>Create a codebook for your <code>chr_2023</code> tibble which briefly but sufficiently describes your selected variables and counties. This will also form part of your Proposal.</li>
+<li>Print your <code>chr_2023</code> tibble (to prove it is a tibble) and then provide a modest set of appropriate numerical summaries describing your data. This, too, will form part of your Proposal.</li>
 </ol>
-<p>Here are some key additional details for each step of this process. - Please refer to Dr.&nbsp;Love’s materials in the rest of these Project A Instructions, particularly in the Examples &amp; Tips section for more help.</p>
 </section>
-<section id="task-1.-ingest-the-raw-data-into-chr_2023_raw" class="level1">
-<h1>Task 1. Ingest the raw data into <code>chr_2023_raw</code></h1>
+<section id="task-1.-ingest-the-raw-data-into-chr_2023_raw-then-filter-to-ranked-counties" class="level1">
+<h1>Task 1. Ingest the raw data into <code>chr_2023_raw</code>, then filter to ranked counties</h1>
 <p>Begin an R Project just for Project A, and create a Quarto file within that project where you will do your data development work. Working from a template, or from your own best understanding of what works well for you, start by loading the packages you’ll need, including the <code>tidyverse</code> and any other packages you plan to use.</p>
 <p>You’ll use <code>read_csv()</code> to ingest your raw <code>.csv</code> file into R and call the resulting tibble <strong>chr_2023_raw</strong>. But as you do this, you’ll need to remove the top row from the .csv within your R code. You should probably look at the raw .csv in Excel or another spreadsheet system so that you know why we need to do this.</p>
 <p>To accomplish this, use the <code>skip = 1</code> command within your <code>read_csv()</code>. Sample code follows:</p>
@@ -284,126 +274,354 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>chr_2023_raw <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(data_url, <span class="at">skip =</span> <span class="dv">1</span>, <span class="at">guess_max =</span> <span class="dv">4000</span>,</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                         <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>You should at this point have a <code>chr_2023_raw</code> tibble with 3194 rows (observations) and 720 columns (variables).</p>
-<p>You should now write code to restrict the <code>chr_2023_raw</code> data to only include the <strong>3082</strong> rows which have “county_ranked” values of 1, since the other rows will not be used by us in this project.</p>
+<p>This code should create a <code>chr_2023_raw</code> tibble with 3194 rows (observations) and 720 columns (variables).</p>
+<p>To complete Task 1, write code to restrict the <code>chr_2023_raw</code> data to include only the <strong>3082</strong> rows which have “county_ranked” values of 1, since the other rows will not be used by us in this project.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We strongly encourage you to use the <code>filter()</code> function from the <code>dplyr</code> package in the <code>tidyverse</code> to include only the counties ranked by CHR.</p>
+</div>
+</div>
+<p>At the end of Task 1, your <code>chr_2023_raw</code> tibble should have 3082 rows (counties) and 720 columns (variables).</p>
 </section>
-<section id="task-2.-filter-your-data-to-the-counties-in-the-states-youve-chosen" class="level1">
-<h1>Task 2. Filter your data to the counties in the states you’ve chosen</h1>
-<p>Now we’ll filter the <strong>chr_2023_raw</strong> data containing 3082 rows and 720 columns to a new tibble called <code>chr_2023</code> which contains the 300-500 rows (counties) you will actually study in your project. Each row you’ll keep should have a <code>county_ranked</code> value of 1, as we’ve ensured at the end of Task 1. To go from 3082 counties to our final sample, you will need to select 4-6 states, including Ohio.</p>
-<p>Your selection must include:</p>
+<section id="task-2.-filter-your-data-to-the-300-500-counties-in-six-states-including-ohio" class="level1">
+<h1>Task 2. Filter your data to the 300-500 counties in six states (including Ohio)</h1>
+<p>Now we’ll filter the <code>chr_2023_raw</code> data into a new tibble called <strong>chr_2023</strong> which contains the 300-500 rows (counties) you will actually study in your project.</p>
+<p>Your selection must include six states, including:</p>
 <ul>
 <li>the 88 counties of Ohio, and</li>
-<li>all of the counties in five additional states in the US</li>
+<li>all of the counties in <strong>five</strong> additional US states</li>
 </ul>
-<p>The number of counties (which have <code>county_ranked</code> values of 1) associated with each state (specified using its two-letter postal abbreviation code) is listed below, for your convenience.</p>
-<ul>
-<li>Do not include any of the six “states” (District of Columbia, Connecticut, Delaware, Hawaii, New Hampshire and Rhode Island) with fewer than 12 counties.</li>
-</ul>
-<section id="states-you-are-permitted-to-select" class="level2">
-<h2 class="anchored" data-anchor-id="states-you-are-permitted-to-select">States You Are Permitted to Select</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>chr_2023_raw <span class="sc">|&gt;</span> <span class="fu">count</span>(statecode, state) <span class="sc">|&gt;</span> <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">12</span>) <span class="sc">|&gt;</span> <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<pre><code># A tibble: 45 × 3
-   statecode state     n
-   &lt;chr&gt;     &lt;chr&gt; &lt;int&gt;
- 1 01        AL       67
- 2 02        AK       24
- 3 04        AZ       15
- 4 05        AR       75
- 5 06        CA       58
- 6 08        CO       59
- 7 12        FL       67
- 8 13        GA      159
- 9 16        ID       43
-10 17        IL      102
-11 18        IN       92
-12 19        IA       99
-13 20        KS      104
-14 21        KY      120
-15 22        LA       64
-16 23        ME       16
-17 24        MD       24
-18 25        MA       14
-19 26        MI       83
-20 27        MN       87
-21 28        MS       82
-22 29        MO      115
-23 30        MT       47
-24 31        NE       79
-25 32        NV       16
-26 34        NJ       21
-27 35        NM       32
-28 36        NY       62
-29 37        NC      100
-30 38        ND       48
-31 39        OH       88  ## note: must be selected
-32 40        OK       77
-33 41        OR       35
-34 42        PA       67
-35 45        SC       46
-36 46        SD       61
-37 47        TN       95
-38 48        TX      244
-39 49        UT       28
-40 50        VT       14
-41 51        VA      133
-42 53        WA       39
-43 54        WV       55
-44 55        WI       72
-45 56        WY       23</code></pre>
-<p>So, including <code>OH</code>, you will need a total of 300-500 counties, from 6 states. For example,</p>
-<ul>
-<li>one possible combination would be <code>PA</code> (67), <code>NY</code> (62), <code>NJ</code> (21), <code>OR</code> (35) and <code>UT</code> (28) in addition to <code>OH</code> (88) yielding 301 counties in 6 states.</li>
-<li>another combination would be <code>TX</code> (244), <code>CA</code> (58), <code>MD</code> (24), <code>NV</code> (16) and <code>FL</code> (67) in addition to <code>OH</code> (88) yielding 497 counties in 6 states.</li>
-</ul>
-<p>After making your selection, and applying it, you should have a tibble called <code>chr_2023</code> which contains 300-500 rows, and 720 columns. In Task 3, we’ll cut down those columns.</p>
-</section>
-<section id="additional-task-2-notes" class="level2">
-<h2 class="anchored" data-anchor-id="additional-task-2-notes">Additional Task 2 Notes</h2>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
-<li>Choose your subset of states with the knowledge in mind that some variables in the CHR data are not available for some counties, and that each state you select must have more than 12 counties.</li>
-<li>You should have some reason for selecting the states that you do, and you will need to describe that reason in a complete sentence or two in your proposal and your final report.</li>
-<li>Don’t forget to filter the rows at the end of Task 1 so that only those rows with <code>county_ranked</code> values of 1 are included. Otherwise, your counts won’t match those shown above, and you’ll have lots of problems.</li>
+<li><p>You will write a sentence or two in your Proposal describing the reason for your selections, so you should have one.</p></li>
+<li><p>Don’t forget to filter in Task 1 so that only those rows with <code>county_ranked</code> values of 1 are included. Otherwise, your counts won’t match those shown in the table below.</p></li>
+<li><p>The table excludes Arizona, Connecticut, Delaware, District of Columbia, Hawaii, Maine, Massachusetts, Nevada, New Hampshire, Rhode Island and Vermont because they have fewer than 20 ranked counties.</p></li>
 </ol>
-</section>
-</section>
-<section id="task-3.-select-five-variables-add-four-required-ones-and-clean-up-chr_2023" class="level1">
-<h1>Task 3. Select five variables, add four required ones, and clean up <code>chr_2023</code></h1>
-<p>Next, you will identify variables from the your existing <code>chr_2023</code> tibble describing your selected sample of counties to include only nine variables (columns) instead of the 725 you should have at the start of Task 3. These nine variables must include:</p>
+</div>
+</div>
+<section id="states-you-can-select" class="level2">
+<h2 class="anchored" data-anchor-id="states-you-can-select">States You Can Select</h2>
+<p>The number of counties (with <code>county_ranked</code> values of 1) in each state (specified using its two-digit FIPS code and two-letter postal abbreviation) is listed below, for your convenience.</p>
+<table class="table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 11%">
+<col style="width: 10%">
+<col style="width: 22%">
+<col style="width: 6%">
+<col style="width: 11%">
+<col style="width: 8%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;"><code>statecode</code></th>
+<th style="text-align: right;"><code>state</code></th>
+<th style="text-align: right;">ranked <br> counties</th>
+<th>State <br> Name</th>
+<th style="text-align: right;"><code>statecode</code></th>
+<th style="text-align: right;"><code>state</code></th>
+<th style="text-align: right;">ranked <br> counties</th>
+<th>State <br> Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><code>01</code></td>
+<td style="text-align: right;">AL</td>
+<td style="text-align: right;">67</td>
+<td>Alabama</td>
+<td style="text-align: right;"><code>31</code></td>
+<td style="text-align: right;">NE</td>
+<td style="text-align: right;">79</td>
+<td>Nebraska</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><code>02</code></td>
+<td style="text-align: right;">AK</td>
+<td style="text-align: right;">24</td>
+<td>Alaska</td>
+<td style="text-align: right;"><code>34</code></td>
+<td style="text-align: right;">NJ</td>
+<td style="text-align: right;">21</td>
+<td>New Jersey</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><code>05</code></td>
+<td style="text-align: right;">AR</td>
+<td style="text-align: right;">75</td>
+<td>Arkansas</td>
+<td style="text-align: right;"><code>35</code></td>
+<td style="text-align: right;">NM</td>
+<td style="text-align: right;">32</td>
+<td>New Mexico</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><code>06</code></td>
+<td style="text-align: right;">CA</td>
+<td style="text-align: right;">58</td>
+<td>California</td>
+<td style="text-align: right;"><code>36</code></td>
+<td style="text-align: right;">NY</td>
+<td style="text-align: right;">62</td>
+<td>New York</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><code>08</code></td>
+<td style="text-align: right;">CO</td>
+<td style="text-align: right;">59</td>
+<td>Colorado</td>
+<td style="text-align: right;"><code>37</code></td>
+<td style="text-align: right;">NC</td>
+<td style="text-align: right;">100</td>
+<td>North Carolina</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><code>12</code></td>
+<td style="text-align: right;">FL</td>
+<td style="text-align: right;">67</td>
+<td>Florida</td>
+<td style="text-align: right;"><code>38</code></td>
+<td style="text-align: right;">ND</td>
+<td style="text-align: right;">48</td>
+<td>North Dakota</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><code>13</code></td>
+<td style="text-align: right;">GA</td>
+<td style="text-align: right;">159</td>
+<td>Georgia</td>
+<td style="text-align: right;"><code>39</code></td>
+<td style="text-align: right;"><strong>OH</strong></td>
+<td style="text-align: right;"><strong>88</strong></td>
+<td><strong>Ohio</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><code>16</code></td>
+<td style="text-align: right;">ID</td>
+<td style="text-align: right;">43</td>
+<td>Idaho</td>
+<td style="text-align: right;"><code>40</code></td>
+<td style="text-align: right;">OK</td>
+<td style="text-align: right;">77</td>
+<td>Oklahoma</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><code>17</code></td>
+<td style="text-align: right;">IL</td>
+<td style="text-align: right;">102</td>
+<td>Illinois</td>
+<td style="text-align: right;"><code>41</code></td>
+<td style="text-align: right;">OR</td>
+<td style="text-align: right;">35</td>
+<td>Oregon</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><code>18</code></td>
+<td style="text-align: right;">IN</td>
+<td style="text-align: right;">92</td>
+<td>Indiana</td>
+<td style="text-align: right;"><code>42</code></td>
+<td style="text-align: right;">PA</td>
+<td style="text-align: right;">67</td>
+<td>Pennsylvania</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><code>19</code></td>
+<td style="text-align: right;">IA</td>
+<td style="text-align: right;">99</td>
+<td>Iowa</td>
+<td style="text-align: right;"><code>45</code></td>
+<td style="text-align: right;">SC</td>
+<td style="text-align: right;">46</td>
+<td>South Carolina</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><code>20</code></td>
+<td style="text-align: right;">KS</td>
+<td style="text-align: right;">104</td>
+<td>Kansas</td>
+<td style="text-align: right;"><code>46</code></td>
+<td style="text-align: right;">SD</td>
+<td style="text-align: right;">61</td>
+<td>South Dakota</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><code>21</code></td>
+<td style="text-align: right;">KY</td>
+<td style="text-align: right;">120</td>
+<td>Kentucky</td>
+<td style="text-align: right;"><code>47</code></td>
+<td style="text-align: right;">TN</td>
+<td style="text-align: right;">95</td>
+<td>Tennessee</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><code>22</code></td>
+<td style="text-align: right;">LA</td>
+<td style="text-align: right;">64</td>
+<td>Louisiana</td>
+<td style="text-align: right;"><code>48</code></td>
+<td style="text-align: right;">TX</td>
+<td style="text-align: right;">244</td>
+<td>Texas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><code>24</code></td>
+<td style="text-align: right;">MD</td>
+<td style="text-align: right;">24</td>
+<td>Maryland</td>
+<td style="text-align: right;"><code>49</code></td>
+<td style="text-align: right;">UT</td>
+<td style="text-align: right;">28</td>
+<td>Utah</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><code>26</code></td>
+<td style="text-align: right;">MI</td>
+<td style="text-align: right;">83</td>
+<td>Michigan</td>
+<td style="text-align: right;"><code>51</code></td>
+<td style="text-align: right;">VA</td>
+<td style="text-align: right;">133</td>
+<td>Virginia</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><code>27</code></td>
+<td style="text-align: right;">MN</td>
+<td style="text-align: right;">87</td>
+<td>Minnesota</td>
+<td style="text-align: right;"><code>53</code></td>
+<td style="text-align: right;">WA</td>
+<td style="text-align: right;">39</td>
+<td>Washington</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><code>28</code></td>
+<td style="text-align: right;">MS</td>
+<td style="text-align: right;">82</td>
+<td>Mississippi</td>
+<td style="text-align: right;"><code>54</code></td>
+<td style="text-align: right;">WV</td>
+<td style="text-align: right;">55</td>
+<td>West Virginia</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><code>29</code></td>
+<td style="text-align: right;">MO</td>
+<td style="text-align: right;">115</td>
+<td>Missouri</td>
+<td style="text-align: right;"><code>55</code></td>
+<td style="text-align: right;">WI</td>
+<td style="text-align: right;">72</td>
+<td>Wisconsin</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><code>30</code></td>
+<td style="text-align: right;">MT</td>
+<td style="text-align: right;">47</td>
+<td>Montana</td>
+<td style="text-align: right;"><code>56</code></td>
+<td style="text-align: right;">WY</td>
+<td style="text-align: right;">23</td>
+<td>Wyoming</td>
+</tr>
+</tbody>
+</table>
+<p>Select six states (including <code>OH</code>) yielding a total of 300-500 counties.</p>
 <ul>
-<li>the five-digit fips code for the county, which will be a convenient ID variable, which is called <code>fipscode</code> in the raw data.</li>
-<li>the name of the county, which will be useful for labeling and identifying the counties, and which is called <code>county</code> in the raw data.</li>
-<li>the <code>state</code>, which will be a multi-categorical (with 4-6 categories) variable</li>
-<li>the <code>county_ranked</code> variable, which tells us whether the row should be included in our data (all of the rows you include in your data should have <code>county_ranked == 1</code>)</li>
-<li>followed by five variables you select from the 84 variables in the raw CHR data set that we have listed below.
-<ul>
-<li>Each of these must be of the form <code>vXXX_rawvalue</code> (note: to select the entire group of 86 variables, you might try <code>select(ends_with("rawvalue"))</code> as part of a pipe.)</li>
-<li>Note that we have not included two of these 86 in our list below of the 84 variables you can choose from.</li>
-</ul></li>
+<li>For example, one possible combination would be <code>ID</code> (43), <code>OR</code> (35), <code>MT</code> (47), <code>ND</code> (48) and <code>WA</code> (39) with <code>OH</code> (88) yielding exactly 300 counties.</li>
+<li>another possibility would be <code>GA</code> (159), <code>CA</code> (58), <code>FL</code> (67), <code>NC</code> (100) and <code>UT</code> (28) with <code>OH</code> (88) yielding exactly 500 counties.</li>
 </ul>
-<section id="the-84-variables-you-must-select-five-from" class="level2">
-<h2 class="anchored" data-anchor-id="the-84-variables-you-must-select-five-from">The 84 variables you must select five from</h2>
-<p>You must select your five variables from the 84 variables in the raw (.csv) data file listed below. We show them here in the order in which they appear in the raw file. The listing “v001” in this table actually refers to the variable named “<strong>v001_rawvalue</strong>”.</p>
+<p>After making your selection, and filtering the data, you should have a tibble called <code>chr_2023</code> which contains all of the 300-500 counties in your six states, and 720 columns.</p>
+</section>
+</section>
+<section id="task-3.-add-five-selected-measures-to-four-required-variables-and-clean-up-chr_2023" class="level1">
+<h1>Task 3. Add five selected measures to four required variables and clean up <code>chr_2023</code></h1>
+<p>Next, you will identify variables from the your existing <code>chr_2023</code> tibble describing your selected sample of counties.</p>
+<p>In particular, you will select exactly nine variables (columns) from the 720 you should have at the start of Task 3. These nine variables must include the following four:</p>
+<table class="table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 83%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Variable <br> Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><code>fipscode</code></td>
+<td>the five-digit FIPS code for the county, which will be a convenient ID variable that is distinct for each row in your tibble</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><code>county</code></td>
+<td>the name of the county, which will be useful for labeling and identifying the counties</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><code>state</code></td>
+<td>a multi-categorical (with 6 levels) variable of two-letter postal abbreviations for your six selected states</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><code>county_ranked</code></td>
+<td>tells us whether the row should be included in our data <br> (all rows should have <code>county_ranked == 1</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>This set of four variables will then be followed by five variables that you will select from among the 50 listed below.</p>
+<ul>
+<li>Each of these must be of the form <code>vXXX_rawvalue</code> (note: to select the entire group of raw value variables, you might try <code>select(ends_with("rawvalue"))</code> as part of a pipe.)</li>
+<li>There are many <code>vXXX_rawvalue</code> variables in the CHR data which we don’t include in the list below, usually because of substantial missing data.</li>
+</ul>
+<section id="select-five-of-these-50-variables" class="level2">
+<h2 class="anchored" data-anchor-id="select-five-of-these-50-variables">Select five of these 50 variables</h2>
+<p>You must select your five variables from the 50 variables listed below. We show them here in the order in which they appear in the raw file. The listing “v001” in this table actually refers to the variable named “<strong>v001_rawvalue</strong>”.</p>
 <pre><code> [1] "v001" "v002" "v036" "v042" "v037" "v009" "v011" "v133" "v070" "v132"
-[11] "v049" "v134" "v045" "v014" "v085" "v004" "v088" "v062" "v005" "v050"
-[21] "v155" "v168" "v069" "v023" "v024" "v044" "v082" "v140" "v043" "v135"
-[31] "v125" "v124" "v136" "v067" "v137" "v173" "v147" "v127" "v128" "v129"
-[41] "v144" "v145" "v060" "v061" "v139" "v083" "v138" "v039" "v143" "v003"
-[51] "v122" "v021" "v149" "v159" "v160" "v167" "v169" "v151" "v063" "v065"
-[61] "v141" "v142" "v171" "v172" "v015" "v161" "v148" "v158" "v156" "v153"
-[71] "v154" "v166" "v051" "v052" "v053" "v054" "v055" "v081" "v080" "v056"
-[81] "v126" "v059" "v057" "v058"</code></pre>
+[11] "v049" "v134" "v045" "v085" "v004" "v088" "v005" "v050" "v155" "v168"
+[21] "v023" "v024" "v044" "v140" "v135" "v125" "v136" "v067" "v147" "v127"
+[31] "v060" "v139" "v083" "v143" "v169" "v151" "v063" "v177" "v178" "v156" 
+[41] "v153" "v154" "v166" "v053" "v054" "v056" "v126" "v059" "v057" "v058"</code></pre>
 <p>For example, <code>v001_rawvalue</code> shows the raw values for the premature death measure. If you select this variable, it is up to you to use the documentation in the two PDF files I have linked to, as well as the information on the County Health Rankings website, to get a reasonable understanding of what the variable measures, and how it was collected.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>The <a href="https://www.countyhealthrankings.org/sites/default/files/media/document/2023%20Analytic%20Documentation.pdf">2023 CHR Analytic Data Documentation</a> file (PDF), and the <a href="https://www.countyhealthrankings.org/sites/default/files/media/document/DataDictionary_2023.pdf">2023 Data Dictionary</a> file (also PDF) are crucial here, as those are the ones that explain what the available variables mean, and how they should be labeled.</p>
-<p>As noted below, you will also need look up each measure you wind up selecting to learn more about it at <a href="https://www.countyhealthrankings.org/2023-measures">this CHR 2023 Measures link</a>.</p>
+<p>In building your codebook, you will also need look up each measure you select at <a href="https://www.countyhealthrankings.org/2023-measures">this CHR 2023 Measures link</a>.</p>
+</div>
+</div>
 </section>
 <section id="some-important-notes-for-task-3" class="level2">
 <h2 class="anchored" data-anchor-id="some-important-notes-for-task-3">Some important notes for Task 3</h2>
 <ol type="1">
-<li><p>Be sure to read this entire Data page (especially the material on How to Clean Your Variables) before selecting your variables, so you are aware of some features of the data we disclose below.</p></li>
-<li><p>The five variables you select must be five different variables selected from the 84 variables listed above. Some variables in that set of 84 are better choices than others.</p></li>
-<li><p>Each variable you select should be of some interest to you on its own, in terms of either providing a health outcome of interest, or potentially providing useful information about a feature of the county that might relate to that health outcome. Your five selected quantitative variables, selected by you from the 84 available “raw value” CHR variables, will need be treated as follows:</p></li>
+<li><p>Be sure to read this entire Data page before selecting your variables, so you are aware of some features of the data we disclose below.</p></li>
+<li><p>The five variables you select must be five different variables selected from the variables listed above. Some variables in that set of 50 will lead to more straightforward analyses than others.</p></li>
+<li><p>Each variable you select should be of some interest to you on its own, in terms of either providing a health outcome of interest, or potentially providing useful information about a feature of the county that might relate to that health outcome. Your five selected quantitative variables, selected by you from the 50 available “raw value” CHR variables, will need be treated as follows:</p></li>
 </ol>
 <ul>
 <li>variable 1 will be treated as quantitative, and as an outcome of interest</li>
@@ -419,96 +637,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>the <code>state</code> will serve as another multi-categorical (with 4-6 categories) predictor of variable 1, so this will also be part of your tibble</li>
 </ul>
 <ol start="4" type="1">
-<li>Each of the five variables you select must have data for at least 75% of the counties in each state you plan to study. This is something you will have to check on, in R, and you’ll have to present the code, and demonstrate with complete English sentences that you’ve verified this. The use of a tool (or more than one) from the <code>naniar</code> package to do this checking is encouraged.</li>
-</ol>
-</section>
-<section id="caution-some-variables-have-lots-of-missing-data" class="level2">
-<h2 class="anchored" data-anchor-id="caution-some-variables-have-lots-of-missing-data">Caution: Some Variables have Lots of Missing Data</h2>
-<p>The variables listed below have more than 10% missing values across all 3082 ranked counties in the US. While you are welcome to use any of these variables, you may want to look elsewhere to avoid problems with the “minimum 75% complete data” requirement. (Note that variable <code>v170_rawvalue</code> is missing for all counties in the data so we don’t allow its use.)</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Variable</th>
-<th style="text-align: center;">Description</th>
-<th style="text-align: center;">% missing</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><code>v129_rawvalue</code></td>
-<td style="text-align: center;">infant mortality</td>
-<td style="text-align: center;">60.5</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>v149_rawvalue</code></td>
-<td style="text-align: center;">disconnected youth</td>
-<td style="text-align: center;">60.4</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><code>v015_rawvalue</code></td>
-<td style="text-align: center;">homicides</td>
-<td style="text-align: center;">57.0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>v138_rawvalue</code></td>
-<td style="text-align: center;">drug overdose deaths</td>
-<td style="text-align: center;">41.7</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><code>v128_rawvalue</code></td>
-<td style="text-align: center;">child mortality</td>
-<td style="text-align: center;">38.9</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>v158_rawvalue</code></td>
-<td style="text-align: center;">juvenile arrests</td>
-<td style="text-align: center;">37.3</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><code>v141_rawvalue</code></td>
-<td style="text-align: center;">residential segregation</td>
-<td style="text-align: center;">32.6</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>v148_rawvalue</code></td>
-<td style="text-align: center;">firearm fatalities</td>
-<td style="text-align: center;">26.3</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><code>v161_rawvalue</code></td>
-<td style="text-align: center;">suicides</td>
-<td style="text-align: center;">21.1</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>v021_rawvalue</code></td>
-<td style="text-align: center;">High School graduation</td>
-<td style="text-align: center;">19.5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><code>v173_rawvalue</code></td>
-<td style="text-align: center;">COVID-19 age-adjusted mortality</td>
-<td style="text-align: center;">16.8</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>v061_rawvalue</code></td>
-<td style="text-align: center;">HIV prevalence</td>
-<td style="text-align: center;">14.2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><code>v160_rawvalue</code></td>
-<td style="text-align: center;">Math scores</td>
-<td style="text-align: center;">12.8</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>v039_rawvalue</code></td>
-<td style="text-align: center;">Motor vehicle crash deaths</td>
-<td style="text-align: center;">12.7</td>
-</tr>
-</tbody>
-</table>
-<ol start="5" type="1">
+<li><p>Each of the five variables you select must have data for at least 75% of the counties in each state you plan to study. This is something you will have to check on, in R, and you’ll have to present the code, and demonstrate with complete English sentences that you’ve verified this. The use of a tool (or more than one) from the <code>naniar</code> package to do this checking is encouraged.</p></li>
 <li><p>The descriptions provided in these instructions associated with each variable are available as the first (deleted in R) row in the .csv file, and are also specified in the <a href="https://www.countyhealthrankings.org/sites/default/files/media/document/2023%20Analytic%20Documentation.pdf">2023 CHR Analytic Data Documentation</a> PDF file.</p></li>
-<li><p>Across your complete set of 4-6 selected states, the raw versions of each of your five selected variables must have at least <strong>ten</strong> distinct non-missing values. You’ll need to show R code to do this checking (the best choice is often <code>Hmisc::describe</code> since you’ll run that anyway), and you’ll need to demonstrate with a complete English sentence or two that you have checked this to be true.</p></li>
+<li><p>Across your complete set of 6 selected states, the raw versions of each of your five selected variables must have at least <strong>ten</strong> distinct non-missing values. You’ll need to show R code to do this checking (the best choice is often <code>Hmisc::describe()</code> since you’ll run that anyway), and you’ll need to demonstrate with a complete English sentence or two that you have checked this to be true.</p></li>
 </ol>
 </section>
 </section>
@@ -517,12 +648,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Find each of your five selected variables on one of the lists below.</p>
 <ul>
 <li>If you plan to use the variable as quantitative, do what is suggested below as part of your data development work, rename the variable appropriately, and use that version in your codebook.</li>
-<li>If you plan to use the variable as a categorical predictor, you should still make the appropriate change to the original quantitative version as indicated below.</li>
+<li>If you plan to use the variable as your categorical predictor, you should still make the appropriate change to the original quantitative version as indicated below.</li>
 </ul>
-<section id="the-binary-category" class="level2">
-<h2 class="anchored" data-anchor-id="the-binary-category">The Binary Category</h2>
-<p><code>v124</code> is about Drinking Water Violations, is the only binary (1 = Yes, 0 = No) variable in the data. (all other variables are quantitative.) You are permitted to use <code>v124</code> as your variable 4, if you like. <code>v124</code> may not be used as anything other than variable 4 in your work.</p>
-</section>
 <section id="ratios-that-need-converting" class="level2">
 <h2 class="anchored" data-anchor-id="ratios-that-need-converting">Ratios That Need Converting</h2>
 <p>These variables are specified as providers per population in the raw data file. You will want to take the reciprocal (1/raw value) to rescale the results in terms of population per provider, which should be much more interpretable.</p>
@@ -543,18 +670,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Primary care physicians</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">v062</td>
-<td style="text-align: left;">Mental health providers</td>
-</tr>
-<tr class="odd">
 <td style="text-align: right;">v088</td>
 <td style="text-align: left;">Dentists</td>
 </tr>
 </tbody>
 </table>
-<ul>
-<li>Note that we don’t allow the use of variable <code>v131</code> in Project A because of the large number of counties with very small numbers of these providers listed.</li>
-</ul>
 </section>
 <section id="variables-that-should-be-rescaled" class="level2">
 <h2 class="anchored" data-anchor-id="variables-that-should-be-rescaled">Variables that should be rescaled</h2>
@@ -578,19 +698,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Divide by 100 to represent losses per 1000 population</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">v051</td>
-<td style="text-align: left;">Population</td>
-<td style="text-align: left;">Either use log10(population), or divide population by 1000 to represent population in thousands.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">v061</td>
-<td style="text-align: left;">HIV prevalence</td>
-<td style="text-align: left;">Divide by 100 to represent cases per 1000 population (caution: substantial missing data)</td>
-</tr>
-<tr class="even">
 <td style="text-align: right;">v063</td>
 <td style="text-align: left;">Median household income</td>
-<td style="text-align: left;">Divide by 1000 to represent in thousands of dollars</td>
+<td style="text-align: left;">Divide by 1000 to represent income in thousands of dollars</td>
 </tr>
 </tbody>
 </table>
@@ -599,10 +709,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="variables-that-are-proportions-should-be-converted-to-percentages">Variables that are Proportions should be converted to Percentages</h2>
 <p>Each of the variables listed below are proportions (between 0 and 1). Before you use them in any analyses, please <strong>multiply them by 100</strong> in your data development (using mutate) to turn their values into percentages (between 0 and 100) and this will seriously ease the interpretation of slopes and transformations for these variables.</p>
 <table class="table">
-<colgroup>
-<col style="width: 8%">
-<col style="width: 91%">
-</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: right;">Code</th>
@@ -615,20 +721,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Poor or fair health</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">v003</td>
-<td style="text-align: left;">Uninsured adults (pick v003 or v085, but not both)</td>
-</tr>
-<tr class="odd">
 <td style="text-align: right;">v009</td>
 <td style="text-align: left;">Adult smoking</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: right;">v011</td>
 <td style="text-align: left;">Adult obesity</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">v021</td>
-<td style="text-align: left;">High school graduation (pick v021 or v168, but not both, see note)</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">v023</td>
@@ -651,20 +749,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Mammography screening</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">v052</td>
-<td style="text-align: left;">Proportion below 18 years of age</td>
+<td style="text-align: right;">v053</td>
+<td style="text-align: left;">Proportion ages 65 and older</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">v053</td>
-<td style="text-align: left;">Proportion 65 and older</td>
-</tr>
-<tr class="odd">
 <td style="text-align: right;">v054</td>
 <td style="text-align: left;">Proportion Non-Hispanic Black (see note below)</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">v055</td>
-<td style="text-align: left;">Proportion American Indian and Alaska Native (see note below)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">v056</td>
@@ -672,7 +762,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td style="text-align: right;">v057</td>
-<td style="text-align: left;">Proportion Females</td>
+<td style="text-align: left;">Proportion Female</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">v058</td>
@@ -687,44 +777,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Diabetes prevalence</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">v065</td>
-<td style="text-align: left;">Children eligible for free or reduced price lunch</td>
-</tr>
-<tr class="odd">
 <td style="text-align: right;">v067</td>
 <td style="text-align: left;">Driving alone to work</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">v069</td>
-<td style="text-align: left;">Some college</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">v070</td>
 <td style="text-align: left;">Physical inactivity</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">v080</td>
-<td style="text-align: left;">Proportion Native Hawaiian/Other Pacific Islander (see note below)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">v081</td>
-<td style="text-align: left;">Proportion Asian (see note below)</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">v082</td>
-<td style="text-align: left;">Children in single-parent households</td>
-</tr>
-<tr class="odd">
 <td style="text-align: right;">v083</td>
 <td style="text-align: left;">Limited access to healthy foods</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">v085</td>
-<td style="text-align: left;">Uninsured (pick v003 or v085, but not both)</td>
-</tr>
 <tr class="odd">
-<td style="text-align: right;">v122</td>
-<td style="text-align: left;">Uninsured children (pick v085 or v122, but not both)</td>
+<td style="text-align: right;">v085</td>
+<td style="text-align: left;">Uninsured</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">v126</td>
@@ -743,28 +809,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Severe housing problems</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">v137</td>
-<td style="text-align: left;">Long commute - driving alone</td>
-</tr>
-<tr class="odd">
 <td style="text-align: right;">v139</td>
 <td style="text-align: left;">Food insecurity</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: right;">v143</td>
 <td style="text-align: left;">Insufficient sleep</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">v144</td>
-<td style="text-align: left;">Frequent physical distress (pick v036 or v144, but not both)</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">v145</td>
-<td style="text-align: left;">Frequent mental distress (pick v042 or v145, but not both)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">v149</td>
-<td style="text-align: left;">Disconnected youth (caution: lots of missing data)</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">v153</td>
@@ -784,27 +834,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td style="text-align: right;">v168</td>
-<td style="text-align: left;">High school completion (pick v021 or v168, but not both, see note)</td>
+<td style="text-align: left;">High school completion</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">v171</td>
-<td style="text-align: left;">Childcare cost burden</td>
+<td style="text-align: right;">v177</td>
+<td style="text-align: left;">Voter turnout</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">v178</td>
+<td style="text-align: left;">Census Participation</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>If you are interested in studying race and ethnicity and their impact on a health outcome, these data aren’t particularly well suited to a detailed look. Instead we suggest using <code>v126</code> to incorporate this dimension as a predictor (or its inverse, 1 - <code>v126</code>), rather than including any of the other race/ethnicity variables, specifically <code>v053</code>, <code>v054</code>, <code>v055</code>, <code>v056</code>, <code>v080</code>, or <code>v081</code>. This is because there’s more variation in the <code>v126</code> data across the reported counties. Again, a serious look at the impact of race/ethnicity is beyond the scope of Project A.</li>
-<li>Note that variable <code>v021</code> generally has more missing data than <code>v168</code>, should you be trying to choose between them.</li>
+<li>A serious look at the impact of race/ethnicity is beyond the scope of Project A. If you are interested in studying race and ethnicity and their impact on a health outcome, we strongly suggest using <code>v126</code> to incorporate this dimension as a predictor (or its inverse, 1 - <code>v126</code>), rather than including the other race/ethnicity variables, specifically <code>v054</code> and <code>v056</code>. This is because there’s more variation in the <code>v126</code> data across the reported counties.</li>
 </ul>
 </section>
 <section id="variables-that-should-be-ok-as-is" class="level2">
 <h2 class="anchored" data-anchor-id="variables-that-should-be-ok-as-is">Variables that should be OK as is</h2>
 <p>The variables listed below should be useful as they are. Most of them are ratios, although a few are averages or indexes. The main issue for these variables is correctly specifying the units of measurement (note that the indexes don’t have units.)</p>
 <table class="table">
-<colgroup>
-<col style="width: 8%">
-<col style="width: 92%">
-</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: right;">Code</th>
@@ -817,28 +866,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Preventable hospital stays</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">v014</td>
-<td style="text-align: left;">Teen births</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">v015</td>
-<td style="text-align: left;">Homicide rate (caution: lots of missing data)</td>
-</tr>
-<tr class="even">
 <td style="text-align: right;">v036</td>
-<td style="text-align: left;">Poor physical health days (pick v036 or v144, but not both)</td>
+<td style="text-align: left;">Poor physical health days</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">v039</td>
-<td style="text-align: left;">Motor vehicle crash deaths (caution: substantial missing data)</td>
-</tr>
-<tr class="even">
 <td style="text-align: right;">v042</td>
-<td style="text-align: left;">Poor mental health days (pick v042 or v145, but not both)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">v043</td>
-<td style="text-align: left;">Violent crime</td>
+<td style="text-align: left;">Poor mental health days</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">v044</td>
@@ -857,14 +890,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Premature age-adjusted mortality</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">v128</td>
-<td style="text-align: left;">Child mortality (caution: lots of missing data)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">v129</td>
-<td style="text-align: left;">Infant mortality (caution: lots of missing data)</td>
-</tr>
-<tr class="even">
 <td style="text-align: right;">v133</td>
 <td style="text-align: left;">Food environment index</td>
 </tr>
@@ -873,28 +898,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Injury deaths</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">v138</td>
-<td style="text-align: left;">Drug overdose deaths (caution: lots of missing data)</td>
-</tr>
-<tr class="odd">
 <td style="text-align: right;">v140</td>
 <td style="text-align: left;">Social associations</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">v141</td>
-<td style="text-align: left;">Residential segregation - Black/White (pick v141 or v142, see note)</td>
-</tr>
 <tr class="odd">
-<td style="text-align: right;">v142</td>
-<td style="text-align: left;">Residential segregation - non-White/White (pick v141 or v142, see note)</td>
-</tr>
-<tr class="even">
 <td style="text-align: right;">v147</td>
 <td style="text-align: left;">Life expectancy</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">v148</td>
-<td style="text-align: left;">Firearm fatalities (caution: substantial missing data)</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">v151</td>
@@ -905,41 +914,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Traffic volume</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">v158</td>
-<td style="text-align: left;">Juvenile arrests (caution: lots of missing data)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">v159</td>
-<td style="text-align: left;">Reading scores</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">v160</td>
-<td style="text-align: left;">Math scores (caution: substantial missing data)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">v161</td>
-<td style="text-align: left;">Suicides (caution: substantial missing data)</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">v167</td>
-<td style="text-align: left;">School segregation (index from 0-1 with no units of measurement)</td>
-</tr>
-<tr class="odd">
 <td style="text-align: right;">v169</td>
 <td style="text-align: left;">School funding adequacy (gap measured in dollars per pupil)</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">v172</td>
-<td style="text-align: left;">Childcare centers per 1000 population under 5 years old</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">v173</td>
-<td style="text-align: left;">COVID-19 age-adjusted mortality (caution: substantial missing data)</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>Note that variable <code>v141</code> has more missing data than <code>v142</code>, should you be trying to choose between them.</li>
 <li>For any variable you select, be sure that it has at least 75% complete data across the counties in your selected states, and within each state you have selected.</li>
 </ul>
 </section>
