@@ -12,7 +12,8 @@ knitr::opts_chunk$set(comment = NA)
 
 # What is on this Website
 
-- The [Data page](data.qmd) contains information on the data you'll use, and on the required cleaning and development of your final project tibble. You'll need to complete these data management tasks to be ready to write the Proposal.
+- The [Data page](data.qmd) contains information on the data you'll use, and on the required cleaning and development of your final project tibble. 
+    - You'll need to complete these data management tasks to be ready to write the Proposal. Start this in **early September**.
 - The [Proposal page](proposal.qmd) describes the proposal, which you will submit in early October, according to the deadline on the [Course Calendar](https://thomaselove.github.io/431-2023/calendar.html). 
     - You will do all of the work for the Proposal in **September**.
 - The [Analyses page](analyses.qmd) contains information on the analyses you'll include in your final submission after we accept your Proposal.
@@ -51,26 +52,26 @@ To build your data set, which will be a sample of the full data, you will do a s
 
 - You'll select a subset of six states (Ohio will automatically be one of them, so you'll be selecting five others from a list we will provide) which together include at least **300** and no more than **500** counties.
 - You'll select five different quantitative variables from the County Health Rankings data, from a list of options we provide for you.
-  - One of these variables will serve as your outcome for Task 1.
-  - Another will serve as your predictor for Task 1.
-  - A third will serve as your outcome for Task 2.
-  - Your fourth variable will serve (after categorizing^[Note: Categorizing quantitative information like this turns out to be a terrible idea in practical model-building. We're doing this here for pedagogical reasons that will, in time, become clearer.]) as your predictor for Task 2.
+  - One of these variables will serve as your outcome for Analysis 1.
+  - Another will serve as your predictor for Analysis 1.
+  - A third will serve as your outcome for Analysis 2.
+  - Your fourth variable will serve (after categorizing^[Note: Categorizing quantitative information like this turns out to be a terrible idea in practical model-building. We're doing this here for pedagogical reasons that will, in time, become clearer.]) as your predictor for Analysis 2.
   - The fifth variable (different from the other four) will serve as an alternative choice, should one of your other four variables prove to be unsuitable for its planned role.
-- In addition to the five analytic variables listed above, you will add three pre-specified variables (a fips code, the state name and the county name) which will identify your observations.
+- In addition to the five analytic variables listed above, you will add four pre-specified variables (a fips code, the state postal abbreviation, the county name, and an indicator that the county is ranked by CHR) which will identify your observations.
 - Creating a tibble of your selected counties, and your set of variables will be necessary to complete the proposal.
 
 # Analyses You'll Do
 
-After your proposal is accepted, you will complete the two analytic tasks using your clean tibble. The observations (rows) in your data will be the counties from your set of six states.
+After your proposal is accepted, you will complete two main Analyses using your clean tibble. The observations (rows) in your data will be the counties from your set of six states.
 
-The two key analytic tasks you’ll complete are:
+The two main Analyses you’ll complete are:
 
 1. Visualizing and modeling the relationship between a quantitative outcome and a quantitative predictor.
 2. Visualizing and modeling the relationship between a quantitative outcome and a categorical predictor with two levels.
 
 ## Examples from Dr. Love
 
-We have provided a sample proposal (using Quarto) that we strongly encourage you to use in motivating your data and proposal work. -We've also provided an outline of the analysis report we hope to see. These items will help ensure your final project report matches our expectations and is something to be proud of. 
+We have provided a sample proposal (using Quarto) that we strongly encourage you to use in motivating your data and proposal work. We've also provided an outline of the analysis report we hope to see. These items will help ensure your final project report matches our expectations and is something to be proud of. 
 
 # Project A Objectives 
 
@@ -83,17 +84,17 @@ I am primarily interested in your learning something interesting, useful and eve
 1. The ability to create and formulate research questions that are statistically and scientifically appropriate.
 2. The ability to turn research questions into measures of interest.
 3. The ability to pull and merge and clean and tidy data, then present the data set following [Jeff Leek's guide to sharing data with a statistician](https://github.com/jtleek/datasharing).
-4. The ability to build a reasonable pair of linear models, assess the quality of the models, and use them to make predictions.
-5. The ability to identify and (with help) solve problems that crop up
-6. The ability to comment on your work within code, and in written and oral presentation.
+4. The ability to build a reasonable pair of analyses, and assess their quality.
+5. The ability to identify and (with help) solve problems that crop up.
+6. The ability to comment on your work within code, and in written and oral presentation. You have to be able to reason about your findings, not just generate the code to solve the problem.
 7. The ability to build a Quarto-based report and to give a short presentation based on key findings from that report.
 
-Project A is about building models and visualizing data from a (fairly clean) data set I provide to you. In Project A, you will complete most of the elements of a data science project designed to create a statistical model for a *quantitative* outcome, then use it for prediction, and assess the quality of those predictions. Tools necessary for Project A include:
+Project A is about building relatively simple analyses and visualizing data from a (fairly clean) data set I provide to you. In Project A, you will complete most of the elements of a data science project designed to create statistical models for a pair of *quantitative* outcomes, and assess their quality. Tools necessary for Project A include:
 
 - Describing the experimental or observational study design used to gather the data, as well as the complete data collection process.
 - Sharing the process of ingesting and tidying the data, with specific reference to the decisions you make to "clean" things up.
 - Descriptive and exploratory summaries of the data across the groups for your chosen outcomes, including, of course, attractive and well-constructed visualizations, which may include both graphs and tables.
-- Developing appropriate research questions that lead to the identification of smart measures for predictors and outcomes, and then the development of a prediction model using linear regression.
+- Developing appropriate research questions that lead to the identification of smart measures for predictors and outcomes.
 - Regression-based comparisons of mean differences for a quantitative outcome across a set of two groups, including appropriate demonstrations of the reasons behind the models you build.
 - Regression-based predictions of a quantitative outcome using a quantitative predictor.
 

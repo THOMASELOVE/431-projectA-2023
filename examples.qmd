@@ -9,3 +9,12 @@ knitr::opts_chunk$set(comment = NA)
 ```
 
 # This material is under revision. Please ignore it for now, until new material is posted.
+
+To come:
+
+1. Sample Proposal, including Data Development, Codebook and Initial Summary
+    - Template for Proposal
+2. Sample Analyses
+3. Sample Portfolio Report
+    - Template for Portfolio Report
+

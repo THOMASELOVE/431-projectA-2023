@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="431 Staff">
-<meta name="dcterms.date" content="2023-08-11">
+<meta name="dcterms.date" content="2023-08-16">
 
 <title>431 Project A - 431 Project A Instructions</title>
 <style>
@@ -175,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2023-08-11</p>
+      <p class="date">2023-08-16</p>
     </div>
   </div>
   
@@ -191,7 +191,10 @@ ul.task-list li input[type="checkbox"] {
 <section id="what-is-on-this-website" class="level1">
 <h1>What is on this Website</h1>
 <ul>
-<li>The <a href="./data.html">Data page</a> contains information on the data you’ll use, and on the required cleaning and development of your final project tibble. You’ll need to complete these data management tasks to be ready to write the Proposal.</li>
+<li>The <a href="./data.html">Data page</a> contains information on the data you’ll use, and on the required cleaning and development of your final project tibble.
+<ul>
+<li>You’ll need to complete these data management tasks to be ready to write the Proposal. Start this in <strong>early September</strong>.</li>
+</ul></li>
 <li>The <a href="./proposal.html">Proposal page</a> describes the proposal, which you will submit in early October, according to the deadline on the <a href="https://thomaselove.github.io/431-2023/calendar.html">Course Calendar</a>.
 <ul>
 <li>You will do all of the work for the Proposal in <strong>September</strong>.</li>
@@ -238,28 +241,28 @@ ul.task-list li input[type="checkbox"] {
 <li>You’ll select a subset of six states (Ohio will automatically be one of them, so you’ll be selecting five others from a list we will provide) which together include at least <strong>300</strong> and no more than <strong>500</strong> counties.</li>
 <li>You’ll select five different quantitative variables from the County Health Rankings data, from a list of options we provide for you.
 <ul>
-<li>One of these variables will serve as your outcome for Task 1.</li>
-<li>Another will serve as your predictor for Task 1.</li>
-<li>A third will serve as your outcome for Task 2.</li>
-<li>Your fourth variable will serve (after categorizing<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>) as your predictor for Task 2.</li>
+<li>One of these variables will serve as your outcome for Analysis 1.</li>
+<li>Another will serve as your predictor for Analysis 1.</li>
+<li>A third will serve as your outcome for Analysis 2.</li>
+<li>Your fourth variable will serve (after categorizing<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>) as your predictor for Analysis 2.</li>
 <li>The fifth variable (different from the other four) will serve as an alternative choice, should one of your other four variables prove to be unsuitable for its planned role.</li>
 </ul></li>
-<li>In addition to the five analytic variables listed above, you will add three pre-specified variables (a fips code, the state name and the county name) which will identify your observations.</li>
+<li>In addition to the five analytic variables listed above, you will add four pre-specified variables (a fips code, the state postal abbreviation, the county name, and an indicator that the county is ranked by CHR) which will identify your observations.</li>
 <li>Creating a tibble of your selected counties, and your set of variables will be necessary to complete the proposal.</li>
 </ul>
 </section>
 </section>
 <section id="analyses-youll-do" class="level1">
 <h1>Analyses You’ll Do</h1>
-<p>After your proposal is accepted, you will complete the two analytic tasks using your clean tibble. The observations (rows) in your data will be the counties from your set of six states.</p>
-<p>The two key analytic tasks you’ll complete are:</p>
+<p>After your proposal is accepted, you will complete two main Analyses using your clean tibble. The observations (rows) in your data will be the counties from your set of six states.</p>
+<p>The two main Analyses you’ll complete are:</p>
 <ol type="1">
 <li>Visualizing and modeling the relationship between a quantitative outcome and a quantitative predictor.</li>
 <li>Visualizing and modeling the relationship between a quantitative outcome and a categorical predictor with two levels.</li>
 </ol>
 <section id="examples-from-dr.-love" class="level2">
 <h2 class="anchored" data-anchor-id="examples-from-dr.-love">Examples from Dr.&nbsp;Love</h2>
-<p>We have provided a sample proposal (using Quarto) that we strongly encourage you to use in motivating your data and proposal work. -We’ve also provided an outline of the analysis report we hope to see. These items will help ensure your final project report matches our expectations and is something to be proud of.</p>
+<p>We have provided a sample proposal (using Quarto) that we strongly encourage you to use in motivating your data and proposal work. We’ve also provided an outline of the analysis report we hope to see. These items will help ensure your final project report matches our expectations and is something to be proud of.</p>
 </section>
 </section>
 <section id="project-a-objectives" class="level1">
@@ -273,17 +276,17 @@ ul.task-list li input[type="checkbox"] {
 <li>The ability to create and formulate research questions that are statistically and scientifically appropriate.</li>
 <li>The ability to turn research questions into measures of interest.</li>
 <li>The ability to pull and merge and clean and tidy data, then present the data set following <a href="https://github.com/jtleek/datasharing">Jeff Leek’s guide to sharing data with a statistician</a>.</li>
-<li>The ability to build a reasonable pair of linear models, assess the quality of the models, and use them to make predictions.</li>
-<li>The ability to identify and (with help) solve problems that crop up</li>
-<li>The ability to comment on your work within code, and in written and oral presentation.</li>
+<li>The ability to build a reasonable pair of analyses, and assess their quality.</li>
+<li>The ability to identify and (with help) solve problems that crop up.</li>
+<li>The ability to comment on your work within code, and in written and oral presentation. You have to be able to reason about your findings, not just generate the code to solve the problem.</li>
 <li>The ability to build a Quarto-based report and to give a short presentation based on key findings from that report.</li>
 </ol>
-<p>Project A is about building models and visualizing data from a (fairly clean) data set I provide to you. In Project A, you will complete most of the elements of a data science project designed to create a statistical model for a <em>quantitative</em> outcome, then use it for prediction, and assess the quality of those predictions. Tools necessary for Project A include:</p>
+<p>Project A is about building relatively simple analyses and visualizing data from a (fairly clean) data set I provide to you. In Project A, you will complete most of the elements of a data science project designed to create statistical models for a pair of <em>quantitative</em> outcomes, and assess their quality. Tools necessary for Project A include:</p>
 <ul>
 <li>Describing the experimental or observational study design used to gather the data, as well as the complete data collection process.</li>
 <li>Sharing the process of ingesting and tidying the data, with specific reference to the decisions you make to “clean” things up.</li>
 <li>Descriptive and exploratory summaries of the data across the groups for your chosen outcomes, including, of course, attractive and well-constructed visualizations, which may include both graphs and tables.</li>
-<li>Developing appropriate research questions that lead to the identification of smart measures for predictors and outcomes, and then the development of a prediction model using linear regression.</li>
+<li>Developing appropriate research questions that lead to the identification of smart measures for predictors and outcomes.</li>
 <li>Regression-based comparisons of mean differences for a quantitative outcome across a set of two groups, including appropriate demonstrations of the reasons behind the models you build.</li>
 <li>Regression-based predictions of a quantitative outcome using a quantitative predictor.</li>
 </ul>

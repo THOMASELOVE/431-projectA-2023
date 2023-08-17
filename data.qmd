@@ -22,19 +22,17 @@ The key elements we'll use are all found in the [Rankings Data & Documentation s
 
 In addition, when building the Codebook in Data Task 6 below, you'll use [this CHR 2023 Measures link](https://www.countyhealthrankings.org/explore-health-rankings/county-health-rankings-measures) to obtain further details on the variables you select. 
 
-# Developing the Data: Overview of Your Seven Tasks
+# Developing the Data: Five Data Tasks
 
-Obtaining and cleaning your data takes a little while, but you can start at any time. First, in broad terms, here are the seven data tasks you need to complete in order to build your Project A Proposal.
+Obtaining and cleaning your data takes a little while, but you can start at any time. First, in broad terms, here are the five data tasks you need to complete in order to build your Project A Proposal.
 
 1. Ingest the raw data from CHR 2023 into a tibble in R called `chr_2023_raw`, then filter these raw data to only the counties actually ranked by CHR.
 2. In addition to Ohio, select five more states (from the 39 others with at least 20 ranked counties) to study, so that you wind up with at least 300 and no more than 500 counties in your study. Create a new `chr_2023` tibble that contains only the counties from your chosen six states (including Ohio).
 3. Reduce your data to a selection of nine variables (4 we specify below and 5 more you'll select from a list we provide), rename them in helpful ways, clean up problems, then save this smaller tibble as `chr_2023`.
 4. Create a new binary factor (categorical variable) from one of the 5 variables you selected in the previous task, and add it to `chr_2023` so it now contains 10 variables.
 5. Save the resulting `chr_2023` tibble as an R data set, and you will share this new `.Rds` file with us as part of your Proposal.
-6. Create a codebook for your `chr_2023` tibble which briefly but sufficiently describes your selected variables and counties. This will also form part of your Proposal.
-7. Print your `chr_2023` tibble (to prove it is a tibble) and then provide a modest set of appropriate numerical summaries describing your data. This, too, will form part of your Proposal.
 
-# Task 1. Ingest the raw data into `chr_2023_raw`, then filter to ranked counties
+# Data Task 1. Ingest the raw data into `chr_2023_raw`, then filter to ranked counties
 
 Begin an R Project just for Project A, and create a Quarto file within that project where you will do your data development work. Working from a template, or from your own best understanding of what works well for you, start by loading the packages you'll need, including the `tidyverse` and any other packages you plan to use.
 
@@ -64,7 +62,7 @@ We strongly encourage you to use the `filter()` function from the `dplyr` packag
 
 At the end of Task 1, your `chr_2023_raw` tibble should have 3082 rows (counties) and 720 columns (variables).
 
-# Task 2. Filter your data to the 300-500 counties in six states (including Ohio)
+# Data Task 2. Filter your data to the 300-500 counties in six states (including Ohio)
 
 Now we'll filter the `chr_2023_raw` data into a new tibble called **chr_2023** which contains the 300-500 rows (counties) you will actually study in your project. 
 
@@ -116,7 +114,13 @@ Select six states (including `OH`) yielding a total of 300-500 counties.
 
 After making your selection, and filtering the data, you should have a tibble called `chr_2023` which contains all of the 300-500 counties in your six states, and 720 columns. 
 
-# Task 3. Add five selected measures to four required variables and clean up `chr_2023`
+::: {.callout-note}
+
+After reducing your tibble to your selected six states, it is very important to then **convert** the `state` variable  to a `factor` in R.
+
+:::
+
+# Data Task 3. Add five selected measures to four required variables and clean up `chr_2023`
 
 Next, you will identify variables from the your existing `chr_2023` tibble describing your selected sample of counties. 
 
@@ -126,7 +130,7 @@ Variable <br /> Name | Description
 -----------: | -------------------------------------------------------------
 `fipscode` | the five-digit FIPS code for the county, which will be a convenient ID variable that is distinct for each row in your tibble
 `county` | the name of the county, which will be useful for labeling and identifying the counties
-`state` | a multi-categorical (with 6 levels) variable of two-letter postal abbreviations for your six selected states
+`state` | a multi-categorical (with 6 levels) variable of two-letter postal abbreviations for your six selected states (this should be a factor variable thanks to your making it one at the end of Task 2)
 `county_ranked` | tells us whether the row should be included in our data <br /> (all rows should have `county_ranked == 1`)
 
 This set of four variables will then be followed by five variables that you will select from among the 50 listed below.
@@ -135,6 +139,8 @@ This set of four variables will then be followed by five variables that you will
 - There are many `vXXX_rawvalue` variables in the CHR data which we don't include in the list below, usually because of substantial missing data.
 
 ## Select five of these 50 variables
+
+As part of the selection process, you should be developing appropriate **research questions** that lead to the identification of smart measures of interest (from those available) for predictors and outcomes in our two Analyses.
 
 You must select your five variables from the 50 variables listed below. We show them here in the order in which they appear in the raw file. The listing "v001" in this table actually refers to the variable named "**v001_rawvalue**".
 
@@ -148,65 +154,52 @@ You must select your five variables from the 50 variables listed below. We show 
 
 For example, `v001_rawvalue` shows the raw values for the premature death measure. If you select this variable, it is up to you to use the documentation in the two PDF files I have linked to, as well as the information on the County Health Rankings website, to get a reasonable understanding of what the variable measures, and how it was collected.
 
-::: {.callout-note}
+## What will these variables become?
 
-The [2023 CHR Analytic Data Documentation](https://www.countyhealthrankings.org/sites/default/files/media/document/2023%20Analytic%20Documentation.pdf) file (PDF), and the [2023 Data Dictionary](https://www.countyhealthrankings.org/sites/default/files/media/document/DataDictionary_2023.pdf) file (also PDF) are crucial here, as those are the ones that explain what the available variables mean, and how they should be labeled. 
+Each of the five variables you select should be of some interest to you on its own, in terms of either providing a health outcome of interest, or potentially providing useful information about a feature of the county that might relate to that health outcome. Be sure to read this entire Data page before selecting your variables, so you are aware of some features of the data we disclose below.
 
-In building your codebook, you will also need look up each measure you select at [this CHR 2023 Measures link](https://www.countyhealthrankings.org/2023-measures).
+- Variable 1 will be your outcome for Analysis 1. It should be a measure describing some aspect of a community's health^[Many of the variables, but probably *not* all 50 of them, meet this requirement. It's up to you to make good choices.], rather than a demographic characteristic.
+- Variable 2 will be your predictor for Analysis 1, so the relationship between variables 1 and 2 should be of interest to you.
+- Variable 3 will be your outcome for Analysis 2. Like variable 1, it should describe some aspect of a community's health, rather than just its demographics.
+- Variable 4 (after you categorize it, later) will be your predictor for Analysis 2. Again, the relationship between variables 3 and 4 should be of interest.
+- Variable 5 is an alternate choice, appropriate to serve as a replacement for any of the other four variables in your analytic work.
 
-:::
+## Information to help select and build a codebook
 
-## Some important notes for Task 3
+The [2023 CHR Analytic Data Documentation](https://www.countyhealthrankings.org/sites/default/files/media/document/2023%20Analytic%20Documentation.pdf) file (PDF), and the [2023 Data Dictionary](https://www.countyhealthrankings.org/sites/default/files/media/document/DataDictionary_2023.pdf) file (also PDF) are crucial here, as those are the ones that explain what the available variables mean, and how they should be labeled. In building your codebook, you will also need look up each measure you select at [this CHR 2023 Measures link](https://www.countyhealthrankings.org/2023-measures).
 
-1. Be sure to read this entire Data page before selecting your variables, so you are aware of some features of the data we disclose below.
-
-2. The five variables you select must be five different variables selected from the variables listed above. Some variables in that set of 50 will lead to more straightforward analyses than others.
-
-3. Each variable you select should be of some interest to you on its own, in terms of either providing a health outcome of interest, or potentially providing useful information about a feature of the county that might relate to that health outcome. Your five selected quantitative variables, selected by you from the 50 available "raw value" CHR variables, will need be treated as follows:
-
-- variable 1 will be treated as quantitative, and as an outcome of interest
-- two others (variables 2 and 3) will be treated as quantitative predictors of interest for variable 1
-    - Each of your quantitative variables (1, 2 and 3) must have **at least** 15 distinct values within your final tibble.
-- variable 4 will be categorized into 2 mutually exclusive and collectively exhaustive levels to create a binary categorical variable of interest in predicting variable 1 (this is a terrible idea in practical work.) 
-    - Exactly one of the variables in the data (`v124` about drinking water violations) is already a binary (1 = Yes, 0 = No) variable (all other variables are quantitative.) You are permitted to use `v124` as your variable 4, if you like. `v124` may not be used as anything other than variable 4 in your work.
-- variable 5 will be categorized into 3-5 mutually exclusive and collectively exhaustive levels to create a multi-categorical variable of interest in predicting variable 1 (this is almost as bad as what we'll do to variable 4 in practical work)
-- the `state` will serve as another multi-categorical (with 4-6 categories) predictor of variable 1, so this will also be part of your tibble
-
-4. Each of the five variables you select must have data for at least 75% of the counties in each state you plan to study. This is something you will have to check on, in R, and you'll have to present the code, and demonstrate with complete English sentences that you've verified this. The use of a tool (or more than one) from the `naniar` package to do this checking is encouraged. 
-
-5. The descriptions provided in these instructions associated with each variable are available as the first (deleted in R) row in the .csv file, and are also specified in the [2023 CHR Analytic Data Documentation](https://www.countyhealthrankings.org/sites/default/files/media/document/2023%20Analytic%20Documentation.pdf) PDF file.
-
-6. Across your complete set of 6 selected states, the raw versions of each of your five selected variables must have at least **ten** distinct non-missing values. You'll need to show R code to do this checking (the best choice is often `Hmisc::describe()` since you'll run that anyway), and you'll need to demonstrate with a complete English sentence or two that you have checked this to be true.
-
-# How To Clean Your Selected Variables
+## How To Clean Your Selected Variables
 
 Find each of your five selected variables on one of the lists below.
 
 - If you plan to use the variable as quantitative, do what is suggested below as part of your data development work, rename the variable appropriately, and use that version in your codebook.
 - If you plan to use the variable as your categorical predictor, you should still make the appropriate change to the original quantitative version as indicated below.
 
-## Ratios That Need Converting
+The descriptions provided in these instructions associated with each variable are available as the first (deleted in R) row in the .csv file, and are also specified in the [2023 CHR Analytic Data Documentation](https://www.countyhealthrankings.org/sites/default/files/media/document/2023%20Analytic%20Documentation.pdf) PDF file.
 
-These variables are specified as providers per population in the raw data file. You will want to take the reciprocal (1/raw value) to rescale the results in terms of population per provider, which should be much more interpretable. 
+### Ratios That Need Converting
 
-- You'll note that this rescaled ratio is also provided in the raw file if you want it, for example, for primary care physicians, `v004_rawvalue` is providers per population, but `v004_other_data_1` is the ratio of population (residents) per provider.
-- Note that after rescaling by taking the reciprocal, you may see some counties with infinite ratios, which should then be changed to missing values.
+These variables are specified as providers per population in the raw data file. You will want to take the reciprocal (1/raw value) to rescale the results in terms of population per provider, which should ease interpretation. 
+
+- Note that after rescaling by taking the reciprocal, you may see some counties with infinite ratios, which should then be changed to **missing** values.
 
 Code | Variable Description
 ---: | :---------------------------------------------
 v004 | Primary care physicians
 v088 | Dentists
 
-## Variables that should be rescaled
+### Variables that should be rescaled
+
+Two of the variables you might choose should be rescaled by division so as to more closely match the scales of other variables you'll study.
 
 Code | Variable Description | What to do?
 ---: | :----------- | :---------------
 v001 |	Premature death	| Divide by 100 to represent losses per 1000 population
 v063 |	Median household income | Divide by 1000 to represent income in thousands of dollars
 
-## Variables that are Proportions should be converted to Percentages
+### Variables that are Proportions should be converted to Percentages
 
-Each of the variables listed below are proportions (between 0 and 1). Before you use them in any analyses, please **multiply them by 100** in your data development (using mutate) to turn their values into percentages (between 0 and 100) and this will seriously ease the interpretation of slopes and transformations for these variables.
+Each of the variables listed below are proportions (between 0 and 1). Before you use them in any analyses, **multiply them by 100** in your data development (using the `mutate` function) to turn their values into percentages (between 0 and 100.) We're doing this to ease your interpretation of these variables.
 
 Code | Variable Description
 ---: | :--------------------------------------------
@@ -245,7 +238,7 @@ v178 |  Census Participation
 
 - A serious look at the impact of race/ethnicity is beyond the scope of Project A. If you are interested in studying race and ethnicity and their impact on a health outcome, we strongly suggest using `v126` to incorporate this dimension as a predictor (or its inverse, 1 - `v126`), rather than including the other race/ethnicity variables, specifically `v054` and `v056`. This is because there's more variation in the `v126` data across the reported counties. 
 
-## Variables that should be OK as is
+### Variables that should be OK as is
 
 The variables listed below should be useful as they are. Most of them are ratios, although a few are averages or indexes. The main issue for these variables is correctly specifying the units of measurement (note that the indexes don't have units.)
 
@@ -266,24 +259,28 @@ v151 |  Gender pay gap
 v156 |	Traffic volume
 v169 |  School funding adequacy (gap measured in dollars per pupil)
 
-- For any variable you select, be sure that it has at least 75% complete data across the counties in your selected states, and within each state you have selected.
+## Checking Your Variables
 
-# Task 4. Create factors for two of the five variables you chose in Task 2
+For each of the variables you select, as part of your analytic work, you will need to both check and display that the variable has: 
 
-Create new categorical variables (factors) based on two of your previously selected variables, and add them to your **chr_2023** tibble. 
-You'll also retain the original (quantitative) versions of those two variables, so your tibble will now have 11 variables.
+- at least **80% complete** data across the counties within each of your selected states, **and**
+- at least **15 distinct** values across the complete set of counties in your sample.
 
-As mentioned, you will need to provide code to categorize two of your variables. Specifically...
+# Data Task 4. Create a factor for the Task 2 predictor
 
-- variable 4 will be categorized into 2 mutually exclusive and collectively exhaustive levels to create a binary categorical variable of interest in predicting variable 1 (this is a terrible idea in practical work.) 
-- variable 5 will be categorized into 3-5 mutually exclusive and collectively exhaustive levels to create a multi-categorical variable of interest in predicting variable 1 (this is almost as bad as what we'll do to variable 4 in practical work.)
+Create a new categorical variables (factor) based on your fourth variable, and add this new factor to your **chr_2023** tibble. You'll also retain the original (quantitative) version of this variable, so your tibble will now have 10 variables.
 
-## Additional Task 4 Notes
+1. Divide the values in your variable 4 into three groups, as follows:
+    - values in the lowest 40% of your sample's observations (the low group)
+    - values in the middle 20% of your sample's observations (the middle group)
+    - values in the highest 40% of your sample's observations (the high group)
 
-1. You will need to verify that all levels (categories) in each of your two categorical variables contain at least ten counties. Using `tabyl` is a good approach to check that this is true.
-2. Verify that your `state` variable and your two categorical variables are now recognized by R as **factors** with appropriate levels.
+2. Create a new factor which has two levels, low and high (although you can use other labels if you prefer), based on your three-level categorization, and treats the rest (middle group) as missing. 
+    - This should yield (from your original set of 300-500 counties) between 120 and 200 defined as low, 120-200 defined as high, and 60-100 missing values in your new factor.
 
-# Task 5. Save and share the final `chr_2023` tibble
+3. Add the resulting (binary) factor to your **chr_2023** tibble. 
+
+# Data Task 5. Rename variables and save the final `chr_2023` tibble
 
 Your final **chr_2023** tibble will thus contain 300-500 rows (counties) and 10 variables. You'll save this tibble as an R data set (.Rds file) and share that file with us as part of your proposal.
 
@@ -295,85 +292,24 @@ Your main data set for analysis then should be gathered into a tibble called **c
     - `fipscode` = the five-digit fips code for the state and county,
     - `county` = the name of the county
     - `state` = the postal abbreviation code for the state
-- the variable `county_ranked`, which must be 1 for all rows in your data
-- your three selected quantitative variables, one of which is your planned outcome
+- the variable `county_ranked`,
+- your five selected quantitative variables
 - your binary categorical variable derived from your fourth selected variable
-- your multi-categorical variable derived from your fifth selected variable
-- the "original" quantitative versions of the two variables (4 and 5) that you later categorized (if you chose the drinking water violations variable for variable 4, then you don't need to repeat it here.)
 
 All of these variables should be **renamed** (and also have `clean_names()` from the `janitor` package applied) so as to have descriptive and maximally helpful variable names. 
 
 - For example, if you have decided to use as a quantitative variable something like  `v009_rawvalue`, which is about adult smoking, you should rename the variable `v009_rawvalue` to **adult_smoking** in your tibble. 
-- If `v009_rawvalue` (about adult smoking) is to be one of your categorical variables, then you should include both the original quantitative value (renamed `adult_smoking_raw`) and your categorical variable that you'll actually use in analyses, which should be named `adult_smoking_cat`.
+- If `v009_rawvalue` (about adult smoking) is to be your categorical factor, then you should include both the original quantitative value (renamed `adult_smoking_raw`) and your categorical variable that you'll actually use in analyses, which should be named `adult_smoking_cat`.
 
 **Save the Tibble**: You should provide code that saves your tibble as an R data set into your R Project, with the file name **chr_2023_YOURNAME.Rds**. If you like, you can store this `.Rds` file in a `data` subdirectory within your R Project.
 
-## Additional Task 5 Notes
+::: {.callout-note}
 
-1. After your cleaning is done, each row in your `chr_2023` tibble should contain all of the counties within the 4-6 states you are studying, and no other counties should be included in your tibble. All rows of your `chr_2023` tibble must display a  `county_ranked` value of 1.
-2. If data for some counties are missing in the raw data for one or more of your variables, then these data should be indicated as missing (using NA) in the tibble.
-3. There is no need to set a seed in this process, as you are not doing anything that involves selecting a random sample.
+1. After your cleaning is done, each row in your `chr_2023` tibble should contain all of the counties within the 6 states you are studying, and no other counties should be included in your tibble. 
+2. All rows of your `chr_2023` tibble must display a  `county_ranked` value of 1.
+3. If data for some counties are missing in the raw data for one or more of your variables, then these data should be indicated as missing (using NA) in the tibble.
+4. There is no need to set a seed in this process, as you are not doing anything that involves selecting a random sample.
 
-# Task 6. Provide a Codebook for Your Tibble
+:::
 
-Next, you will provide a codebook as part of your Quarto file (and HTML output) that specifies the name of each variable in your tibble and its definition. After you select your variables, use the [County Health Rankings website's 2023 Measures list](https://www.countyhealthrankings.org/2023-measures), and in particular the linked information on that page for full descriptions, definitions and limitations of the variables you have selected. 
 
-## Demo Codebook
-
-The start of your Codebook might look something like this (note that I've used states you're not allowed to use here.) Here, I've split the codebook into two parts - first describing the states, and then the variables.
-
-My states are: 
-
-State Name | Abbreviation | # of counties
-:----: | :----: | ----:
-Ohio | `OH` | 88
-Connecticut | `CT` | 8
-Delaware | `DE` | 3
-Hawaii | `HI` | 4
-New Hampshire | `NH` | 10
-Rhode Island | `RI` | 5
-**Total (6 states)** | -- | **118**
-
-Remember that you need to have six states, including Ohio, with 300-500 counties, so my choice of states wouldn't be acceptable.
-
-My variables are:
-
-Variable | Description | Original Name | # Missing
-:-------: | :-------------------------: | :------: | :---:
-`fipscode` | five-digit identifying code for state and county | `fipscode` | 0
-`county` | name of the county | `county` | 0
-`state` | postal abbreviation for the state | `state` | 0
-`poorfair` | (variable 1: outcome) % of adults reporting fair or poor health (age-adjusted). | `v002_rawvalue` | 0
-`fluvax` | (variable 2) % of fee-for-service (FFS) Medicare enrollees that had an annual flu vaccination. | `v155_rawvalue` | 0
-`infmort` | (variable 3) Infant deaths (within 1 year) per 1,000 live births. | `v129_rawvalue` | 31
-`discyouth_raw` | % of teens and young adults ages 16-19 who are neither working nor in school. | `v149_rawvalue` | 44
-`homicide_raw` | Deaths due to homicide per 100,000 population. | `v015_rawvalue` | 48
-`discyouth_cat` | (variable 4) Low (below A%) vs. High (A% or higher) based on `discyouth_raw` | `v149_rawvalue` | 44
-`homicide_cat` | (variable 5) Low (below B), Medium (between B and C), High (above C) based on `homicide_raw` | `v015_rawvalue` | 48
-
-- A% is the median value for `discyouth_raw`
-- B and C represent the tertiles of `homicide_raw`.
-
-Remember that you need to have at least 75% complete cases for each variable, so several of my variables here wouldn't be acceptable given this selection of states.
-
-## Additional Task 6 Notes
-
-1. Be sure to include a description for each of the 11 variables (4 required including `county_ranked` + 5 you select + 2 categorical versions you create) in your codebook for your final tibble. The descriptions I've used here come from the [County Health Rankings website's 2023 Measures list](https://www.countyhealthrankings.org/2023-measures) site, which is what you should use, as well.
-
-2. Include a description of what the cut points are for the two categorical variables you create, and specify how those cut points were chosen, as I have done above - you should include the actual numbers, not just A, B and C. 
-
-3. Tools from the `naniar` package, especially the `miss_var_summary()` tool, can be of help in preparing this codebook.
-
-# Task 7. Print and Summarize Your Tibble
-
-1. **Print the Tibble**: You will then prove that your tibble is in fact a tibble and not just a data frame by listing it, so that the first 10 rows are printed, and the columns are appropriately labeled. The command you want is just **`chr_2023`**.
-
-2. **Numerical Summaries**: You will then demonstrate main numerical summaries from the tibble by running some of the following summaries.
-
-- At a minimum in the proposal, you will need to show the results of `Hmisc::describe` run on the whole tibble. This can also be used to demonstrate that you have at least 15 distinct values for each quantitative variable (variables 1-3) in your data set.
-- You may need an additional summary to prove that you have at least 75% complete data within each state for each variable.
-- You may need an additional summary to demonstrate that there are at least ten observations within each level of each of your categorical variables.
-- Note that in the project report, there are two additional requirements, so you might consider them now. 
-    - `mosaic::favstats` on each of your quantitative variables (so variables 1, 2, and 3 and the original versions of variables 4 and 5)
-    - `janitor::tabyl` on your categorical variables 4 and 5 as well as on `state`.
-    

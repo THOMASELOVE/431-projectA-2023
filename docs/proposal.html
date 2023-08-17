@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="431 Staff">
-<meta name="dcterms.date" content="2023-08-11">
+<meta name="dcterms.date" content="2023-08-16">
 
 <title>431 Project A - Project A Proposal</title>
 <style>
@@ -135,12 +135,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#this-material-is-under-revision.-please-ignore-it-for-now-until-new-material-is-posted." id="toc-this-material-is-under-revision.-please-ignore-it-for-now-until-new-material-is-posted." class="nav-link active" data-scroll-target="#this-material-is-under-revision.-please-ignore-it-for-now-until-new-material-is-posted.">This material is under revision. Please ignore it for now, until new material is posted.</a>
   <ul class="collapse">
   <li><a href="#proposal-requirements" id="toc-proposal-requirements" class="nav-link" data-scroll-target="#proposal-requirements">Proposal Requirements</a></li>
-  <li><a href="#project-proposal-example-using-2019-data" id="toc-project-proposal-example-using-2019-data" class="nav-link" data-scroll-target="#project-proposal-example-using-2019-data">Project Proposal Example using 2019 Data</a>
+  <li><a href="#project-proposal-example-using-2019-data" id="toc-project-proposal-example-using-2019-data" class="nav-link" data-scroll-target="#project-proposal-example-using-2019-data">Project Proposal Example using 2019 Data</a></li>
+  </ul></li>
+  <li><a href="#data-task-6.-build-a-codebook-for-your-tibble" id="toc-data-task-6.-build-a-codebook-for-your-tibble" class="nav-link" data-scroll-target="#data-task-6.-build-a-codebook-for-your-tibble">Data Task 6. Build a Codebook for Your Tibble</a></li>
+  <li><a href="#data-task-7.-print-and-summarize-your-tibble" id="toc-data-task-7.-print-and-summarize-your-tibble" class="nav-link" data-scroll-target="#data-task-7.-print-and-summarize-your-tibble">Data Task 7. Print and Summarize Your Tibble</a>
   <ul class="collapse">
   <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions">Submission Instructions</a></li>
   <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
   <li><a href="#grading-the-proposal-13-things-were-looking-for" id="toc-grading-the-proposal-13-things-were-looking-for" class="nav-link" data-scroll-target="#grading-the-proposal-13-things-were-looking-for">Grading the Proposal: 13 Things We’re Looking for</a></li>
-  </ul></li>
   <li><a href="#grading-clarification" id="toc-grading-clarification" class="nav-link" data-scroll-target="#grading-clarification">Grading Clarification</a></li>
   </ul></li>
   </ul>
@@ -168,7 +170,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2023-08-11</p>
+      <p class="date">2023-08-16</p>
     </div>
   </div>
   
@@ -211,6 +213,24 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li>The resulting HTML file can be viewed at <a href="https://rpubs.com/TELOVE/projA-sample-proposal-431-2022" class="uri">https://rpubs.com/TELOVE/projA-sample-proposal-431-2022</a>, which may be easier for you to read and will also show you what your final result should look like.</li>
 </ul>
+</section>
+</section>
+<section id="data-task-6.-build-a-codebook-for-your-tibble" class="level1">
+<h1>Data Task 6. Build a Codebook for Your Tibble</h1>
+<p>Next, you will provide a codebook as part of your Quarto file (and HTML output) that specifies the name of each variable in your tibble and its definition.</p>
+<p>After you select your variables, use the <a href="https://www.countyhealthrankings.org/2023-measures">County Health Rankings website’s 2023 Measures list</a>, and in particular the linked information on that page for full descriptions, definitions and limitations of the variables you have selected.</p>
+<p>A sample codebook is provided as part of the <a href="./examples.html">Examples folder</a> in these instructions.</p>
+</section>
+<section id="data-task-7.-print-and-summarize-your-tibble" class="level1">
+<h1>Data Task 7. Print and Summarize Your Tibble</h1>
+<ol type="1">
+<li><p><strong>Print the Tibble</strong>: You will then prove that your tibble is in fact a tibble and not just a data frame by listing it, so that we can see that the first 10 rows are printed, and the columns are appropriately labeled. The command you want is just <strong><code>chr_2023</code></strong>.</p></li>
+<li><p><strong>Numerical Summaries</strong>: You will then demonstrate main numerical summaries from the tibble, in particular:</p>
+<ul>
+<li>You will display the results of <code>Hmisc::describe</code> run on the whole tibble.</li>
+<li>You will display <code>tabyl()</code> results to show the association of your categorical factor (derived from variable 4) with your six <code>state</code>s.</li>
+</ul></li>
+</ol>
 <section id="submission-instructions" class="level3">
 <h3 class="anchored" data-anchor-id="submission-instructions">Submission Instructions</h3>
 <ul>
@@ -299,7 +319,6 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><p>You don’t have more than 3 spelling, typographical or grammatical errors in the document as a whole that we catch.</p></li>
 </ol>
-</section>
 </section>
 <section id="grading-clarification" class="level2">
 <h2 class="anchored" data-anchor-id="grading-clarification">Grading Clarification</h2>
