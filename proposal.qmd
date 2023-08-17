@@ -57,7 +57,7 @@ All necessary packages (and no unused packages) should be loaded at the start of
 
 ::: {.callout-note}
 
-It seems impossible to do this work without the `Hmisc`, `janitor`, `naniar` and `tidyverse` packages. Remember that the `tidyverse` should be loaded last. The use of other packages is up to you.
+It seems impossible to do this work without the `Hmisc`, `janitor`, `naniar`, `sessioninfo` and `tidyverse` packages. Remember that the `tidyverse` should be loaded last. The use of other packages is up to you.
 
 :::
 
@@ -153,6 +153,8 @@ Your discussion of the biggest challenge includes a paragraph (or more) written 
 ## Section 15. Session Information
 
 As we have required in our Labs, there must be a Session Information section at the end of the document. This should indicate that R version 4.3.1. or later is used.
+
+We'd like you to use the `xfun` package's version of `session_info()`.
 
 # Submission Instructions
 
