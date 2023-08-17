@@ -63,7 +63,7 @@ It seems impossible to do this work without the `Hmisc`, `janitor`, `naniar` and
 
 ## Section 2. Data Ingest
 
-This section should display the results of following the instructions in Data Task 1 from the [Data page](data.qmd). In this section, you should ingest the raw data into `chr_2023_raw` and then filter to the ranked counties, producing a tibble with 3082 rows and 720 columns. Do not list the tibble, but use `dim(chr_2023_raw)` to demonstrate that your work meets this requirement.
+This section should display the results of following the instructions in Data Task 1 from the [Data page](data.qmd). In this section, you should ingest the raw data into `chr_2023_raw` and then filter to the ranked counties, producing a tibble with 3082 rows and 720 columns. Do not list the tibble, but use R code to demonstrate that your work meets this requirement.
 
 ::: {.callout-note}
 
@@ -95,9 +95,11 @@ For each of your selected variables, you will use the instructions in [Data Task
 
 Use the instructions in [Data Task 4](data.qmd) to develop the binary factor that you will use as your Analysis 2 predictor. Be sure to describe the exact cutpoints used in creating the low and high groups, and demonstrate that the resulting factor has approximately 40% of your original observations in the low group, 40% in the high group, and missing data for the middle 20%.
 
-## Section 7. Arranging Your Analytic Tibble
+## Section 7. Arranging and Saving The Analytic Tibble
 
 After renaming your variables, arrange the variables in your **chr_2023** tibble into the order specified in [Data Task 5](data.qmd).
+
+Then save the tibble as an R data set. Don't make any changes to the tibble after this point.
 
 ## Section 8. Print the Tibble
 

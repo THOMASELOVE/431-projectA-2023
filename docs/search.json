@@ -18,7 +18,7 @@
     "href": "cleaning.html",
     "title": "Cleaning Your Variables",
     "section": "",
-    "text": "This page was last updated: 2023-08-17 14:48:03.309132.\nCheck your five variables on the lists below. You should find all five."
+    "text": "This page was last updated: 2023-08-17 15:21:45.085777.\nCheck your five variables on the lists below. You should find all five."
   },
   {
     "objectID": "cleaning.html#variables-that-are-proportions-should-be-converted-to-percentages",
@@ -109,7 +109,7 @@
     "href": "exampleB.html",
     "title": "Outline for Project Report",
     "section": "",
-    "text": "This page was last updated: 2023-08-17 14:48:07.818546.\nHere is an outline of the “Analysis” section of your final Project A report. Note that none of this material should be included in your Project A proposal."
+    "text": "This page was last updated: 2023-08-17 15:21:49.518922.\nHere is an outline of the “Analysis” section of your final Project A report. Note that none of this material should be included in your Project A proposal."
   },
   {
     "objectID": "exampleB.html#the-variables",
@@ -312,7 +312,7 @@
     "href": "proposal.html#section-2.-data-ingest",
     "title": "Project A Proposal",
     "section": "Section 2. Data Ingest",
-    "text": "Section 2. Data Ingest\nThis section should display the results of following the instructions in Data Task 1 from the Data page. In this section, you should ingest the raw data into chr_2023_raw and then filter to the ranked counties, producing a tibble with 3082 rows and 720 columns. Do not list the tibble, but use dim(chr_2023_raw) to demonstrate that your work meets this requirement.\n\n\n\n\n\n\nNote\n\n\n\nWe will want to check that the project ingests the data properly. This means that you have eliminated the correct row (in any way that works) as you import the data, and that you have used read_csv() to read in the data, thus creating a tibble."
+    "text": "Section 2. Data Ingest\nThis section should display the results of following the instructions in Data Task 1 from the Data page. In this section, you should ingest the raw data into chr_2023_raw and then filter to the ranked counties, producing a tibble with 3082 rows and 720 columns. Do not list the tibble, but use R code to demonstrate that your work meets this requirement.\n\n\n\n\n\n\nNote\n\n\n\nWe will want to check that the project ingests the data properly. This means that you have eliminated the correct row (in any way that works) as you import the data, and that you have used read_csv() to read in the data, thus creating a tibble."
   },
   {
     "objectID": "proposal.html#section-3.-state-selection",
@@ -343,11 +343,11 @@
     "text": "Section 6. Creating the Analysis 2 Predictor\nUse the instructions in Data Task 4 to develop the binary factor that you will use as your Analysis 2 predictor. Be sure to describe the exact cutpoints used in creating the low and high groups, and demonstrate that the resulting factor has approximately 40% of your original observations in the low group, 40% in the high group, and missing data for the middle 20%."
   },
   {
-    "objectID": "proposal.html#section-7.-arranging-your-analytic-tibble",
-    "href": "proposal.html#section-7.-arranging-your-analytic-tibble",
+    "objectID": "proposal.html#section-7.-arranging-and-saving-the-analytic-tibble",
+    "href": "proposal.html#section-7.-arranging-and-saving-the-analytic-tibble",
     "title": "Project A Proposal",
-    "section": "Section 7. Arranging Your Analytic Tibble",
-    "text": "Section 7. Arranging Your Analytic Tibble\nAfter renaming your variables, arrange the variables in your chr_2023 tibble into the order specified in Data Task 5."
+    "section": "Section 7. Arranging and Saving The Analytic Tibble",
+    "text": "Section 7. Arranging and Saving The Analytic Tibble\nAfter renaming your variables, arrange the variables in your chr_2023 tibble into the order specified in Data Task 5.\nThen save the tibble as an R data set. Don’t make any changes to the tibble after this point."
   },
   {
     "objectID": "proposal.html#section-8.-print-the-tibble",

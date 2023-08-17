@@ -145,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#section-4.-variable-selection" id="toc-section-4.-variable-selection" class="nav-link" data-scroll-target="#section-4.-variable-selection">Section 4. Variable Selection</a></li>
   <li><a href="#section-5.-variable-cleaning-and-renaming" id="toc-section-5.-variable-cleaning-and-renaming" class="nav-link" data-scroll-target="#section-5.-variable-cleaning-and-renaming">Section 5. Variable Cleaning and Renaming</a></li>
   <li><a href="#section-6.-creating-the-analysis-2-predictor" id="toc-section-6.-creating-the-analysis-2-predictor" class="nav-link" data-scroll-target="#section-6.-creating-the-analysis-2-predictor">Section 6. Creating the Analysis 2 Predictor</a></li>
-  <li><a href="#section-7.-arranging-your-analytic-tibble" id="toc-section-7.-arranging-your-analytic-tibble" class="nav-link" data-scroll-target="#section-7.-arranging-your-analytic-tibble">Section 7. Arranging Your Analytic Tibble</a></li>
+  <li><a href="#section-7.-arranging-and-saving-the-analytic-tibble" id="toc-section-7.-arranging-and-saving-the-analytic-tibble" class="nav-link" data-scroll-target="#section-7.-arranging-and-saving-the-analytic-tibble">Section 7. Arranging and Saving The Analytic Tibble</a></li>
   <li><a href="#section-8.-print-the-tibble" id="toc-section-8.-print-the-tibble" class="nav-link" data-scroll-target="#section-8.-print-the-tibble">Section 8. Print the Tibble</a></li>
   <li><a href="#section-9.-numerical-summaries" id="toc-section-9.-numerical-summaries" class="nav-link" data-scroll-target="#section-9.-numerical-summaries">Section 9. Numerical Summaries</a></li>
   <li><a href="#section-10.-missingness-checks" id="toc-section-10.-missingness-checks" class="nav-link" data-scroll-target="#section-10.-missingness-checks">Section 10. Missingness checks</a></li>
@@ -263,7 +263,7 @@ Note
 </section>
 <section id="section-2.-data-ingest" class="level2">
 <h2 class="anchored" data-anchor-id="section-2.-data-ingest">Section 2. Data Ingest</h2>
-<p>This section should display the results of following the instructions in Data Task 1 from the <a href="./data.html">Data page</a>. In this section, you should ingest the raw data into <code>chr_2023_raw</code> and then filter to the ranked counties, producing a tibble with 3082 rows and 720 columns. Do not list the tibble, but use <code>dim(chr_2023_raw)</code> to demonstrate that your work meets this requirement.</p>
+<p>This section should display the results of following the instructions in Data Task 1 from the <a href="./data.html">Data page</a>. In this section, you should ingest the raw data into <code>chr_2023_raw</code> and then filter to the ranked counties, producing a tibble with 3082 rows and 720 columns. Do not list the tibble, but use R code to demonstrate that your work meets this requirement.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -311,9 +311,10 @@ Note
 <h2 class="anchored" data-anchor-id="section-6.-creating-the-analysis-2-predictor">Section 6. Creating the Analysis 2 Predictor</h2>
 <p>Use the instructions in <a href="./data.html">Data Task 4</a> to develop the binary factor that you will use as your Analysis 2 predictor. Be sure to describe the exact cutpoints used in creating the low and high groups, and demonstrate that the resulting factor has approximately 40% of your original observations in the low group, 40% in the high group, and missing data for the middle 20%.</p>
 </section>
-<section id="section-7.-arranging-your-analytic-tibble" class="level2">
-<h2 class="anchored" data-anchor-id="section-7.-arranging-your-analytic-tibble">Section 7. Arranging Your Analytic Tibble</h2>
+<section id="section-7.-arranging-and-saving-the-analytic-tibble" class="level2">
+<h2 class="anchored" data-anchor-id="section-7.-arranging-and-saving-the-analytic-tibble">Section 7. Arranging and Saving The Analytic Tibble</h2>
 <p>After renaming your variables, arrange the variables in your <strong>chr_2023</strong> tibble into the order specified in <a href="./data.html">Data Task 5</a>.</p>
+<p>Then save the tibble as an R data set. Don’t make any changes to the tibble after this point.</p>
 </section>
 <section id="section-8.-print-the-tibble" class="level2">
 <h2 class="anchored" data-anchor-id="section-8.-print-the-tibble">Section 8. Print the Tibble</h2>
