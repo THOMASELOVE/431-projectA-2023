@@ -8,7 +8,7 @@ date: last-modified
 knitr::opts_chunk$set(comment = NA)
 ```
 
-# This material is under revision. Please ignore it for now, until new material is posted.
+# Please ignore these instructions until the first class meeting, while we continue to build them.
 
 ## Your Final Submission involves Three Parts
 

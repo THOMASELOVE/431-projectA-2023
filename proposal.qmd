@@ -8,7 +8,7 @@ date: last-modified
 knitr::opts_chunk$set(comment = NA)
 ```
 
-# This material is under revision. Please ignore it for now, until new material is posted.
+# Please ignore these instructions until the first class meeting, while we continue to build them.
 
 You will submit a proposal document to Canvas (both in R Markdown and HTML) providing the answers to a series of questions related to your Data Development work. 
 
@@ -22,9 +22,9 @@ You will submit a proposal document to Canvas (both in R Markdown and HTML) prov
 
 Your project proposal requires you to create the tibble you plan to use and then send (via Canvas) an R Markdown file and HTML result that contains these five elements:
 
-1. A sentence or two (or small table) specifying the 4-6 states you chose, and the number of counties you are studying in total and within each state. The codebook you built in Task 6 of the Data work is appropriate here. In an additional sentence or two, provide some motivation for why you chose those states.
+1. A sentence or two (or small table) specifying the 6 states you chose, and the number of counties you are studying in total and within each state. The codebook you built in Task 6 of the Data work is appropriate here. In an additional sentence or two, provide some motivation for why you chose those states.
 2. A list of the five variables (including their original raw names and your renamed versions) you are studying, with a clear indication of the cutpoints you chose to create the binary categories out of variable 4 and the multiple categories out of variable 5. The codebook you built in Task 6 of the Data work is appropriate here. For each variable, provide a sentence describing your motivation for why this variable was interesting to you.
-3. A print-out of your cleaned up `chr_2022` tibble, to prove it is a tibble, with 11 columns (variables) and 200-400 rows (counties). No writing is required here - just the result of the code.
+3. A print-out of your cleaned up `chr_2022` tibble, to prove it is a tibble, with 11 columns (variables) and 300-800 rows (counties). No writing is required here - just the result of the code.
 4. The `Hmisc::describe` result for your `chr_2022` tibble. As in element 3, code alone is sufficient for this element.
 5. In a paragraph, describe the most challenging (or difficult) part of completing the work so far, and how you were able to overcome whatever it was that was difficult. 
 
@@ -102,8 +102,8 @@ A sample codebook is provided as part of the [Examples folder](examples.qmd) in 
     - The example proposal provides an example, but you can come up with something better if you like. It must be run within R Markdown though - you cannot submit an image instead of getting the codebook through code.
 
 6.	Which states were chosen is clear, and there is a sentence about why they were chosen.
-    - There must be 4-6 states, including Ohio
-    - This must lead to 200-400 counties, and this number must be clear from the document (both the number of rows in the final tibble and in writing.)
+    - There must be 6 states, including Ohio
+    - This must lead to 300-800 counties, and this number must be clear from the document (both the number of rows in the final tibble and in writing.)
     - You should not drop any counties from any of the states you selected in the development of your tibble.
     
 7.	Your selected five variables are clear, and there is information about what the variables mean and why you chose them, and the role they will play in your eventual analyses
