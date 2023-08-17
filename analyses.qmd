@@ -1,5 +1,5 @@
 ---
-title: "Analyses"
+title: "Project A Analyses"
 author: "431 Staff"
 date: last-modified
 ---
@@ -8,77 +8,5 @@ date: last-modified
 knitr::opts_chunk$set(comment = NA)
 ```
 
-# This material is under revision. Please ignore it for now, until new material is posted.
-
-Using the tibble you've developed following the instructions on the [Data](data.qmd) and [Proposal](proposal.qmd) pages, you will then create the remainder of your report by performing the analytic tasks specified below.
-
-All three of these tasks should include R code that creates the information you need, **and** complete English sentences that interpret those results.
-
-Dr. Love has provided a detailed outline for each of these Analyses as part of the [Examples & Tips](exampleB.qmd) page. You'll find that outline incorporated into the descriptions below, too.
-
-### Analysis 1: Simple Linear Regression Model
-
-Provide evidence regarding the question of how well variable 1 can be predicted using one of the other quantitative variables (your choice of either variable 2 or variable 3). This should include a report on the effectiveness of a simple linear regression model, and an appropriate plot of the relationship. Important steps to include in your analytic report include:
-
-- At the start, a careful statement of the **research question** you are trying to answer with this analysis. At the end, a clear and appropriate **response** to that question, with a clear description of the limitations of your work. Most of the time, one model won't let you come to a strong conclusion about a question of interest, and it is your job to accurately present what information can be specified as a result of the model, without overstating your conclusions. This (the specification of your research question and your response) is the most important part of the analysis.
-- A visualization of the relationship between the outcome (Y-axis) and the predictor (X-axis) and a written description of what you learn about the association (which should include its direction, shape and strength along with identification of any substantial outliers). The addition of a loess smooth and/or a fit line to the plot should be important.
-- A specification of any transformations you choose to apply to the X or Y variable in order to obtain a better fit with a simple linear regression, along with some justification for the choice (or for the decision not to apply a transformation.)
-- A specification of the actual prediction equation created by the model, and an interpretation of what the coefficients mean, and how they should be interpreted in light of their estimated standard errors.
-- A specification of summary measures of goodness of fit, at a minimum the residual standard deviation (sigma) and the r-squared value. The quality of fit is not a consideration in the grading of this work.
-- Identification of the two counties (by name and state) where the model is least successful at predicting the outcome.
-
-#### The Outline for Analysis 1
-
-The [outline Dr. Love has prepared for Analysis 1](exampleB.qmd) includes the following subsections. See that outline for more details in terms of what needs to go where, and additional guidance to help you complete the project effectively.
-
-1. The Variables
-2. Research Question
-3. Visualizing the Data
-4. Transformation Assessment
-5. The Fitted Model
-6. Residual Analysis
-7. Conclusions and Limitations
-
-### Analysis 2: Comparing Groups on a Quantitative Outcome using Independent Samples
-
-Provide evidence regarding the question of how well your variable 1 can be predicted using one of your categorical variables (you may select either the binary (variable 4) or the multi-categorical (variable 5) here.) This should include a report on the effectiveness of the resulting model following the suggestions from the first task, and a key part of that report will be an appropriate, attractive and well-labeled plot of the relationship between your quantitative and categorical variable. Consider a transformation of the quantitative outcome should that prove useful, and be sure to provide evidence regarding the impact of the assumptions of a linear model on your conclusions.
-
-Your report should include, at a minimum:
-
-- At the start, a careful statement of the **research question** you are trying to answer with this analysis. At the end, a clear and appropriate **response** to that question, with a clear description of the limitations of your work. Most of the time, one model won't let you come to a strong conclusion about a question of interest, and it is your job to accurately present what information can be specified as a result of the model, without overstating your conclusions. This (the specification of your research question and your response) is the most important part of the analysis.
-- A visualization of the relationship between the outcome (Y-axis) and the predictor (X-axis) and a written description of what you learn about the changes in the distribution of your outcome associated with your predictor's categories. 
-- A specification of any transformations you choose to apply to the Y variable in order to obtain a better fit with a simple linear regression on your categorical predictor (which should definitely be included in the model as a *factor* in R), along with some justification for the choice (or for the decision not to apply a transformation.)
-- A specification of the actual prediction equation created by the model, and an interpretation of what the coefficients mean, and how they should be interpreted in light of their estimated standard errors.
-- A specification of summary measures of goodness of fit, at a minimum the residual standard deviation (sigma) and the r-squared value. The quality of fit is not a consideration in the grading of this work.
-- Identification of the two counties (by name and state) where the model is least successful at predicting the outcome.
-
-#### The Outline for Analysis 2
-
-The [outline Dr. Love has prepared for Analysis 2](exampleB.qmd) includes the following subsections. See that outline for more details in terms of what needs to go where, and additional guidance to help you complete the project effectively.
-
-1. The Variables
-2. Research Question
-3. Visualizing the Data
-4. The Fitted Model
-5. Prediction Analysis
-6. Conclusions and Limitations
-
-### Analysis 3: Adjusting for the impact of state on your linear model
-
-Provide evidence regarding the question of how well variable 1 can be predicted using one of the other quantitative variables (your choice of either variable 2 or variable 3) after adjusting for the `state` effect. This should include a report on the effectiveness of the resulting model following the suggestions from the first task, and this must include (of course) an attractive, well-labeled and appropriate plot of the relationship that shows the impact of the `state` and helps us understand the inter-relationship of the three variables under study.
-
-Your work on Analysis 3 should follow a similar path to the first two analyses, with a careful description of what's happening in the model, and visualizations to help us understand what you've learned from the data. Specification of the prediction model, its goodness of fit and identification of outliers are all relevant here, as well, and your final description of the work should demonstrate a coherent and clear understanding of what you've done.
-
-As in Analyses 1 and 2, the most important part of this Analysis is to provide, at the start, a careful statement of the **research question** you are trying to answer with this analysis, followed at the end by a clear and appropriate **response** to that question, with a clear description of the limitations of your work. 
-
-#### The Outline for Analysis 3
-
-The [outline Dr. Love has prepared for Analysis 3](exampleB.qmd) includes the following subsections. See that outline for more details in terms of what needs to go where, and additional guidance to help you complete the project effectively.
-
-1. The Variables
-2. Research Question
-3. Visualizing the Data
-4. The Fitted Model
-5. Residual Analysis
-6. Conclusions and Limitations
+# Coming soon.
 

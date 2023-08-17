@@ -166,7 +166,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#please-ignore-these-instructions-until-the-first-class-meeting-while-we-continue-to-build-them." id="toc-please-ignore-these-instructions-until-the-first-class-meeting-while-we-continue-to-build-them." class="nav-link active" data-scroll-target="#please-ignore-these-instructions-until-the-first-class-meeting-while-we-continue-to-build-them.">Please ignore these instructions until the first class meeting, while we continue to build them.</a></li>
+  <li><a href="#we-will-post-full-instructions-before-our-first-class.-for-now-ignore-this-draft." id="toc-we-will-post-full-instructions-before-our-first-class.-for-now-ignore-this-draft." class="nav-link active" data-scroll-target="#we-will-post-full-instructions-before-our-first-class.-for-now-ignore-this-draft.">We will post full instructions before our first class. For now, ignore this draft.</a></li>
   <li><a href="#what-data-will-i-use" id="toc-what-data-will-i-use" class="nav-link" data-scroll-target="#what-data-will-i-use">What Data Will I Use?</a></li>
   <li><a href="#developing-the-data-five-data-tasks" id="toc-developing-the-data-five-data-tasks" class="nav-link" data-scroll-target="#developing-the-data-five-data-tasks">Developing the Data: Five Data Tasks</a></li>
   <li><a href="#data-task-1.-ingest-the-raw-data-into-chr_2023_raw-then-filter-to-ranked-counties" id="toc-data-task-1.-ingest-the-raw-data-into-chr_2023_raw-then-filter-to-ranked-counties" class="nav-link" data-scroll-target="#data-task-1.-ingest-the-raw-data-into-chr_2023_raw-then-filter-to-ranked-counties">Data Task 1. Ingest the raw data into <code>chr_2023_raw</code>, then filter to ranked counties</a></li>
@@ -186,9 +186,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#variables-that-are-proportions-should-be-converted-to-percentages" id="toc-variables-that-are-proportions-should-be-converted-to-percentages" class="nav-link" data-scroll-target="#variables-that-are-proportions-should-be-converted-to-percentages">Variables that are Proportions should be converted to Percentages</a></li>
   <li><a href="#variables-that-should-be-ok-as-is" id="toc-variables-that-should-be-ok-as-is" class="nav-link" data-scroll-target="#variables-that-should-be-ok-as-is">Variables that should be OK as is</a></li>
   </ul></li>
-  <li><a href="#checking-your-variables" id="toc-checking-your-variables" class="nav-link" data-scroll-target="#checking-your-variables">Checking Your Variables</a></li>
   </ul></li>
-  <li><a href="#data-task-4.-create-a-factor-for-the-task-2-predictor" id="toc-data-task-4.-create-a-factor-for-the-task-2-predictor" class="nav-link" data-scroll-target="#data-task-4.-create-a-factor-for-the-task-2-predictor">Data Task 4. Create a factor for the Task 2 predictor</a></li>
+  <li><a href="#data-task-4.-create-a-factor-for-the-analysis-2-predictor" id="toc-data-task-4.-create-a-factor-for-the-analysis-2-predictor" class="nav-link" data-scroll-target="#data-task-4.-create-a-factor-for-the-analysis-2-predictor">Data Task 4. Create a factor for the Analysis 2 predictor</a></li>
   <li><a href="#data-task-5.-rename-variables-and-save-the-final-chr_2023-tibble" id="toc-data-task-5.-rename-variables-and-save-the-final-chr_2023-tibble" class="nav-link" data-scroll-target="#data-task-5.-rename-variables-and-save-the-final-chr_2023-tibble">Data Task 5. Rename variables and save the final <code>chr_2023</code> tibble</a></li>
   </ul>
 </nav>
@@ -225,8 +224,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="please-ignore-these-instructions-until-the-first-class-meeting-while-we-continue-to-build-them." class="level1">
-<h1>Please ignore these instructions until the first class meeting, while we continue to build them.</h1>
+<section id="we-will-post-full-instructions-before-our-first-class.-for-now-ignore-this-draft." class="level1">
+<h1>We will post full instructions before our first class. For now, ignore this draft.</h1>
 </section>
 <section id="what-data-will-i-use" class="level1">
 <h1>What Data Will I Use?</h1>
@@ -874,17 +873,9 @@ Note
 </ul>
 </section>
 </section>
-<section id="checking-your-variables" class="level2">
-<h2 class="anchored" data-anchor-id="checking-your-variables">Checking Your Variables</h2>
-<p>For each of the variables you select, as part of your analytic work, you will need to both check and display that the variable has:</p>
-<ul>
-<li>at least <strong>80% complete</strong> data across the counties within each of your selected states, <strong>and</strong></li>
-<li>at least <strong>15 distinct</strong> values across the complete set of counties in your sample.</li>
-</ul>
 </section>
-</section>
-<section id="data-task-4.-create-a-factor-for-the-task-2-predictor" class="level1">
-<h1>Data Task 4. Create a factor for the Task 2 predictor</h1>
+<section id="data-task-4.-create-a-factor-for-the-analysis-2-predictor" class="level1">
+<h1>Data Task 4. Create a factor for the Analysis 2 predictor</h1>
 <p>Create a new categorical variables (factor) based on your fourth variable, and add this new factor to your <strong>chr_2023</strong> tibble. You’ll also retain the original (quantitative) version of this variable, so your tibble will now have 10 variables.</p>
 <ol type="1">
 <li>Divide the values in your variable 4 into three groups, as follows:
@@ -902,26 +893,25 @@ Note
 </section>
 <section id="data-task-5.-rename-variables-and-save-the-final-chr_2023-tibble" class="level1">
 <h1>Data Task 5. Rename variables and save the final <code>chr_2023</code> tibble</h1>
-<p>Your final <strong>chr_2023</strong> tibble will thus contain 300-800 rows (counties) and 10 variables. You’ll save this tibble as an R data set (.Rds file) and share that file with us as part of your proposal.</p>
-<p>In your Quarto file, you will need to present all code necessary to take the original .csv data file and wind up with your <code>chr_2023</code> tibble so that we can run that code and get the same results you do.</p>
-<p>Your main data set for analysis then should be gathered into a tibble called <strong>chr_2023</strong> containing the following information in this order:</p>
-<ul>
-<li>the identifying variables for each county, specifically:
-<ul>
-<li><code>fipscode</code> = the five-digit fips code for the state and county,</li>
-<li><code>county</code> = the name of the county</li>
-<li><code>state</code> = the postal abbreviation code for the state</li>
-</ul></li>
-<li>the variable <code>county_ranked</code>,</li>
-<li>your five selected quantitative variables</li>
-<li>your binary categorical variable derived from your fourth selected variable</li>
-</ul>
-<p>All of these variables should be <strong>renamed</strong> (and also have <code>clean_names()</code> from the <code>janitor</code> package applied) so as to have descriptive and maximally helpful variable names.</p>
+<p>Revise the <strong>chr_2023</strong> tibble to arrange the variables in the following order:</p>
+<ol type="1">
+<li><code>fipscode</code>,</li>
+<li><code>state</code>,</li>
+<li><code>county</code>,</li>
+<li>your selected (and renamed) variable 1 (Analysis 1 outcome),</li>
+<li>your selected (and renamed) variable 2 (Analysis 1 predictor),</li>
+<li>your selected (and renamed) variable 3 (Analysis 2 outcome),</li>
+<li>your binary factor describing variable 4 (Analysis 2 predictor),</li>
+<li>your original (quantitative version) of variable 4,</li>
+<li>your selected (and renamed) variable 5 (extra variable), and</li>
+<li>the <code>county_ranked</code> variable (whose values must all be 1)</li>
+</ol>
+<p>All of your selected variables should be <strong>renamed</strong> (and also have <code>clean_names()</code> from the <code>janitor</code> package applied) so as to have descriptive and maximally helpful variable names.</p>
 <ul>
 <li>For example, if you have decided to use as a quantitative variable something like <code>v009_rawvalue</code>, which is about adult smoking, you should rename the variable <code>v009_rawvalue</code> to <strong>adult_smoking</strong> in your tibble.</li>
 <li>If <code>v009_rawvalue</code> (about adult smoking) is to be your categorical factor, then you should include both the original quantitative value (renamed <code>adult_smoking_raw</code>) and your categorical variable that you’ll actually use in analyses, which should be named <code>adult_smoking_cat</code>.</li>
 </ul>
-<p><strong>Save the Tibble</strong>: You should provide code that saves your tibble as an R data set into your R Project, with the file name <strong>chr_2023_YOURNAME.Rds</strong>. If you like, you can store this <code>.Rds</code> file in a <code>data</code> subdirectory within your R Project.</p>
+<p>Save this final <strong>chr_2023</strong> tibble as an R data set (.Rds file) in your R Project, with the file name <strong>chr_2023_YOURNAME.Rds</strong>. You will share this file with us as part of your proposal. If you like, you can store this <code>.Rds</code> file in a <code>data</code> subdirectory within your R Project.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -934,7 +924,6 @@ Note
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li>After your cleaning is done, each row in your <code>chr_2023</code> tibble should contain all of the counties within the 6 states you are studying, and no other counties should be included in your tibble.</li>
-<li>All rows of your <code>chr_2023</code> tibble must display a <code>county_ranked</code> value of 1.</li>
 <li>If data for some counties are missing in the raw data for one or more of your variables (and this will be true at least for your binary factor representing low and high levels of variable 4), then these data should be indicated as missing (using NA) in the tibble.</li>
 <li>There is no need to set a seed in this process, as you are not doing anything that involves selecting a random sample.</li>
 </ol>
