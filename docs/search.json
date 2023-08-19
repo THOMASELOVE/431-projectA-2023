@@ -4,7 +4,56 @@
     "href": "analyses.html",
     "title": "Project A Analyses",
     "section": "",
-    "text": "Coming soon."
+    "text": "Using the tibble you’ve developed following the instructions on the Data and Proposal pages, you will then create the remainder of your report by performing the analytic tasks specified below.\nEach of these tasks should include R code that creates the information you need, and complete English sentences that interpret those results. Again, you have to be able to reason about what you’ve done, not just generate the code to solve the problem."
+  },
+  {
+    "objectID": "analyses.html#the-variables",
+    "href": "analyses.html#the-variables",
+    "title": "Project A Analyses",
+    "section": "The Variables",
+    "text": "The Variables\nIn this section you will build a simple linear regression model to predict your outcome using one of your two quantitative predictors (it’s your choice.) Start by identifying those variables, and restricting your data set for this analysis to the complete cases on those variables.\n\nUse complete English sentences to identify your outcome and your predictor, describing what each variable means and its units of measurement.\nAlso specify the name of each variable in your tibble (making it clear which is the outcome and which the predictor), the name of your tibble, which states you’re studying, and how many counties have complete data on both variables.\nFinally, specify the values of your outcome and predictor for Cuyahoga County, in Ohio, where CWRU’s campus is located."
+  },
+  {
+    "objectID": "analyses.html#research-question",
+    "href": "analyses.html#research-question",
+    "title": "Project A Analyses",
+    "section": "Research Question",
+    "text": "Research Question\nHere, you should restate your research question clearly, following the path set out in your proposal, tweaked as necessary in light of the work you’ve now completed. Remember that a research question will end with a question mark, and will be something you will be able to answer (or at least respond to effectively) after your analysis is complete."
+  },
+  {
+    "objectID": "analyses.html#visualizing-the-data",
+    "href": "analyses.html#visualizing-the-data",
+    "title": "Project A Analyses",
+    "section": "Visualizing the Data",
+    "text": "Visualizing the Data\nProvide an attractive, well-labeled scatterplot of your outcome and predictor, before any transformations, including all code necessary to build it, and describe what the plot tells you about the association of the variables, as detailed in the instructions."
+  },
+  {
+    "objectID": "analyses.html#transformation-assessment",
+    "href": "analyses.html#transformation-assessment",
+    "title": "Project A Analyses",
+    "section": "Transformation Assessment",
+    "text": "Transformation Assessment\nHere, you will provide information about any transformations you chose to apply to the outcome, and explain why you did (or didn’t) choose to use a transformation.\n\nIf you decide to use a transformation, specify the transformation you’ve chosen carefully, and show the scatterplot of the transformed data, using the same suggestions as were provided in the previous section to describe the resulting plot. Write a few sentences describing the transformations you considered, and why you thought this was the most promising, and why you eventually decided to use the transformed versions of your variables.\nIf you decide not to use a transformation, identify the ONE plot which was the most promising of available transformations and show that one. Write a few sentences describing the transformations you considered, and why you thought this was the most promising, and why you eventually decided to stick with the original versions of the variables.\n\n\nTips on the Transformation Assessment\nYour response will include ONE plot demonstrating a particular transformation, although you will probably fit and view several plots in order to select a final one for this work.\nFor this part of Project A, confine your search to either a logarithm, an inverse, or a square as applied to the outcome. If you want to consider one of those transformations for the predictor as well, that’s OK but not crucial. You should select the most promising transformation on the basis of a scatterplot (perhaps with a loess smooth and linear fit) after the transformation has been applied.\nYou are discouraged from using numerical summaries of fit in this section. Of course, summary statistics like \\(R^2\\) when the outcome is transformed will definitely not be comparable.\nNote that this transformation assessment is part of Analysis 1, but will not be shown in Analyses 2 or 3. Feel free to use the transformation (of the outcome) that you select in Analysis 1 for the other two Analyses, if you like."
+  },
+  {
+    "objectID": "analyses.html#the-fitted-model",
+    "href": "analyses.html#the-fitted-model",
+    "title": "Project A Analyses",
+    "section": "The Fitted Model",
+    "text": "The Fitted Model\nFit your model to use your predictor to predict your outcome (applying your selected transformation) and provide the code you used, and the following summary elements in this section.\n\nA written statement of the full prediction equation, with coefficients nicely rounded, and a careful description of what the coefficients mean in context.\nA tidy summary of the model’s coefficients, including 90% confidence interval for model estimates.\nThe model’s R-squared, residual standard error, the number of observations to which the model was fit, and the Pearson correlation of your predictor and outcome."
+  },
+  {
+    "objectID": "analyses.html#residual-analysis",
+    "href": "analyses.html#residual-analysis",
+    "title": "Project A Analyses",
+    "section": "Residual Analysis",
+    "text": "Residual Analysis\nHere, you’ll need to do four things.\n\nprepare a pair of residual plots (one to assess residuals vs. fitted values for non-linearity, and one to assess Normality in the residuals or the standardized residuals.)\ninterpret those plots in terms of what they tell you about how well the assumptions of linearity and Normality hold for your setting, in complete English sentences.\ndisplay your model’s prediction for the original (untransformed) outcome you are studying for Cuyahoga County, in Ohio, and compare it to Cuyahoga’s actual value of this outcome.\nidentify the two counties (by name and state) where the model you’ve fit is least successful at predicting the outcome (in the sense of having the largest residual in absolute value.)\n\n\nThe augment function would be very helpful here.\nIf you model is called m1, you could use something like plot(m1, which = c(1:2)) to obtain these two plots and that’s OK.\nYou can produce a more pleasing picture using ggplot2 and patchwork following the strategy I’ve demonstrated multiple times in the slides and the Course Notes, should you desire."
+  },
+  {
+    "objectID": "analyses.html#conclusions-and-limitations",
+    "href": "analyses.html#conclusions-and-limitations",
+    "title": "Project A Analyses",
+    "section": "Conclusions and Limitations",
+    "text": "Conclusions and Limitations\nHere, you’ll write two paragraphs.\nIn the first paragraph, you should provide a clear restatement of your research question, followed by a clear and appropriate response to your research question, motivated by your results.\nThen, write a paragraph which summarizes the key limitations of your work in Analysis 1. - If you see problems with regression assumptions in your residual plot, that would be a good thing to talk about here, for instance. - Another issue that is worth discussing is your target population, and what evidence you can describe that might indicate whether your selected states are a representative sample of the US as a whole, or perhaps some particular part of the United States."
   },
   {
     "objectID": "check_final.html",
@@ -18,7 +67,7 @@
     "href": "cleaning.html",
     "title": "Cleaning Your Variables",
     "section": "",
-    "text": "This page was last updated: 2023-08-19 12:12:39.100058.\nCheck your five variables on the lists below. You should find all five."
+    "text": "This page was last updated: 2023-08-19 12:24:58.42014.\nCheck your five variables on the lists below. You should find all five."
   },
   {
     "objectID": "cleaning.html#variables-that-are-proportions-should-be-converted-to-percentages",
@@ -109,7 +158,7 @@
     "href": "exampleB.html",
     "title": "Outline for Project Report",
     "section": "",
-    "text": "This page was last updated: 2023-08-19 12:12:43.676492.\nHere is an outline of the “Analysis” section of your final Project A report. Note that none of this material should be included in your Project A proposal."
+    "text": "This page was last updated: 2023-08-19 12:25:02.920013.\nHere is an outline of the “Analysis” section of your final Project A report. Note that none of this material should be included in your Project A proposal."
   },
   {
     "objectID": "exampleB.html#the-variables",
