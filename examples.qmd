@@ -8,13 +8,19 @@ date: last-modified
 knitr::opts_chunk$set(comment = NA)
 ```
 
-# Coming Soon.
+# Now Available
+
+## Project A Proposal
+
+1. The **sample proposal** using 2019 data is available now. The Quarto file is called `431-projA-sample-portfolio.qmd` and it is part of the regular downloads of data and code at our [431-data site](https://github.com/THOMASELOVE/431-data). However, I might start by looking at the posted [HTML result](https://rpubs.com/TELOVE/projectA-sample-proposal) at RPubs, which should be easier to read.
+
+2. The **proposal template**, which we used to build the sample proposal but which has less information in it, as a result, is also available as part of [the 431-data site](https://github.com/THOMASELOVE/431-data). It is called `431-projA-portfolio-template.qmd`.
+
+# Coming Soon
 
 To come:
 
-1. Sample Proposal, including Data Development, Codebook and Initial Summary
-    - Template for Proposal
-2. Sample Analyses
-3. Sample Portfolio Report
+1. Sample Analyses
+2. Sample Portfolio Report
     - Template for Portfolio Report
 

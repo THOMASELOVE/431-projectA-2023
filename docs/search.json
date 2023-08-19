@@ -18,7 +18,7 @@
     "href": "cleaning.html",
     "title": "Cleaning Your Variables",
     "section": "",
-    "text": "This page was last updated: 2023-08-19 12:02:18.174004.\nCheck your five variables on the lists below. You should find all five."
+    "text": "This page was last updated: 2023-08-19 12:12:39.100058.\nCheck your five variables on the lists below. You should find all five."
   },
   {
     "objectID": "cleaning.html#variables-that-are-proportions-should-be-converted-to-percentages",
@@ -109,7 +109,7 @@
     "href": "exampleB.html",
     "title": "Outline for Project Report",
     "section": "",
-    "text": "This page was last updated: 2023-08-19 12:02:22.718744.\nHere is an outline of the “Analysis” section of your final Project A report. Note that none of this material should be included in your Project A proposal."
+    "text": "This page was last updated: 2023-08-19 12:12:43.676492.\nHere is an outline of the “Analysis” section of your final Project A report. Note that none of this material should be included in your Project A proposal."
   },
   {
     "objectID": "exampleB.html#the-variables",
@@ -263,7 +263,14 @@
     "href": "examples.html",
     "title": "Examples",
     "section": "",
-    "text": "Coming Soon.\nTo come:\n\nSample Proposal, including Data Development, Codebook and Initial Summary\n\nTemplate for Proposal\n\nSample Analyses\nSample Portfolio Report\n\nTemplate for Portfolio Report"
+    "text": "The sample proposal using 2019 data is available now. The Quarto file is called 431-projA-sample-portfolio.qmd and it is part of the regular downloads of data and code at our 431-data site. However, I might start by looking at the posted HTML result at RPubs, which should be easier to read.\nThe proposal template, which we used to build the sample proposal but which has less information in it, as a result, is also available as part of the 431-data site. It is called 431-projA-portfolio-template.qmd."
+  },
+  {
+    "objectID": "examples.html#project-a-proposal",
+    "href": "examples.html#project-a-proposal",
+    "title": "Examples",
+    "section": "",
+    "text": "The sample proposal using 2019 data is available now. The Quarto file is called 431-projA-sample-portfolio.qmd and it is part of the regular downloads of data and code at our 431-data site. However, I might start by looking at the posted HTML result at RPubs, which should be easier to read.\nThe proposal template, which we used to build the sample proposal but which has less information in it, as a result, is also available as part of the 431-data site. It is called 431-projA-portfolio-template.qmd."
   },
   {
     "objectID": "index.html#deliverables",
