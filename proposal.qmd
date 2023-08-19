@@ -107,21 +107,15 @@ You will show that your **chr_2023** tibble is in fact a tibble and not just a d
 
 ## Section 9. Numerical Summaries
 
-You will then demonstrate main numerical summaries from the tibble, in particular:
+You will display the results of `describe()` from the `Hmisc` package, run on the entire tibble. 
 
-1. You will display the results of `describe()` from the `Hmisc` package, run on the entire tibble. You will use this output to help demonstrate that you have at least **15 distinct** values across the complete set of counties in your sample for your Analysis 1 outcome and predictor, and for your Analysis 2 outcome.
-    - We need to see minimum and maximum values that make sense, and also that each of your variables shows the appopriate number of counties. 
-2. You will display `tabyl()` results to show the association of your categorical factor (derived from variable 4) with your six `state`s. In part, this will demonstrate the number of counties within each `state` and overall.
+- We need to see minimum and maximum values that make sense, and also that each of your variables shows the appropriate number of counties. 
 
-## Section 10. Missingness checks
+## Section 10. The Codebook
 
-For each of the five (quantitative) variables you select, you will need to check and display that the variable has at least **80% complete** data across the counties within **each** of your selected states.
+Begin this section with a statement of the number of counties and variables (should be ten) in your tibble.
 
-The results of your missingness check and your # of distinct values check are clear, and you've written a sentence (at least) in response to the results of each check that makes sense.
-
-## Section 11. The Codebook
-
-A codebook, including your revised and the original variable names, definitions and a clear indication of the cutpoints for your binary factor is the next step.
+A codebook, including your revised and the original variable names, counts of distinct and missing values, definitions and a clear indication of the cutpoints for your binary factor is the next step. 
 
 After you select your variables, use the [County Health Rankings website's 2023 Measures list](https://www.countyhealthrankings.org/2023-measures), and in particular the linked information on that page for full descriptions, definitions and limitations of the variables you have selected. 
 
@@ -136,21 +130,54 @@ For more details of what we're looking for here, please refer to the sample code
 
 :::
 
-## Section 12. Research Question for Analysis 1
+At the end of this section, you should complete checks that:
 
-Here you will propose your Research Question for Analysis 1 and provide some motivation for your variable choices associated with that analysis.
+1. You have at least **15 distinct** values across your sample of counties for your Analysis 1 variables, your Analysis 2 outcome and your Extra variable.
+2. You have no more than 20% missing values in your Analysis 1 variables, your Analysis 2 outcome and your Extra variable.
+3. You have no missing data at all in your identifying variables (`fipscode`, `state`, `county`) nor in your `county_ranked` variable, and that you have a distinct `fipscode` for every row in your tibble.
 
-## Section 13. Research Question for Analysis 2
+## Section 11. Research Question for Analysis 1
 
-Here you will propose your Research Question for Analysis 2 and provide some motivation for your variable choices associated with that analysis.
+Here you will propose your Research Question for Analysis 1 and provide some motivation for your variable choices associated with that analysis. A pair of good research questions (one here in Section 11, the other in Section 12) is the most important part of this portfolio.
 
-## Section 14. Reflection
+- A research question will **end with a question mark**, and will be something you will be able to answer (or at least respond to effectively) after your Analysis 1 is complete.
+- Do not use more than one research question for this Analysis.
+- After listing your question, it is completely appropriate for you to provide some brief speculation as to the nature of the relationship you anticipate finding based on your hypotheses about the variables you plan to study (following my tips below.)
+
+### Tips for the research question in Analysis 1
+
+- Examples of dull but moderately effective and minimally appropriate research questions for Analysis 1 would be:
+
+**How well does a linear model using [predictor] predict [outcome], in [number] counties in the states of [list of your states]?**
+
+or
+
+**What is the nature of the association between [predictor] and [outcome], in [number] counties in the states of [list of your states]?**
+
+- You should be able to do meaningfully better than that, especially if you have a reason to believe something in advance about the direction or strength of the association you are anticipating. 
+- However, if you're struggling, using that format will be OK. 
+- A research question uses formal but clear language. 
+- Given your planned analyses, stay away from statements about cause and effect, and don't use the words correlate or regression (in any form) in your research question.
+
+## Section 12. Research Question for Analysis 2
+
+Here you will propose your Research Question for Analysis 2 and provide some motivation for your variable choices associated with that analysis. All of the tips for Analysis 1 apply in this case, too. 
+
+- Please remember that a research question for this course should end in a question mark.
+- Again, after listing your question, it is completely appropriate for you to provide some brief speculation as to the nature of the relationship you anticipate finding based on your hypotheses about the variables you plan to study.
+- An example of a dull but moderately effective and minimally appropriate research question for Analysis 2 might be:
+
+**Are there meaningful differences in the mean of [outcome] for counties with high and low levels of [predictor], across the states of [list of your states]?**
+
+Again, you should be able to do a bit better than that.
+
+## Section 13. Reflection
 
 Here you will provide a paragraph describing the most challenging (or difficult) part of completing the work so far, and how you were able to overcome whatever it was that was most challenging.
 
 Your discussion of the biggest challenge includes a paragraph (or more) written in English, with attention paid to grammar, syntax and spelling.  It needs to be clear to us from reading your reflection what your biggest issue was, and how you tried to address it.
 
-## Section 15. Session Information
+## Section 14. Session Information
 
 As we have required in our Labs, there must be a Session Information section at the end of the document. This should indicate that R version 4.3.1. or later is used.
 
@@ -158,8 +185,10 @@ We'd like you to use the `xfun` package's version of `session_info()`.
 
 # Submission Instructions
 
-- Your proposal (R data set, Quarto and HTML files) should be submitted to Canvas. 
-- Be sure that your proposal includes your name (names if you are working with a partner) as the author in Quarto, and thus in HTML. 
+- Be sure to use spell check (just hit F7) on your Quarto file before rendering it, and review the HTML result carefully to ensure that no residual warnings or error messages remain in the document.
+- Be sure that your proposal includes your name (names if you are working with a partner) as the author in Quarto, and thus in HTML, as well as a proper title. 
+
+Your proposal (R data set, Quarto and HTML files) should then be submitted to Canvas by the deadline listed in the [Course Calendar](https://thomaselove.github.io/431-2023/calendar.html). 
 
 # Grading The Proposal
 

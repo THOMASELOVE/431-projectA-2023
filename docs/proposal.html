@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="431 Staff">
-<meta name="dcterms.date" content="2023-08-17">
+<meta name="dcterms.date" content="2023-08-19">
 
 <title>431 Project A - Project A Proposal</title>
 <style>
@@ -148,12 +148,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#section-7.-arranging-and-saving-the-analytic-tibble" id="toc-section-7.-arranging-and-saving-the-analytic-tibble" class="nav-link" data-scroll-target="#section-7.-arranging-and-saving-the-analytic-tibble">Section 7. Arranging and Saving The Analytic Tibble</a></li>
   <li><a href="#section-8.-print-the-tibble" id="toc-section-8.-print-the-tibble" class="nav-link" data-scroll-target="#section-8.-print-the-tibble">Section 8. Print the Tibble</a></li>
   <li><a href="#section-9.-numerical-summaries" id="toc-section-9.-numerical-summaries" class="nav-link" data-scroll-target="#section-9.-numerical-summaries">Section 9. Numerical Summaries</a></li>
-  <li><a href="#section-10.-missingness-checks" id="toc-section-10.-missingness-checks" class="nav-link" data-scroll-target="#section-10.-missingness-checks">Section 10. Missingness checks</a></li>
-  <li><a href="#section-11.-the-codebook" id="toc-section-11.-the-codebook" class="nav-link" data-scroll-target="#section-11.-the-codebook">Section 11. The Codebook</a></li>
-  <li><a href="#section-12.-research-question-for-analysis-1" id="toc-section-12.-research-question-for-analysis-1" class="nav-link" data-scroll-target="#section-12.-research-question-for-analysis-1">Section 12. Research Question for Analysis 1</a></li>
-  <li><a href="#section-13.-research-question-for-analysis-2" id="toc-section-13.-research-question-for-analysis-2" class="nav-link" data-scroll-target="#section-13.-research-question-for-analysis-2">Section 13. Research Question for Analysis 2</a></li>
-  <li><a href="#section-14.-reflection" id="toc-section-14.-reflection" class="nav-link" data-scroll-target="#section-14.-reflection">Section 14. Reflection</a></li>
-  <li><a href="#section-15.-session-information" id="toc-section-15.-session-information" class="nav-link" data-scroll-target="#section-15.-session-information">Section 15. Session Information</a></li>
+  <li><a href="#section-10.-the-codebook" id="toc-section-10.-the-codebook" class="nav-link" data-scroll-target="#section-10.-the-codebook">Section 10. The Codebook</a></li>
+  <li><a href="#section-11.-research-question-for-analysis-1" id="toc-section-11.-research-question-for-analysis-1" class="nav-link" data-scroll-target="#section-11.-research-question-for-analysis-1">Section 11. Research Question for Analysis 1</a>
+  <ul class="collapse">
+  <li><a href="#tips-for-the-research-question-in-analysis-1" id="toc-tips-for-the-research-question-in-analysis-1" class="nav-link" data-scroll-target="#tips-for-the-research-question-in-analysis-1">Tips for the research question in Analysis 1</a></li>
+  </ul></li>
+  <li><a href="#section-12.-research-question-for-analysis-2" id="toc-section-12.-research-question-for-analysis-2" class="nav-link" data-scroll-target="#section-12.-research-question-for-analysis-2">Section 12. Research Question for Analysis 2</a></li>
+  <li><a href="#section-13.-reflection" id="toc-section-13.-reflection" class="nav-link" data-scroll-target="#section-13.-reflection">Section 13. Reflection</a></li>
+  <li><a href="#section-14.-session-information" id="toc-section-14.-session-information" class="nav-link" data-scroll-target="#section-14.-session-information">Section 14. Session Information</a></li>
   </ul></li>
   <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions">Submission Instructions</a></li>
   <li><a href="#grading-the-proposal" id="toc-grading-the-proposal" class="nav-link" data-scroll-target="#grading-the-proposal">Grading The Proposal</a></li>
@@ -182,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2023-08-17</p>
+      <p class="date">2023-08-19</p>
     </div>
   </div>
   
@@ -322,23 +324,15 @@ Note
 </section>
 <section id="section-9.-numerical-summaries" class="level2">
 <h2 class="anchored" data-anchor-id="section-9.-numerical-summaries">Section 9. Numerical Summaries</h2>
-<p>You will then demonstrate main numerical summaries from the tibble, in particular:</p>
-<ol type="1">
-<li>You will display the results of <code>describe()</code> from the <code>Hmisc</code> package, run on the entire tibble. You will use this output to help demonstrate that you have at least <strong>15 distinct</strong> values across the complete set of counties in your sample for your Analysis 1 outcome and predictor, and for your Analysis 2 outcome.
+<p>You will display the results of <code>describe()</code> from the <code>Hmisc</code> package, run on the entire tibble.</p>
 <ul>
-<li>We need to see minimum and maximum values that make sense, and also that each of your variables shows the appopriate number of counties.</li>
-</ul></li>
-<li>You will display <code>tabyl()</code> results to show the association of your categorical factor (derived from variable 4) with your six <code>state</code>s. In part, this will demonstrate the number of counties within each <code>state</code> and overall.</li>
-</ol>
+<li>We need to see minimum and maximum values that make sense, and also that each of your variables shows the appropriate number of counties.</li>
+</ul>
 </section>
-<section id="section-10.-missingness-checks" class="level2">
-<h2 class="anchored" data-anchor-id="section-10.-missingness-checks">Section 10. Missingness checks</h2>
-<p>For each of the five (quantitative) variables you select, you will need to check and display that the variable has at least <strong>80% complete</strong> data across the counties within <strong>each</strong> of your selected states.</p>
-<p>The results of your missingness check and your # of distinct values check are clear, and you’ve written a sentence (at least) in response to the results of each check that makes sense.</p>
-</section>
-<section id="section-11.-the-codebook" class="level2">
-<h2 class="anchored" data-anchor-id="section-11.-the-codebook">Section 11. The Codebook</h2>
-<p>A codebook, including your revised and the original variable names, definitions and a clear indication of the cutpoints for your binary factor is the next step.</p>
+<section id="section-10.-the-codebook" class="level2">
+<h2 class="anchored" data-anchor-id="section-10.-the-codebook">Section 10. The Codebook</h2>
+<p>Begin this section with a statement of the number of counties and variables (should be ten) in your tibble.</p>
+<p>A codebook, including your revised and the original variable names, counts of distinct and missing values, definitions and a clear indication of the cutpoints for your binary factor is the next step.</p>
 <p>After you select your variables, use the <a href="https://www.countyhealthrankings.org/2023-measures">County Health Rankings website’s 2023 Measures list</a>, and in particular the linked information on that page for full descriptions, definitions and limitations of the variables you have selected.</p>
 <p>For more details of what we’re looking for here, please refer to the sample codebook provided as part of the sample proposal and the proposal template in the <a href="./examples.html">Examples</a> section.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -359,22 +353,55 @@ Note
 </ul>
 </div>
 </div>
+<p>At the end of this section, you should complete checks that:</p>
+<ol type="1">
+<li>You have at least <strong>15 distinct</strong> values across your sample of counties for your Analysis 1 variables, your Analysis 2 outcome and your Extra variable.</li>
+<li>You have no more than 20% missing values in your Analysis 1 variables, your Analysis 2 outcome and your Extra variable.</li>
+<li>You have no missing data at all in your identifying variables (<code>fipscode</code>, <code>state</code>, <code>county</code>) nor in your <code>county_ranked</code> variable, and that you have a distinct <code>fipscode</code> for every row in your tibble.</li>
+</ol>
 </section>
-<section id="section-12.-research-question-for-analysis-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-12.-research-question-for-analysis-1">Section 12. Research Question for Analysis 1</h2>
-<p>Here you will propose your Research Question for Analysis 1 and provide some motivation for your variable choices associated with that analysis.</p>
+<section id="section-11.-research-question-for-analysis-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-11.-research-question-for-analysis-1">Section 11. Research Question for Analysis 1</h2>
+<p>Here you will propose your Research Question for Analysis 1 and provide some motivation for your variable choices associated with that analysis. A pair of good research questions (one here in Section 11, the other in Section 12) is the most important part of this portfolio.</p>
+<ul>
+<li>A research question will <strong>end with a question mark</strong>, and will be something you will be able to answer (or at least respond to effectively) after your Analysis 1 is complete.</li>
+<li>Do not use more than one research question for this Analysis.</li>
+<li>After listing your question, it is completely appropriate for you to provide some brief speculation as to the nature of the relationship you anticipate finding based on your hypotheses about the variables you plan to study (following my tips below.)</li>
+</ul>
+<section id="tips-for-the-research-question-in-analysis-1" class="level3">
+<h3 class="anchored" data-anchor-id="tips-for-the-research-question-in-analysis-1">Tips for the research question in Analysis 1</h3>
+<ul>
+<li>Examples of dull but moderately effective and minimally appropriate research questions for Analysis 1 would be:</li>
+</ul>
+<p><strong>How well does a linear model using [predictor] predict [outcome], in [number] counties in the states of [list of your states]?</strong></p>
+<p>or</p>
+<p><strong>What is the nature of the association between [predictor] and [outcome], in [number] counties in the states of [list of your states]?</strong></p>
+<ul>
+<li>You should be able to do meaningfully better than that, especially if you have a reason to believe something in advance about the direction or strength of the association you are anticipating.</li>
+<li>However, if you’re struggling, using that format will be OK.</li>
+<li>A research question uses formal but clear language.</li>
+<li>Given your planned analyses, stay away from statements about cause and effect, and don’t use the words correlate or regression (in any form) in your research question.</li>
+</ul>
 </section>
-<section id="section-13.-research-question-for-analysis-2" class="level2">
-<h2 class="anchored" data-anchor-id="section-13.-research-question-for-analysis-2">Section 13. Research Question for Analysis 2</h2>
-<p>Here you will propose your Research Question for Analysis 2 and provide some motivation for your variable choices associated with that analysis.</p>
 </section>
-<section id="section-14.-reflection" class="level2">
-<h2 class="anchored" data-anchor-id="section-14.-reflection">Section 14. Reflection</h2>
+<section id="section-12.-research-question-for-analysis-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-12.-research-question-for-analysis-2">Section 12. Research Question for Analysis 2</h2>
+<p>Here you will propose your Research Question for Analysis 2 and provide some motivation for your variable choices associated with that analysis. All of the tips for Analysis 1 apply in this case, too.</p>
+<ul>
+<li>Please remember that a research question for this course should end in a question mark.</li>
+<li>Again, after listing your question, it is completely appropriate for you to provide some brief speculation as to the nature of the relationship you anticipate finding based on your hypotheses about the variables you plan to study.</li>
+<li>An example of a dull but moderately effective and minimally appropriate research question for Analysis 2 might be:</li>
+</ul>
+<p><strong>Are there meaningful differences in the mean of [outcome] for counties with high and low levels of [predictor], across the states of [list of your states]?</strong></p>
+<p>Again, you should be able to do a bit better than that.</p>
+</section>
+<section id="section-13.-reflection" class="level2">
+<h2 class="anchored" data-anchor-id="section-13.-reflection">Section 13. Reflection</h2>
 <p>Here you will provide a paragraph describing the most challenging (or difficult) part of completing the work so far, and how you were able to overcome whatever it was that was most challenging.</p>
 <p>Your discussion of the biggest challenge includes a paragraph (or more) written in English, with attention paid to grammar, syntax and spelling. It needs to be clear to us from reading your reflection what your biggest issue was, and how you tried to address it.</p>
 </section>
-<section id="section-15.-session-information" class="level2">
-<h2 class="anchored" data-anchor-id="section-15.-session-information">Section 15. Session Information</h2>
+<section id="section-14.-session-information" class="level2">
+<h2 class="anchored" data-anchor-id="section-14.-session-information">Section 14. Session Information</h2>
 <p>As we have required in our Labs, there must be a Session Information section at the end of the document. This should indicate that R version 4.3.1. or later is used.</p>
 <p>We’d like you to use the <code>xfun</code> package’s version of <code>session_info()</code>.</p>
 </section>
@@ -382,9 +409,10 @@ Note
 <section id="submission-instructions" class="level1">
 <h1>Submission Instructions</h1>
 <ul>
-<li>Your proposal (R data set, Quarto and HTML files) should be submitted to Canvas.</li>
-<li>Be sure that your proposal includes your name (names if you are working with a partner) as the author in Quarto, and thus in HTML.</li>
+<li>Be sure to use spell check (just hit F7) on your Quarto file before rendering it, and review the HTML result carefully to ensure that no residual warnings or error messages remain in the document.</li>
+<li>Be sure that your proposal includes your name (names if you are working with a partner) as the author in Quarto, and thus in HTML, as well as a proper title.</li>
 </ul>
+<p>Your proposal (R data set, Quarto and HTML files) should then be submitted to Canvas by the deadline listed in the <a href="https://thomaselove.github.io/431-2023/calendar.html">Course Calendar</a>.</p>
 </section>
 <section id="grading-the-proposal" class="level1">
 <h1>Grading The Proposal</h1>
