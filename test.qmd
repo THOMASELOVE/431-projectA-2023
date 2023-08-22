@@ -1,0 +1,145 @@
+---
+title: "test"
+---
+
+```{r}
+library(Hmisc)
+library(janitor)
+library(naniar)
+library(sessioninfo)
+library(tidyverse)
+
+knitr::opts_chunk$set(comment = NA)
+```
+
+
+```{r}
+data_url23 <- 
+  "https://www.countyhealthrankings.org/sites/default/files/media/document/analytic_data2023_0.csv"
+
+data_url18 <- 
+  "https://www.countyhealthrankings.org/sites/default/files/analytic_data2018_0.csv"
+
+chr_2023_raw <- read_csv(data_url23, skip = 1, guess_max = 4000,
+                         show_col_types = FALSE)
+
+chr_2018_raw <- read_csv(data_url18, skip = 1, guess_max = 4000,
+                         show_col_types = FALSE)
+```
+
+```{r}
+chr_2023_raw <- chr_2023_raw |>
+  filter(county_ranked == 1)
+
+chr_2018_raw <- chr_2018_raw |>
+  filter(county_ranked == 1)
+```
+
+```{r}
+chr_2023 <- chr_2023_raw |>
+  filter(state %nin% c(
+    "AK", "AZ", "CT", "DE", "DC", "HI", "ME", "MA", "NV", "NH", "RI", "VT"))
+
+chr_2018 <- chr_2018_raw |>
+  filter(state %nin% c(
+    "AK", "AZ", "CT", "DE", "DC", "HI", "ME", "MA", "NV", "NH", "RI", "VT"))
+```
+
+```{r}
+chr_2023 <- chr_2023 |> select(fipscode, state, county, 
+                   v001_rawvalue, v002_rawvalue, v036_rawvalue, 
+                   v042_rawvalue, v009_rawvalue, v011_rawvalue, 
+                   v133_rawvalue, v070_rawvalue, v049_rawvalue, 
+                   v134_rawvalue, v085_rawvalue, v005_rawvalue, 
+                   v050_rawvalue, v023_rawvalue, v044_rawvalue, 
+                   v140_rawvalue, v125_rawvalue, v136_rawvalue, 
+                   v067_rawvalue, v127_rawvalue, v060_rawvalue, 
+                   v139_rawvalue, v083_rawvalue, v143_rawvalue, 
+                   v063_rawvalue, v053_rawvalue, v126_rawvalue, 
+                   v059_rawvalue, v057_rawvalue, v058_rawvalue,
+                   county_ranked)
+
+chr_2018 <- chr_2018 |> select(fipscode, state, county, 
+                   v001_rawvalue, v002_rawvalue, v036_rawvalue, 
+                   v042_rawvalue, v009_rawvalue, v011_rawvalue, 
+                   v133_rawvalue, v070_rawvalue, v049_rawvalue, 
+                   v134_rawvalue, v085_rawvalue, v005_rawvalue, 
+                   v050_rawvalue, v023_rawvalue, v044_rawvalue, 
+                   v140_rawvalue, v125_rawvalue, v136_rawvalue, 
+                   v067_rawvalue, v127_rawvalue, v060_rawvalue, 
+                   v139_rawvalue, v083_rawvalue, v143_rawvalue, 
+                   v063_rawvalue, v053_rawvalue, v126_rawvalue, 
+                   v059_rawvalue, v057_rawvalue, v058_rawvalue,
+                   county_ranked)
+
+```
+
+```{r}
+tot <- left_join(chr_2023, chr_2018, 
+                 by = c("fipscode", "state", "county", "county_ranked"), 
+                 suffix = c("2023", "2018"))
+```
+
+```{r}
+tot <- tot |>
+  mutate(test001 = v001_rawvalue2023 - v001_rawvalue2018,
+         test002 = v002_rawvalue2023 - v002_rawvalue2018,
+         test036 = v036_rawvalue2023 - v036_rawvalue2018,
+         test042 = v042_rawvalue2023 - v042_rawvalue2018,
+         test009 = v009_rawvalue2023 - v009_rawvalue2018,
+         test011 = v011_rawvalue2023 - v011_rawvalue2018,
+         test133 = v133_rawvalue2023 - v133_rawvalue2018,
+         test070 = v070_rawvalue2023 - v070_rawvalue2018,
+         test049 = v049_rawvalue2023 - v049_rawvalue2018,
+         test134 = v134_rawvalue2023 - v134_rawvalue2018,
+         test085 = v085_rawvalue2023 - v085_rawvalue2018,
+         test005 = v005_rawvalue2023 - v005_rawvalue2018,
+         test050 = v050_rawvalue2023 - v050_rawvalue2018,
+         test023 = v023_rawvalue2023 - v023_rawvalue2018,
+         test044 = v044_rawvalue2023 - v044_rawvalue2018,
+         test140 = v140_rawvalue2023 - v140_rawvalue2018,
+         test125 = v125_rawvalue2023 - v125_rawvalue2018,
+         test136 = v136_rawvalue2023 - v136_rawvalue2018,
+         test067 = v067_rawvalue2023 - v067_rawvalue2018,
+         test127 = v127_rawvalue2023 - v127_rawvalue2018,
+         test060 = v060_rawvalue2023 - v060_rawvalue2018,
+         test139 = v139_rawvalue2023 - v139_rawvalue2018,
+         test083 = v083_rawvalue2023 - v083_rawvalue2018,
+         test143 = v143_rawvalue2023 - v143_rawvalue2018,
+         test063 = v063_rawvalue2023 - v063_rawvalue2018,
+         test053 = v053_rawvalue2023 - v053_rawvalue2018,
+         test126 = v126_rawvalue2023 - v126_rawvalue2018,
+         test059 = v059_rawvalue2023 - v059_rawvalue2018,         
+         test057 = v057_rawvalue2023 - v057_rawvalue2018,         
+         test058 = v058_rawvalue2023 - v058_rawvalue2018         
+         ) 
+
+summary(tot)
+```
+
+```{r}
+cor(tot$v001_rawvalue2023, tot$v001_rawvalue2018, use = "pairwise.complete.obs")
+cor(tot$v002_rawvalue2023, tot$v002_rawvalue2018, use = "pairwise.complete.obs")
+cor(tot$v009_rawvalue2023, tot$v009_rawvalue2018, use = "pairwise.complete.obs")
+cor(tot$v011_rawvalue2023, tot$v011_rawvalue2018, use = "pairwise.complete.obs")
+cor(tot$v023_rawvalue2023, tot$v023_rawvalue2018, use = "pairwise.complete.obs")
+cor(tot$v036_rawvalue2023, tot$v036_rawvalue2018, use = "pairwise.complete.obs")
+cor(tot$v042_rawvalue2023, tot$v042_rawvalue2018, use = "pairwise.complete.obs")
+cor(tot$v049_rawvalue2023, tot$v049_rawvalue2018, use = "pairwise.complete.obs")
+cor(tot$v053_rawvalue2023, tot$v053_rawvalue2018, use = "pairwise.complete.obs")
+cor(tot$v057_rawvalue2023, tot$v057_rawvalue2018, use = "pairwise.complete.obs")
+cor(tot$v059_rawvalue2023, tot$v059_rawvalue2018, use = "pairwise.complete.obs")
+cor(tot$v060_rawvalue2023, tot$v060_rawvalue2018, use = "pairwise.complete.obs")
+cor(tot$v063_rawvalue2023, tot$v063_rawvalue2018, use = "pairwise.complete.obs")
+cor(tot$v067_rawvalue2023, tot$v067_rawvalue2018, use = "pairwise.complete.obs")
+cor(tot$v070_rawvalue2023, tot$v070_rawvalue2018, use = "pairwise.complete.obs")
+cor(tot$v085_rawvalue2023, tot$v085_rawvalue2018, use = "pairwise.complete.obs")
+cor(tot$v126_rawvalue2023, tot$v126_rawvalue2018, use = "pairwise.complete.obs")
+cor(tot$v136_rawvalue2023, tot$v136_rawvalue2018, use = "pairwise.complete.obs")
+cor(tot$v139_rawvalue2023, tot$v139_rawvalue2018, use = "pairwise.complete.obs")
+cor(tot$v140_rawvalue2023, tot$v140_rawvalue2018, use = "pairwise.complete.obs")
+cor(tot$v143_rawvalue2023, tot$v143_rawvalue2018, use = "pairwise.complete.obs")
+
+```
+
+

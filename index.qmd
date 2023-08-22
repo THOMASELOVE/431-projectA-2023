@@ -13,7 +13,7 @@ knitr::opts_chunk$set(comment = NA)
 # What is on this Website
 
 - The [Data page](data.qmd) contains information on the data you'll use, and on the required cleaning and development of your final project tibble. 
-    - You'll need to complete five data management tasks. Start this in **early September**.
+    - You'll need to complete six data management tasks. Start this in **early September**.
 - The [Proposal page](proposal.qmd) describes the elements of the proposal, which you will submit in early October, according to the deadline on the [Course Calendar](https://thomaselove.github.io/431-2023/calendar.html). 
     - You will build your Proposal in **September**.
 - The [Analyses page](analyses.qmd) contains information on the analyses you'll include in your final submission after we accept your Proposal.
@@ -41,11 +41,12 @@ There are two deadlines, each of which is specified on the [Course Calendar](htt
 
 # The Data
 
-You will be working with data from the 2023 edition of [County Health Rankings](https://www.countyhealthrankings.org/).
+You will be working (mostly) with data from the 2023 edition of [County Health Rankings](https://www.countyhealthrankings.org/).
 
 - These data describe most counties in the United States. Counties are located within states in the US. There are 88 counties, for instance, in Ohio.
 - The data are available now (along with extensive additional information) at the [County Health Rankings website](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation).
 - Everyone in the class will start with the same data set, but will pick a subset of that data that will be different for each project.
+- Analyses 1 and 2 solely use CHR 2023 data, while Analysis 3 adds some data from CHR 2018.
 
 ## Cleaning the Data
 
@@ -57,9 +58,10 @@ To build your data set, which will be a sample of the full data, you will do a s
   - Another will serve as your predictor for Analysis 1.
   - A third will serve as your outcome for Analysis 2.
   - Your fourth variable will serve (after categorizing^[Note: Categorizing quantitative information like this turns out to be a terrible idea in practical model-building. We're doing this here for pedagogical reasons.]) as your predictor for Analysis 2.
-  - The fifth variable (different from the other four) will serve as an alternative choice, should one of your other four variables prove to be unsuitable for its planned role.
+  - The fifth variable will serve as your outcome for Analysis 3, and here we'll have to pull in some data from the 2018 version of County Health Rankings, as well.
 - In addition to the five analytic variables listed above, you will add a factor describing some groups within the fourth variable, as well as four pre-specified variables (the county's FIPS code, the state postal abbreviation, the county name, and an indicator that the county is ranked by CHR.)
-- Your final analytic tibble will have 300-800 rows (counties) and ten columns (rows).
+- You will also add 2018 data for your fifth variable, using a data set we provide.
+- Your final analytic tibble will have 300-800 rows (counties) and eleven columns (variables.)
 
 # The Proposal
 
@@ -77,7 +79,8 @@ We (the TAs and Dr. Love) will review your proposal and (perhaps after some revi
 After your proposal is accepted, you will use your final analytic tibble to complete two main Analyses. The two main Analyses you’ll complete are:
 
 1. Visualizing and modeling the relationship between a quantitative outcome and a quantitative predictor, and using the model to make and assess some predictions.
-2. Visualizing and modeling the relationship between a quantitative outcome and a categorical predictor with two levels, the describing inferences you can make from that work.
+2. Visualizing and modeling the relationship between a quantitative outcome and a categorical predictor with two levels, and describing the inferences you can make about comparing the centers of the distributions in the two groups.
+3. Visualizing and modeling the relationship between a quantitative outcome reported in 2023 across your sample of counties, and that same outcome as it was reported in 2018, and then describing some inferences you can make regarding that comparison.
 
 # The Portfolio
 
@@ -98,21 +101,24 @@ I am primarily interested in your learning something interesting, useful and eve
 1. The ability to create and formulate research questions that are statistically and scientifically appropriate.
 2. The ability to turn research questions into measures of interest.
 3. The ability to pull and merge and clean and tidy data, then present the data set following [Jeff Leek's guide to sharing data with a statistician](https://github.com/jtleek/datasharing).
-4. The ability to build a reasonable pair of analyses, and assess their quality.
+4. The ability to build a reasonable trio of analyses, and assess their quality.
 5. The ability to identify and (with help) solve problems that crop up.
 6. The ability to comment on your work within code, and in written and oral presentation. You have to be able to *reason* about your findings, not just generate the code to solve the problem.
 7. The ability to build a Quarto-based report and to give a short presentation based on key findings from that report.
 
-Project A is about building relatively simple analyses and visualizing data from a (fairly clean) data set I provide to you. In Project A, you will complete most of the elements of a data science project designed to create statistical models for a pair of *quantitative* outcomes, and assess their quality. Tools necessary for Project A include:
+Project A is about building relatively simple analyses and visualizing data from a (fairly clean) data set I provide to you. Tools necessary for Project A include:
 
 - Describing the experimental or observational study design used to gather the data, as well as the complete data collection process.
 - Sharing the process of ingesting and tidying the data, with specific reference to the decisions you make to "clean" things up.
 - Descriptive and exploratory summaries of the data including, of course, attractive and well-constructed visualizations, which may include both graphs and tables.
-- Developing appropriate research questions that lead to the identification of smart measures for predictors and outcomes.
+- Developing appropriate research questions that lead to the identification of smart measures for your three analyses.
 - Regression-based modeling of a quantitative outcome using a quantitative predictor, including discussion of potential transformations, and making predictions.
 - Regression-based comparisons of mean differences for a quantitative outcome across a set of two groups, including appropriate evaluation of the assumptions behind the models you build, and description of inferential results (comparisons).
+- Regression-based comparisons of mean differences when comparing an outcome reported in 2023 to that same outcome reported five years earlier, including appropriate evaluation of the assumptions behind the models you build, and description of inferential results (comparisons).
 
 > Think of a graph as a comparison. All graphs are comparisons (indeed, all statistical analyses are comparisons). If you already have the graph in mind, think of what comparisons it's enabling. Or if you haven't settled on the graph yet, think of what comparisons you'd like to make. [Andrew Gelman](http://andrewgelman.com/2014/03/25/statistical-graphics-course-statistical-graphics-advice/)
+
+Relevant Class materials for Project A are planned for Classes 1-12.
 
 ## Questions?
 

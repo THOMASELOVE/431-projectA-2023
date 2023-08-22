@@ -29,7 +29,7 @@ The deadline for the Project A Proposal is on the [Course Calendar](https://thom
 
 :::
 
-To complete the proposal, you will need to have completed all five Data Tasks on our [Data page](data.qmd) but none of the work described on our [Analyses page](analyses.qmd)
+To complete the proposal, you will need to have completed all six Data Tasks on our [Data page](data.qmd) but none of the work described on our [Analyses page](analyses.qmd)
 
 # Use the Template and Sample Proposal
 
@@ -42,6 +42,7 @@ You need to come up with a meaningful title (containing at most 80 characters) f
 1. Do not use the terms "Project" or "Project A" or "431" in your title. 
 2. You can use "CHR-2023" as the abbreviation in your title for "County Health Rankings, 2023." 
 3. Your title should be no longer than 80 characters. You can use a subtitle if you like, but the title must stand on its own.
+4. It's fine if your title focuses on just one of your three analyses, rather than trying to cram all three into a short title.
 
 # Proposal Author(s)
 
@@ -95,23 +96,27 @@ For each of your selected variables, you will use the instructions in [Data Task
 
 Use the instructions in [Data Task 4](data.qmd) to develop the binary factor that you will use as your Analysis 2 predictor. Be sure to describe the exact cutpoints used in creating the low and high groups, and demonstrate that the resulting factor has approximately 40% of your original observations in the low group, 40% in the high group, and missing data for the middle 20%.
 
-## Section 7. Arranging and Saving The Analytic Tibble
+## Section 7. Adding 2018 Data for the Analysis 3 Outcome
 
-After renaming your variables, arrange the variables in your **chr_2023** tibble into the order specified in [Data Task 5](data.qmd).
+Use the instructions in [Data Task 5](data.qmd) to include the 2018 version of your Analysis 3 outcome as a variable in your tibble. 
+
+## Section 8. Arranging and Saving The Analytic Tibble
+
+After renaming your variables, arrange the variables in your **chr_2023** tibble into the order specified in [Data Task 6](data.qmd).
 
 Then save the tibble as an R data set. Don't make any changes to the tibble after this point.
 
-## Section 8. Print the Tibble
+## Section 9. Print the Tibble
 
 You will show that your **chr_2023** tibble is in fact a tibble and not just a data frame by listing it, so that we can see that the first 10 rows are printed, and the columns are appropriately labeled. The command you want is just **`chr_2023`**.
 
-## Section 9. Numerical Summaries
+## Section 10. Numerical Summaries
 
 You will display the results of `describe()` from the `Hmisc` package, run on the entire tibble. 
 
 - We need to see minimum and maximum values that make sense, and also that each of your variables shows the appropriate number of counties. 
 
-## Section 10. The Codebook
+## Section 11. The Codebook
 
 Begin this section with a statement of the number of counties and variables (should be ten) in your tibble.
 
@@ -132,19 +137,24 @@ For more details of what we're looking for here, please refer to the sample code
 
 At the end of this section, you should complete checks that:
 
-1. You have at least **15 distinct** values across your sample of counties for your Analysis 1 variables, your Analysis 2 outcome and your Extra variable.
-2. You have no more than 20% missing values in your Analysis 1 variables, your Analysis 2 outcome and your Extra variable.
+1. You have at least **15 distinct** values across your sample of counties for your Analysis 1 variables, your Analysis 2 outcome and your Analysis 3 outcome (in each year.)
+2. You have no more than 20% missing values in your Analysis 1 variables, your Analysis 2 outcome and your Analysis 3 outcome (in each year.)
 3. You have no missing data at all in your identifying variables (`fipscode`, `state`, `county`) nor in your `county_ranked` variable, and that you have a distinct `fipscode` for every row in your tibble.
 
-## Section 11. Research Question for Analysis 1
+## Section 12. Your Research Questions
 
-Here you will propose your Research Question for Analysis 1 and provide some motivation for your variable choices associated with that analysis. A pair of good research questions (one here in Section 11, the other in Section 12) is the most important part of this portfolio.
+In this section, you will provide three research questions, one each for Analysis 1, Analysis 2, and Analysis 3. It would help to provide subsections within this section, as I have done in the [Sample Proposal](examples.qmd) and [Proposal Template](examples.qmd)
+
+### Your Research Question for Analysis 1
+
+Here you will propose your Research Question for Analysis 1 and provide some motivation for your variable choices associated with that analysis. A trio of well-developed research questions in this section is the **most important part** of this portfolio.
 
 - A research question will **end with a question mark**, and will be something you will be able to answer (or at least respond to effectively) after your Analysis 1 is complete.
-- Do not use more than one research question for this Analysis.
-- After listing your question, it is completely appropriate for you to provide some brief speculation as to the nature of the relationship you anticipate finding based on your hypotheses about the variables you plan to study (following my tips below.)
+- Use one research question for Analysis 1, another for Analysis 2, and a third for Analysis 3.
 
-### Tips for the research question in Analysis 1
+After listing your question, you should **provide some brief speculation** as to the nature of the relationship you anticipate finding based on your hypotheses about the variables you plan to study (following my tips below.)
+
+#### Tips for the research question in Analysis 1
 
 - Examples of dull but moderately effective and minimally appropriate research questions for Analysis 1 would be:
 
@@ -159,7 +169,7 @@ or
 - A research question uses formal but clear language. 
 - Given your planned analyses, stay away from statements about cause and effect, and don't use the words correlate or regression (in any form) in your research question.
 
-## Section 12. Research Question for Analysis 2
+### Research Question for Analysis 2
 
 Here you will propose your Research Question for Analysis 2 and provide some motivation for your variable choices associated with that analysis. All of the tips for Analysis 1 apply in this case, too. 
 
@@ -167,7 +177,19 @@ Here you will propose your Research Question for Analysis 2 and provide some mot
 - Again, after listing your question, it is completely appropriate for you to provide some brief speculation as to the nature of the relationship you anticipate finding based on your hypotheses about the variables you plan to study.
 - An example of a dull but moderately effective and minimally appropriate research question for Analysis 2 might be:
 
-**Are there meaningful differences in the mean of [outcome] for counties with high and low levels of [predictor], across the states of [list of your states]?**
+**Are there meaningful differences in the mean of [outcome] for counties with high and low levels of [predictor]?**
+
+Again, you should be able to do a bit better than that.
+
+### Research Question for Analysis 3
+
+Here you will propose your Research Question for Analysis 3, and provide some motivation for your variable choices associated with that analysis. All of the tips for Analysis 1 apply in this case, too. 
+
+- Please remember that a research question for this course should end in a question mark.
+- Again, after listing your question, it is completely appropriate for you to provide some brief speculation as to the nature of the relationship you anticipate finding based on your hypotheses about the variables you plan to study.
+- An example of a dull but moderately effective and minimally appropriate research question for Analysis 3 might be:
+
+**Are there meaningful differences in the mean of [outcome] for counties in 2023 as compared to 2018?**
 
 Again, you should be able to do a bit better than that.
 

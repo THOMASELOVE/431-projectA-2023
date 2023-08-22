@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="431 Staff">
-<meta name="dcterms.date" content="2023-08-17">
+<meta name="dcterms.date" content="2023-08-21">
 
 <title>431 Project A - 431 Project A Instructions</title>
 <style>
@@ -174,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2023-08-17</p>
+      <p class="date">2023-08-21</p>
     </div>
   </div>
   
@@ -192,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>The <a href="./data.html">Data page</a> contains information on the data you’ll use, and on the required cleaning and development of your final project tibble.
 <ul>
-<li>You’ll need to complete five data management tasks. Start this in <strong>early September</strong>.</li>
+<li>You’ll need to complete six data management tasks. Start this in <strong>early September</strong>.</li>
 </ul></li>
 <li>The <a href="./proposal.html">Proposal page</a> describes the elements of the proposal, which you will submit in early October, according to the deadline on the <a href="https://thomaselove.github.io/431-2023/calendar.html">Course Calendar</a>.
 <ul>
@@ -230,11 +230,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-data" class="level1">
 <h1>The Data</h1>
-<p>You will be working with data from the 2023 edition of <a href="https://www.countyhealthrankings.org/">County Health Rankings</a>.</p>
+<p>You will be working (mostly) with data from the 2023 edition of <a href="https://www.countyhealthrankings.org/">County Health Rankings</a>.</p>
 <ul>
 <li>These data describe most counties in the United States. Counties are located within states in the US. There are 88 counties, for instance, in Ohio.</li>
 <li>The data are available now (along with extensive additional information) at the <a href="https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation">County Health Rankings website</a>.</li>
 <li>Everyone in the class will start with the same data set, but will pick a subset of that data that will be different for each project.</li>
+<li>Analyses 1 and 2 solely use CHR 2023 data, while Analysis 3 adds some data from CHR 2018.</li>
 </ul>
 <section id="cleaning-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="cleaning-the-data">Cleaning the Data</h2>
@@ -247,10 +248,11 @@ ul.task-list li input[type="checkbox"] {
 <li>Another will serve as your predictor for Analysis 1.</li>
 <li>A third will serve as your outcome for Analysis 2.</li>
 <li>Your fourth variable will serve (after categorizing<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>) as your predictor for Analysis 2.</li>
-<li>The fifth variable (different from the other four) will serve as an alternative choice, should one of your other four variables prove to be unsuitable for its planned role.</li>
+<li>The fifth variable will serve as your outcome for Analysis 3, and here we’ll have to pull in some data from the 2018 version of County Health Rankings, as well.</li>
 </ul></li>
 <li>In addition to the five analytic variables listed above, you will add a factor describing some groups within the fourth variable, as well as four pre-specified variables (the county’s FIPS code, the state postal abbreviation, the county name, and an indicator that the county is ranked by CHR.)</li>
-<li>Your final analytic tibble will have 300-800 rows (counties) and ten columns (rows).</li>
+<li>You will also add 2018 data for your fifth variable, using a data set we provide.</li>
+<li>Your final analytic tibble will have 300-800 rows (counties) and eleven columns (variables.)</li>
 </ul>
 </section>
 </section>
@@ -270,7 +272,8 @@ ul.task-list li input[type="checkbox"] {
 <p>After your proposal is accepted, you will use your final analytic tibble to complete two main Analyses. The two main Analyses you’ll complete are:</p>
 <ol type="1">
 <li>Visualizing and modeling the relationship between a quantitative outcome and a quantitative predictor, and using the model to make and assess some predictions.</li>
-<li>Visualizing and modeling the relationship between a quantitative outcome and a categorical predictor with two levels, the describing inferences you can make from that work.</li>
+<li>Visualizing and modeling the relationship between a quantitative outcome and a categorical predictor with two levels, and describing the inferences you can make about comparing the centers of the distributions in the two groups.</li>
+<li>Visualizing and modeling the relationship between a quantitative outcome reported in 2023 across your sample of counties, and that same outcome as it was reported in 2018, and then describing some inferences you can make regarding that comparison.</li>
 </ol>
 </section>
 <section id="the-portfolio" class="level1">
@@ -293,23 +296,25 @@ ul.task-list li input[type="checkbox"] {
 <li>The ability to create and formulate research questions that are statistically and scientifically appropriate.</li>
 <li>The ability to turn research questions into measures of interest.</li>
 <li>The ability to pull and merge and clean and tidy data, then present the data set following <a href="https://github.com/jtleek/datasharing">Jeff Leek’s guide to sharing data with a statistician</a>.</li>
-<li>The ability to build a reasonable pair of analyses, and assess their quality.</li>
+<li>The ability to build a reasonable trio of analyses, and assess their quality.</li>
 <li>The ability to identify and (with help) solve problems that crop up.</li>
 <li>The ability to comment on your work within code, and in written and oral presentation. You have to be able to <em>reason</em> about your findings, not just generate the code to solve the problem.</li>
 <li>The ability to build a Quarto-based report and to give a short presentation based on key findings from that report.</li>
 </ol>
-<p>Project A is about building relatively simple analyses and visualizing data from a (fairly clean) data set I provide to you. In Project A, you will complete most of the elements of a data science project designed to create statistical models for a pair of <em>quantitative</em> outcomes, and assess their quality. Tools necessary for Project A include:</p>
+<p>Project A is about building relatively simple analyses and visualizing data from a (fairly clean) data set I provide to you. Tools necessary for Project A include:</p>
 <ul>
 <li>Describing the experimental or observational study design used to gather the data, as well as the complete data collection process.</li>
 <li>Sharing the process of ingesting and tidying the data, with specific reference to the decisions you make to “clean” things up.</li>
 <li>Descriptive and exploratory summaries of the data including, of course, attractive and well-constructed visualizations, which may include both graphs and tables.</li>
-<li>Developing appropriate research questions that lead to the identification of smart measures for predictors and outcomes.</li>
+<li>Developing appropriate research questions that lead to the identification of smart measures for your three analyses.</li>
 <li>Regression-based modeling of a quantitative outcome using a quantitative predictor, including discussion of potential transformations, and making predictions.</li>
 <li>Regression-based comparisons of mean differences for a quantitative outcome across a set of two groups, including appropriate evaluation of the assumptions behind the models you build, and description of inferential results (comparisons).</li>
+<li>Regression-based comparisons of mean differences when comparing an outcome reported in 2023 to that same outcome reported five years earlier, including appropriate evaluation of the assumptions behind the models you build, and description of inferential results (comparisons).</li>
 </ul>
 <blockquote class="blockquote">
 <p>Think of a graph as a comparison. All graphs are comparisons (indeed, all statistical analyses are comparisons). If you already have the graph in mind, think of what comparisons it’s enabling. Or if you haven’t settled on the graph yet, think of what comparisons you’d like to make. <a href="http://andrewgelman.com/2014/03/25/statistical-graphics-course-statistical-graphics-advice/">Andrew Gelman</a></p>
 </blockquote>
+<p>Relevant Class materials for Project A are planned for Classes 1-12.</p>
 <section id="questions" class="level2">
 <h2 class="anchored" data-anchor-id="questions">Questions?</h2>
 <p>If you have questions, let us know about them on <a href="https://thomaselove.github.io/431-2023/campuswire.html">Campuswire</a> using the <strong>projectA</strong> folder, or speak with Dr.&nbsp;Love before or after class, or discuss them with the TAs during office hours.</p>

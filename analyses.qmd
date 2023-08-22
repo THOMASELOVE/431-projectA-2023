@@ -94,3 +94,6 @@ Then, write a paragraph which summarizes the key limitations of your work in Ana
 - If you see problems with regression assumptions in your residual plot, that would be a good thing to talk about here, for instance. 
 - Another issue that is worth discussing is your target population, and what evidence you can describe that might indicate whether your selected states are a representative sample of the US as a whole, or perhaps some particular part of the United States.
 
+# Analysis 2: Comparing Two Independent Samples
+
+# Analysis 3: Comparing An Outcome in 2023 to its value in 2018
