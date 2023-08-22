@@ -14,8 +14,9 @@ knitr::opts_chunk$set(comment = NA)
 
 2. The **proposal template**, which we used to build the sample proposal, is also available as part of [the 431-data site](https://github.com/THOMASELOVE/431-data). It is called `431-projA-portfolio-template.qmd`. The [HTML version is also at RPubs](https://rpubs.com/TELOVE/projectA-proposal-template).
 
-## Project A Portfolio Report Materials
+# Project A Portfolio Report Materials
 
 3. The **portfolio report template**, which we used to build the sample portfolio report, is also available as part of [the 431-data site](https://github.com/THOMASELOVE/431-data). It is called `431-projA-report-template.qmd`. The [HTML version is also at RPubs](https://rpubs.com/TELOVE/projectA-report-template).
 
-4. The sample Portfolio Report is coming soon.
+4. The **sample portfolio report** adds only a little to what you had in the sample proposal (since I chose not to work through the Analyses for you), but it is available as part of [the 431-data site](https://github.com/THOMASELOVE/431-data). It is called `431-projA-sample-report.qmd`. The [HTML version is also at RPubs](https://rpubs.com/TELOVE/projectA-sample-report).
+
