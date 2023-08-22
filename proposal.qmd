@@ -8,8 +8,6 @@ date: last-modified
 knitr::opts_chunk$set(comment = NA)
 ```
 
-# We will post full instructions before our first class. For now, ignore this draft.
-
 # The Deliverables
 
 You will develop and send to us (through Canvas):

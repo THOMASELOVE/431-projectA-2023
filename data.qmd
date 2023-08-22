@@ -8,8 +8,6 @@ date: last-modified
 knitr::opts_chunk$set(comment = NA)
 ```
 
-# We will post full instructions before our first class. For now, ignore this draft.
-
 ::: {.callout-important}
 
 Before starting your Data work, it's a **really** good idea to read through:

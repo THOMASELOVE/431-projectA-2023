@@ -8,4 +8,103 @@ date: last-modified
 knitr::opts_chunk$set(comment = NA)
 ```
 
-# Coming Soon.
+# The Deliverables
+
+Your Final Submission involves three parts, a portfolio report, a "highlight" video, and a self-evaluation.
+
+## The Report
+
+You will submit a polished report in both Quarto and HTML, incorporating a total of 17 sections, as described below. You will also submit your main data file (`chr_2023_YOURNAME.Rds`). 
+
+## The Highlight Video
+
+You will produce a video in mp4 format of no more than 3 minutes in length regardless of whether you are working alone or in a team.
+
+In this video, you will describe what you believe to be one of the most important findings for your Analysis 1, **and** for *either* your Analysis 2 or your Analysis 3. 
+
+- If you are working alone on the project, begin your presentation by introducing yourself and describing your sample (which states you used and specifying the research questions you'll be addressing in your discussion.)
+- If you are working in a pair, each of you will present one of the two analyses, either in two separate videos (which combined are no more than 3 minutes long) or in one video. In either case, introduce yourself at the start of your portion of the video, and specify the states you used (even though you and your partner will be using the same states) and the research question you'll be addressing.
+- Do not discuss all three analyses in the video - just show Analysis 1 and one of the other two.
+- Since you have only 3 minutes to present a highlight from each of two analyses, you need to focus. Do not give a "play by play" of everything you did in the report. Focus on one key visualization to amplify your conclusions for each analysis. Keeping the video under 3 minutes while giving us a clear understanding of what you found is the hard part.
+- All videos should include a clear statement of the research questions for any analyses presented, and justify the responses to those questions with results from the analyses.
+- The video must stand on its own, in the sense that it must be completely understandable to someone who has not read your report, but who is generally familiar with County Health Rankings and its measurements. You need to tell us everything we need to know to evaluate your claims, and no more.
+- Your video must show your face at the start (so recording in Zoom is preferable) and then must share graphs and results taken from your report. Do not build new graphs or results that don't appear in your report.
+
+## The Self-Evaluation
+
+Once you have submitted the other two elements of your project, you will each (whether working alone or with a partner) submit [a brief self-evaluation via this Google Form](https://bit.ly/431-projectA-self-evaluation-2023). The form should take about 10 minutes to complete.
+    - If you're curious, the form asks you to address multiple issues related to the Project in multiple-choice questions. There are also two little essays that we'll ask for, which should be written independently from your partner (if you have one).
+        - You will summarize the key finding of your Project A study in your own well-chosen words (where your response should be in the neighborhood of 75 words, describing one key finding, which might come from any of your three analyses.) 
+        - Also, you will tell us what the most important piece of advice is that you wished you'd heard when you began Project A (and we'd like at least 25 words here).
+
+# Submission Requirements
+
+All portfolio elements (R data set, Quarto and HTML report, video and self-evaluation) are due in late October at the time and date indicated on the [Course Calendar](https://thomaselove.github.io/431-2023/calendar.html). 
+
+- Submit the R data set, Quarto and HTML files and the video files all together to Canvas.
+- If you are working with a partner, one of you submits the R data set, Quarto, HTML and video files to Canvas, and the other partner submits a one-page note to Canvas stating who their partner is and that their partner will submit the materials for their project team. 
+- Everyone (including both members of each team) should fill out [the self-evaluation form](https://bit.ly/431-projectA-self-evaluation-2023) **after** all other materials are posted to Canvas.
+
+# Outline of the Portfolio Report
+
+Your final portfolio report will include:
+
+- Sections 1-12 from the [Proposal](proposal.qmd), edited as necessary.
+- Section 13 will be your Analysis 1, and will have four subsections.
+- Section 14 will be your Analysis 2, with four subsections.
+- Section 15 will be your Analysis 3, with four subsections.
+- Section 16 will be a new Reflections section.
+- Section 17 will be your new location for session information.
+
+Sections 13-15 and their subsections are discussed in detail in the [Analyses](analyses.qmd) section of these instructions.
+
+Section 17 was completed as part of the proposal, although there it was Section 14.
+
+So, if you've completed (and edited) your [proposal](proposal.qmd), and completed your [analyses](analyses.qmd) sections, then the only new piece of the Proposal Report is the new "reflections" section.
+
+# Section 16. Reflections
+
+Write a paragraph (containing at least four well-constructed complete English sentences) to answer the following question:
+
+What was the most important thing you learned as a result of doing this project, and why?
+
+# Report Checklist before Submission
+
+Before submitting your final report, check these things. Your work will receive a better grade if these things are done correctly.
+
+1. There is a meaningful title (of no more than 80 characters, perhaps augmented by a subtitle), set of authors (with full names) and date (in the format 2023-10-31) at the top of your HTML document. Use CHR-2023 as an abbreviation for "County Health Rankings, 2023" throughout your work.
+2. You have used the section and subsection headings included in the Portfolio template.
+3. Neither `#| include: FALSE` nor `#| eval: FALSE` is used in the project.
+4. The option `knitr::opts_chunk$set(comment = NA)` is set as part of your package loading, to ensure that R results in the HTML are not preceded with ##.
+5. Either the option `theme_bw()` or `theme_light()` is used as part of your package loading, to ensure that your ggplot-based graphs are easy to view.
+6. All packages are loaded near the top of the document (as opposed to partway through) and `#| message: FALSE` is used to suppress the messages created when loading packages.
+7. The project uses `read_csv()` to read in the data, and `show_col_types = FALSE` is used to suppress the message about column specifications there.
+8. You have run spell check on your Quarto file (by hitting F7) before rendering it. You'll also want to check the headings and subheadings in your HTML to ensure there are no misspellings there.
+9. The raw data (prior to filtering rows and selecting variables) is not printed or summarized or listed in your HTML.
+10. The final tibble is saved to an Rds file before the Analyses and that file to which it is saved contains only letters and numbers and in particular no spaces in its name. Note that you will submit the .Rds file to Canvas with your final portfolio report.
+11. There are no avoidable scrolling windows in the HTML document. Avoidable scrolling windows are those fixed by hitting ENTER more often in writing R code.
+12. The project demonstrates that all five variables of interest have been cleaned in accordance with the instructions specified in Table B of the [Data page](data.qmd).
+13. The session information is printed, in a section of its own (Section 17) that appears in the Table of Contents and is the last part of the document.
+14. Professor Love’s instructions are NOT repeated in your HTML.
+15. There are no warnings in the HTML document.
+
+# Grading the Portfolios
+
+- Project A is graded on a scale from 0 to 100, theoretically, although I expect the highest grade to be close to 95. Dr. Love works with the TAs to provide feedback and grade the projects, but the final Project A grade is determined solely by him.
+- A successful Proposal is a mandatory part of Project A, and is worth 20 points as part of the Project A grade. 
+- The Report is worth 40 points. It is unlikely that anyone will score above 38 points, which is the planned score for a completely accurate and polished report. Most scores will likely fall between 29 and 36 points on this element.
+    - The most important parts of the Report are accurate (and effectively presented) data development, accurate (and effectively presented) analyses, and the appropriateness of your research questions and your responses to them in light of your analyses.
+    - Most of the feedback you will receive on your Project A report will relate to specific grading criteria that will be evaluated (mostly) by the teaching assistants. 
+- The Video is worth 30 points. It is unlikely that anyone will score above 28 points, which is the planned score for a very strong presentation, which is clear to see and hear and which is effective. Most scores will likely fall between 20 and 27 points on this element.
+    - All videos should include a clear statement of the research questions for any analyses presented, and justify the responses to those questions with results from the analyses.
+    - Most of the comments Professor Love builds in response to your Project A will relate to the Video. Do not treat it lightly. It is a vital part of the work, despite its short length.
+- The Self-Evaluation is worth 10 points. People who complete each question on the self-evaluation thoughtfully and on time will receive the full 10 points.
+
+Overall, a project score of 89 or higher is regarded as an A, and a score of 70 to 84 is regarded as a B, with scores between 85 and 88 falling somewhere in between. Project grading is set up to generate a median score near 85.
+
+## Hint: More isn't better.
+
+To improve your grade, perform the elements of the data science cycle (ingestion, tidying, transforming, visualizing, modeling and communicating) more effectively. Presenting work that isn't relevant to addressing the issues in question will not help your grade. Also, rehearse your video and make sure you present clearly and understandably throughout the (very short) presentation. Make clear choices about what to include - that's key. Do not just show us everything you did.
+
+A stronger grade will be associated with doing the tasks we've discussed more effectively. Adding a lot of additional and unnecessary analyses/work without editing down to the important issues will not improve your grade, but rather have the opposite effect. We want to see polished, accurate, clear work. Making things clearer is the hardest thing to do, and so it's the thing that impresses us most. 
+
