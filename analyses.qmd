@@ -16,7 +16,7 @@ Each of these tasks should include R code that creates the information you need,
 
 # Analysis 1: Simple Linear Regression Model
 
-Provide evidence regarding the question of how well your Analysis 1 outcome can be predicted using your Analysis 2 outcome. This should include a report on the effectiveness of a simple linear regression model, and an appropriate plot of the relationship. Important steps to include in your analytic report include:
+Provide evidence regarding the question of how well your Analysis 1 outcome can be predicted using your Analysis 1 predictor. This should include a report on the effectiveness of a simple linear regression model, and an appropriate plot of the relationship. Important steps to include in your analytic report include:
 
 In your portfolio (section 12.1), you built (and will now edit) your careful statement of the **research question** you are trying to answer with this analysis. At the end of this Analysis, a clear and appropriate **response** to that research question is required, accompanied by a clear description of the limitations of your work. 
 
@@ -100,4 +100,41 @@ Then, write a paragraph which summarizes the key limitations of your work in Ana
 
 # Analysis 2: Comparing Two Independent Samples
 
+Here, you have identified one quantitative (Analysis 2 outcome) and one categorical variable (Analysis 2 binary predictor.) 
+
+You’ll analyze the results and build a 90% confidence interval for the difference in means with an appropriate t-based or bootstrap procedure. 
+
+You will provide complete code, appropriate visualizations and detailed explanations of your analytic decisions, and conclusions.
+
+We are looking for:
+
+- Descriptive and exploratory summaries of the data across the two predictor groups for your chosen outcome, including, of course, attractive and well-constructed visualizations.
+- Comparisons of the population mean difference for your Analysis 2 outcome across a set of two groups defined by your Analysis 2 predictor, including appropriate demonstrations of the reasons behind the choices you made between parametric and bootstrap procedures.
+
+## Analysis 2 Specifications
+
+- Your Analysis 2 material should start with specifications of what each of the variables you are studying in this analysis actually mean, and how your sample was taken from the CHR 2023 data.
+- Your cleaning, creation of your groups and other data management activities should already have been shown in earlier sections. Please refer back to those and don’t repeat what you’ve already done. Be sure that the Codebook you provided describes both of the variables you are using in your analyses here.
+- Provide numerical summaries and visualizations of interest that are relevant to this analysis, and comment on any issues you observe.
+- For your main analysis, show your work and your reasoning (not just your code), and comment on any analytic decisions you make. 
+- Be sure to actively present and justify any assumptions you are making.
+- Finally, answer your research question, by clearly linking the analytic results to what you were asking at the start.
+- If you can see a logical next step for the analysis of the question you asked, specify it. Also, if you specified a pre-existing belief about what would happen, reflect on that in light of the data.
+
 # Analysis 3: Comparing An Outcome in 2023 to its value in 2018
+
+Here, we have identified two quantitative variable (the same outcome in two different time periods) which are paired (so that they have a natural link between them, and use the same units of measurement.) 
+
+You’ll analyze the results and build a 90% confidence interval for the population mean difference with an appropriate t-based or bootstrap procedure. 
+
+Again, you will provide complete code, appropriate visualizations and detailed explanations of your analytic decisions, and conclusions.
+
+## Analysis 3 Specifications
+
+- Your Analysis 3 material should start with specifications of what the outcome you are studying in this analysis actually means, and how your samples in 2018 and 2023 were created.
+- Your cleaning, creation of your groups and other data management activities should already have been shown in earlier sections. Please refer back to those and don’t repeat what you’ve already done. Be sure that the Codebook you provided describes both of the variables you are using in your analyses here.
+- Provide numerical summaries and visualizations of interest that are relevant to this analysis, and comment on any issues you observe.
+- For your main analysis, show your work and your reasoning (not just your code), and comment on any analytic decisions you make. 
+- Be sure to actively present and justify any assumptions you are making.
+- Finally, answer your research question, by clearly linking the analytic results to what you were asking at the start.
+- If you can see a logical next step for the analysis of the question you asked, specify it. Also, if you specified a pre-existing belief about what would happen, reflect on that in light of the data.

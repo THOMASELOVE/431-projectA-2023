@@ -148,8 +148,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#residual-analysis" id="toc-residual-analysis" class="nav-link" data-scroll-target="#residual-analysis">Residual Analysis</a></li>
   <li><a href="#conclusions-and-limitations" id="toc-conclusions-and-limitations" class="nav-link" data-scroll-target="#conclusions-and-limitations">Conclusions and Limitations</a></li>
   </ul></li>
-  <li><a href="#analysis-2-comparing-two-independent-samples" id="toc-analysis-2-comparing-two-independent-samples" class="nav-link" data-scroll-target="#analysis-2-comparing-two-independent-samples">Analysis 2: Comparing Two Independent Samples</a></li>
-  <li><a href="#analysis-3-comparing-an-outcome-in-2023-to-its-value-in-2018" id="toc-analysis-3-comparing-an-outcome-in-2023-to-its-value-in-2018" class="nav-link" data-scroll-target="#analysis-3-comparing-an-outcome-in-2023-to-its-value-in-2018">Analysis 3: Comparing An Outcome in 2023 to its value in 2018</a></li>
+  <li><a href="#analysis-2-comparing-two-independent-samples" id="toc-analysis-2-comparing-two-independent-samples" class="nav-link" data-scroll-target="#analysis-2-comparing-two-independent-samples">Analysis 2: Comparing Two Independent Samples</a>
+  <ul class="collapse">
+  <li><a href="#analysis-2-specifications" id="toc-analysis-2-specifications" class="nav-link" data-scroll-target="#analysis-2-specifications">Analysis 2 Specifications</a></li>
+  </ul></li>
+  <li><a href="#analysis-3-comparing-an-outcome-in-2023-to-its-value-in-2018" id="toc-analysis-3-comparing-an-outcome-in-2023-to-its-value-in-2018" class="nav-link" data-scroll-target="#analysis-3-comparing-an-outcome-in-2023-to-its-value-in-2018">Analysis 3: Comparing An Outcome in 2023 to its value in 2018</a>
+  <ul class="collapse">
+  <li><a href="#analysis-3-specifications" id="toc-analysis-3-specifications" class="nav-link" data-scroll-target="#analysis-3-specifications">Analysis 3 Specifications</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -192,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="analysis-1-simple-linear-regression-model" class="level1">
 <h1>Analysis 1: Simple Linear Regression Model</h1>
-<p>Provide evidence regarding the question of how well your Analysis 1 outcome can be predicted using your Analysis 2 outcome. This should include a report on the effectiveness of a simple linear regression model, and an appropriate plot of the relationship. Important steps to include in your analytic report include:</p>
+<p>Provide evidence regarding the question of how well your Analysis 1 outcome can be predicted using your Analysis 1 predictor. This should include a report on the effectiveness of a simple linear regression model, and an appropriate plot of the relationship. Important steps to include in your analytic report include:</p>
 <p>In your portfolio (section 12.1), you built (and will now edit) your careful statement of the <strong>research question</strong> you are trying to answer with this analysis. At the end of this Analysis, a clear and appropriate <strong>response</strong> to that research question is required, accompanied by a clear description of the limitations of your work.</p>
 <ul>
 <li>Most of the time, one model won’t let you come to a strong conclusion about a question of interest, and it is your job to accurately present what information can be specified as a result of the model, without overstating your conclusions.</li>
@@ -271,11 +277,46 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="analysis-2-comparing-two-independent-samples" class="level1">
 <h1>Analysis 2: Comparing Two Independent Samples</h1>
+<p>Here, you have identified one quantitative (Analysis 2 outcome) and one categorical variable (Analysis 2 binary predictor.)</p>
+<p>You’ll analyze the results and build a 90% confidence interval for the difference in means with an appropriate t-based or bootstrap procedure.</p>
+<p>You will provide complete code, appropriate visualizations and detailed explanations of your analytic decisions, and conclusions.</p>
+<p>We are looking for:</p>
+<ul>
+<li>Descriptive and exploratory summaries of the data across the two predictor groups for your chosen outcome, including, of course, attractive and well-constructed visualizations.</li>
+<li>Comparisons of the population mean difference for your Analysis 2 outcome across a set of two groups defined by your Analysis 2 predictor, including appropriate demonstrations of the reasons behind the choices you made between parametric and bootstrap procedures.</li>
+</ul>
+<section id="analysis-2-specifications" class="level2">
+<h2 class="anchored" data-anchor-id="analysis-2-specifications">Analysis 2 Specifications</h2>
+<ul>
+<li>Your Analysis 2 material should start with specifications of what each of the variables you are studying in this analysis actually mean, and how your sample was taken from the CHR 2023 data.</li>
+<li>Your cleaning, creation of your groups and other data management activities should already have been shown in earlier sections. Please refer back to those and don’t repeat what you’ve already done. Be sure that the Codebook you provided describes both of the variables you are using in your analyses here.</li>
+<li>Provide numerical summaries and visualizations of interest that are relevant to this analysis, and comment on any issues you observe.</li>
+<li>For your main analysis, show your work and your reasoning (not just your code), and comment on any analytic decisions you make.</li>
+<li>Be sure to actively present and justify any assumptions you are making.</li>
+<li>Finally, answer your research question, by clearly linking the analytic results to what you were asking at the start.</li>
+<li>If you can see a logical next step for the analysis of the question you asked, specify it. Also, if you specified a pre-existing belief about what would happen, reflect on that in light of the data.</li>
+</ul>
+</section>
 </section>
 <section id="analysis-3-comparing-an-outcome-in-2023-to-its-value-in-2018" class="level1">
 <h1>Analysis 3: Comparing An Outcome in 2023 to its value in 2018</h1>
+<p>Here, we have identified two quantitative variable (the same outcome in two different time periods) which are paired (so that they have a natural link between them, and use the same units of measurement.)</p>
+<p>You’ll analyze the results and build a 90% confidence interval for the population mean difference with an appropriate t-based or bootstrap procedure.</p>
+<p>Again, you will provide complete code, appropriate visualizations and detailed explanations of your analytic decisions, and conclusions.</p>
+<section id="analysis-3-specifications" class="level2">
+<h2 class="anchored" data-anchor-id="analysis-3-specifications">Analysis 3 Specifications</h2>
+<ul>
+<li>Your Analysis 3 material should start with specifications of what the outcome you are studying in this analysis actually means, and how your samples in 2018 and 2023 were created.</li>
+<li>Your cleaning, creation of your groups and other data management activities should already have been shown in earlier sections. Please refer back to those and don’t repeat what you’ve already done. Be sure that the Codebook you provided describes both of the variables you are using in your analyses here.</li>
+<li>Provide numerical summaries and visualizations of interest that are relevant to this analysis, and comment on any issues you observe.</li>
+<li>For your main analysis, show your work and your reasoning (not just your code), and comment on any analytic decisions you make.</li>
+<li>Be sure to actively present and justify any assumptions you are making.</li>
+<li>Finally, answer your research question, by clearly linking the analytic results to what you were asking at the start.</li>
+<li>If you can see a logical next step for the analysis of the question you asked, specify it. Also, if you specified a pre-existing belief about what would happen, reflect on that in light of the data.</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

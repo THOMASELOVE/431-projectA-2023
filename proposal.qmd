@@ -143,7 +143,13 @@ At the end of this section, you should complete checks that:
 
 ## Section 12. Your Research Questions
 
-In this section, you will provide three research questions, one each for Analysis 1, Analysis 2, and Analysis 3. It would help to provide subsections within this section, as I have done in the [Sample Proposal](examples.qmd) and [Proposal Template](examples.qmd)
+In this section, you will provide three research questions, one each for Analysis 1, Analysis 2, and Analysis 3. It would help to provide subsections within this section, as I have done in the [Sample Proposal](examples.qmd) and [Proposal Template](examples.qmd).
+
+For each analysis ...
+
+1. Start by describing what you want to study, and then specify a research question (which should end with a question mark and be something you can resolve with the planned analysis.)
+2. Don’t boil the ocean here. You’re looking for a research question that can be reasonably addressed using your data, so it has to be pretty straightforward.
+3. If you have a pre-existing belief about what will happen, before you look at the data, please feel encouraged to include a statement about that belief before specifying your question.
 
 ### Your Research Question for Analysis 1
 
