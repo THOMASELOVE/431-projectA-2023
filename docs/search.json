@@ -32,7 +32,7 @@
     "href": "analyses.html#transformation-assessment",
     "title": "Project A Analyses",
     "section": "Transformation Assessment",
-    "text": "Transformation Assessment\nHere, you will provide information about any transformations you chose to apply to the outcome, and explain why you did (or didn’t) choose to use a transformation.\n\nIf you decide to use a transformation, specify the transformation you’ve chosen carefully, and show the scatterplot of the transformed data, using the same suggestions as were provided in the previous section to describe the resulting plot. Write a few sentences describing the transformations you considered, and why you thought this was the most promising, and why you eventually decided to use the transformed versions of your variables.\nIf you decide not to use a transformation, identify the ONE plot which was the most promising of available transformations and show that one. Write a few sentences describing the transformations you considered, and why you thought this was the most promising, and why you eventually decided to stick with the original versions of the variables.\n\n\nTips on the Transformation Assessment\nYour response will include ONE plot demonstrating a particular transformation, although you will probably fit and view several plots in order to select a final one for this work.\nFor this part of Project A, confine your search to either a logarithm, an inverse, or a square as applied to the outcome. If you want to consider one of those transformations for the predictor as well, that’s OK but not crucial. You should select the most promising transformation on the basis of a scatterplot (perhaps with a loess smooth and linear fit) after the transformation has been applied.\nYou are discouraged from using numerical summaries of fit in this section. Of course, summary statistics like \\(R^2\\) when the outcome is transformed will definitely not be comparable.\nNote that this transformation assessment is part of Analysis 1, but will not be shown in Analyses 2 or 3. Feel free to use the transformation (of the outcome) that you select in Analysis 1 for the other two Analyses, if you like."
+    "text": "Transformation Assessment\nHere, you will provide information about any transformations you chose to apply to the outcome, and explain why you did (or didn’t) choose to use a transformation.\n\nIf you decide to use a transformation, specify the transformation you’ve chosen carefully, and show the scatterplot of the transformed data, using the same suggestions as were provided in the previous section to describe the resulting plot. Write a few sentences describing the transformations you considered, and why you thought this was the most promising, and why you eventually decided to use the transformed versions of your variables.\nIf you decide not to use a transformation, identify the ONE plot which was the most promising of available transformations and show that one. Write a few sentences describing the transformations you considered, and why you thought this was the most promising, and why you eventually decided to stick with the original versions of the variables.\n\n\nTips on the Transformation Assessment\nYour response will include ONE plot demonstrating a particular transformation, although you will probably fit and view several plots in order to select a final one for this work.\nFor this part of Project A, confine your search to either a logarithm, an inverse, or a square as applied to the outcome. If you want to consider one of those transformations for the predictor as well, that’s OK but not crucial. You should select the most promising transformation on the basis of a scatterplot (perhaps with a loess smooth and linear fit) after the transformation has been applied.\nYou are discouraged from using numerical summaries of fit in this section. Of course, summary statistics like \\(R^2\\) when the outcome is transformed will definitely not be comparable."
   },
   {
     "objectID": "analyses.html#the-fitted-model",
@@ -67,7 +67,7 @@
     "href": "cleaning.html",
     "title": "Cleaning Your Variables",
     "section": "",
-    "text": "This page was last updated: 2023-08-21 20:09:25.468647.\nCheck your five variables on the lists below. You should find all five."
+    "text": "This page was last updated: 2023-08-21 20:19:52.525809.\nCheck your five variables on the lists below. You should find all five."
   },
   {
     "objectID": "cleaning.html#variables-that-are-proportions-should-be-converted-to-percentages",
@@ -165,7 +165,7 @@
     "href": "exampleB.html",
     "title": "Outline for Project Report",
     "section": "",
-    "text": "This page was last updated: 2023-08-21 20:09:30.184853.\nHere is an outline of the “Analysis” section of your final Project A report. Note that none of this material should be included in your Project A proposal."
+    "text": "This page was last updated: 2023-08-21 20:19:57.316564.\nHere is an outline of the “Analysis” section of your final Project A report. Note that none of this material should be included in your Project A proposal."
   },
   {
     "objectID": "exampleB.html#the-variables",

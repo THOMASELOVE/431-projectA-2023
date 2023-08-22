@@ -10,7 +10,7 @@ knitr::opts_chunk$set(comment = NA)
 
 # We will post full instructions before our first class. For now, ignore this draft.
 
-# What is on this Website
+# What is on this Website?
 
 - The [Data page](data.qmd) contains information on the data you'll use, and on the required cleaning and development of your final project tibble. 
     - You'll need to complete six data management tasks. Start this in **early September**.
