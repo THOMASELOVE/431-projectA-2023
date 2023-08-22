@@ -20,6 +20,8 @@ knitr::opts_chunk$set(comment = NA)
 - The [Examples page](examples.qmd) provides templates for the Proposal and for the Final Portfolio Report, and examples we've developed to help you produce what we're looking for in Project A.
 - The top menu also provides links to [contact us](https://thomaselove.github.io/431-2023/contact.html), and to [the 431 home page](https://thomaselove.github.io/431-2023).
 
+All of Project A can be completed using ideas we will discuss in Classes 1-12 in the 431 course.
+
 # What is Project A?
 
 Project A is the first of two real data science projects you’ll be doing this semester. For Project A, Professor Love has provided a lot of guidance and much less flexibility than you’ll have in Project B. Each of you will be working with part of the same data set (the [County Health Rankings 2023](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation) data.) 
@@ -65,7 +67,7 @@ To build your data set, which will be a sample of the full data, you will do a s
 
 In addition to showing us your data management work, your proposal will:
 
-- identify your two research questions which will motivate your eventual analyses,
+- identify your three research questions which will motivate your three analyses,
 - describe and justify your data management decisions, 
 - provide a codebook for your data, and 
 - summarize your data so we can ensure you're on the right track
@@ -74,7 +76,7 @@ We (the TAs and Dr. Love) will review your proposal and (perhaps after some revi
 
 # Analyses You'll Do
 
-After your proposal is accepted, you will use your final analytic tibble to complete two main Analyses. The two main Analyses you’ll complete are:
+After your proposal is accepted, you will use your final analytic tibble to complete three Analyses. 
 
 1. Visualizing and modeling the relationship between a quantitative outcome and a quantitative predictor, and using the model to make and assess some predictions.
 2. Visualizing and modeling the relationship between a quantitative outcome and a categorical predictor with two levels, and describing the inferences you can make about comparing the centers of the distributions in the two groups.
@@ -84,9 +86,9 @@ After your proposal is accepted, you will use your final analytic tibble to comp
 
 As mentioned, your Portfolio (built after your analyses are complete) will include:
 
-- a Final Report (which includes and augments the Portfolio and your Analyses), along with 
-- a Project A Presentation, and 
-- a Project A self-evaluation.
+- a Final Report (which includes and slightly augments the Portfolio and your Analyses) which includes an R data set, a Quarto file, and an HTML result, along with 
+- a 3-minute (.mp4) video highlighting two findings from your Project A, and 
+- a Project A self-evaluation completed by filling out a Google Form.
 
 # Project A Objectives 
 
@@ -116,8 +118,6 @@ Project A is about building relatively simple analyses and visualizing data from
 
 > Think of a graph as a comparison. All graphs are comparisons (indeed, all statistical analyses are comparisons). If you already have the graph in mind, think of what comparisons it's enabling. Or if you haven't settled on the graph yet, think of what comparisons you'd like to make. [Andrew Gelman](http://andrewgelman.com/2014/03/25/statistical-graphics-course-statistical-graphics-advice/)
 
-Relevant Class materials for Project A are planned for Classes 1-12.
-
-## Questions?
+# Questions?
 
 If you have questions, let us know about them on [Campuswire](https://thomaselove.github.io/431-2023/campuswire.html) using the **projectA** folder, or speak with Dr. Love before or after class, or discuss them with the TAs during office hours.
