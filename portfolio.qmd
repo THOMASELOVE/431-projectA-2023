@@ -20,6 +20,8 @@ You will submit a polished report in both Quarto and HTML, incorporating a total
 
 You will produce a video in mp4 format of no more than 3 minutes in length regardless of whether you are working alone or in a team.
 
+Producing a video often takes a full day of work after the portfolio report is finished. Do not leave yourself without the opportunity to do good work on this.
+
 In this video, you will describe what you believe to be one of the most important findings for your Analysis 1, **and** for *either* your Analysis 2 or your Analysis 3. 
 
 - If you are working alone on the project, begin your presentation by introducing yourself and describing your sample (which states you used and specifying the research questions you'll be addressing in your discussion.)
@@ -32,10 +34,11 @@ In this video, you will describe what you believe to be one of the most importan
 
 ## The Self-Evaluation
 
-Once you have submitted the other two elements of your project, you will each (whether working alone or with a partner) submit [a brief self-evaluation via this Google Form](https://bit.ly/431-projectA-self-evaluation-2023). The form should take about 10 minutes to complete.
-    - If you're curious, the form asks you to address multiple issues related to the Project in multiple-choice questions. There are also two little essays that we'll ask for, which should be written independently from your partner (if you have one).
-        - You will summarize the key finding of your Project A study in your own well-chosen words (where your response should be in the neighborhood of 75 words, describing one key finding, which might come from any of your three analyses.) 
-        - Also, you will tell us what the most important piece of advice is that you wished you'd heard when you began Project A (and we'd like at least 25 words here).
+Once you have submitted the other two elements of your project, you will each (whether working alone or with a partner) submit [a brief self-evaluation via this Google Form](https://bit.ly/431-projectA-self-evaluation-2023). The form should take about 10 minutes to complete, and will open for submissions two weeks prior to the deadline.
+
+- If you're curious, the form asks you to address multiple issues related to the Project in multiple-choice questions. There are also two little essays that we'll ask for, which should be written independently from your partner (if you have one).
+- You will summarize the key finding of your Project A study in your own well-chosen words (where your response should be in the neighborhood of 75 words, describing one key finding, which might come from any of your three analyses.) 
+- Also, you will tell us what the most important piece of advice is that you wished you'd heard when you began Project A (and we'd like at least 25 words here).
 
 # Submission Requirements
 
@@ -44,6 +47,8 @@ All portfolio elements (R data set, Quarto and HTML report, video and self-evalu
 - Submit the R data set, Quarto and HTML files and the video files all together to Canvas.
 - If you are working with a partner, one of you submits the R data set, Quarto, HTML and video files to Canvas, and the other partner submits a one-page note to Canvas stating who their partner is and that their partner will submit the materials for their project team. 
 - Everyone (including both members of each team) should fill out [the self-evaluation form](https://bit.ly/431-projectA-self-evaluation-2023) **after** all other materials are posted to Canvas.
+
+Late work on the portfolio will be met with **harsh penalties**. Please plan ahead so that you meet the deadline easily.
 
 # Outline of the Portfolio Report
 
@@ -90,15 +95,15 @@ Before submitting your final report, check these things. Your work will receive 
 
 # Grading the Portfolios
 
-- Project A is graded on a scale from 0 to 100, theoretically, although I expect the highest grade to be close to 95. Dr. Love works with the TAs to provide feedback and grade the projects, but the final Project A grade is determined solely by him.
-- A successful Proposal is a mandatory part of Project A, and is worth 20 points as part of the Project A grade. 
-- The Report is worth 40 points. It is unlikely that anyone will score above 38 points, which is the planned score for a completely accurate and polished report. Most scores will likely fall between 29 and 36 points on this element.
-    - The most important parts of the Report are accurate (and effectively presented) data development, accurate (and effectively presented) analyses, and the appropriateness of your research questions and your responses to them in light of your analyses.
-    - Most of the feedback you will receive on your Project A report will relate to specific grading criteria that will be evaluated (mostly) by the teaching assistants. 
-- The Video is worth 30 points. It is unlikely that anyone will score above 28 points, which is the planned score for a very strong presentation, which is clear to see and hear and which is effective. Most scores will likely fall between 20 and 27 points on this element.
-    - All videos should include a clear statement of the research questions for any analyses presented, and justify the responses to those questions with results from the analyses.
-    - Most of the comments Professor Love builds in response to your Project A will relate to the Video. Do not treat it lightly. It is a vital part of the work, despite its short length.
-- The Self-Evaluation is worth 10 points. People who complete each question on the self-evaluation thoughtfully and on time will receive the full 10 points.
+Project A is graded on a scale from 0 to 100, theoretically, although I expect the highest grade to be around 95. Dr. Love works with the TAs to provide feedback and grade the projects, but the final Project A grade is determined solely by him.
+
+- A successful **Proposal** is a mandatory part of Project A, and is worth 20 points as part of the Project A grade. 
+- The **Portfolio Report** is worth 45 points. It is unlikely that anyone will score above 43 points, which is the planned score for a completely accurate and polished report. Most scores will likely fall between 32 and 42 points on this element.
+    - The most important parts of the Report are accurate (and effectively presented) data development, accurate (and effectively presented) analyses, and the appropriateness of your research questions and your responses to them in light of your analyses. The reflection in section 16 is also important.
+- The **Video** is worth 25 points. It is unlikely that anyone will score above 24 points, which is the planned score for a very strong presentation, which is clear to see and hear and which is very effective. Most scores will likely fall between 18 and 23 points on this element.
+    - All videos should include a clear statement of the research questions for each of the two analyses presented, and justify the responses to those questions with results from the analyses.
+    - Many of the comments Professor Love builds in response to your Project A will relate to the Video. Do not treat it lightly. It is a vital part of the work, despite its short length.
+- The **Self-Evaluation** is worth 10 points. People who complete each question on the self-evaluation thoughtfully and on time will receive either 9 or 10 points. Those who do not will receive fewer points.
 
 Overall, a project score of 89 or higher is regarded as an A, and a score of 70 to 84 is regarded as a B, with scores between 85 and 88 falling somewhere in between. Project grading is set up to generate a median score near 85.
 
