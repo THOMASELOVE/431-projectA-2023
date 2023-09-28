@@ -40,8 +40,8 @@ Obtaining and cleaning your data takes a little while, but you can start at any 
 2. In addition to Ohio, select five more states (from a set we provide) to study, so that you wind up with at least 300 and no more than 800 counties in your study. Create a new `chr_2023` tibble that contains only the counties from your chosen six states (including Ohio).
 3. Reduce your data to a selection of nine variables (4 we specify below and 5 more you'll select from options we provide), rename them in helpful ways, clean up problems, then save this smaller tibble as `chr_2023`.
 4. Create a new binary factor (categorical variable) from the fourth of the 5 variables you selected in the previous task, and add it to `chr_2023` so it now contains 10 variables.
-5. Pull into your `chr_2023` tibble data from the 2018 County Health Rankings on the fifth of the 5 variables selected in Task 3 using a data set we provide, so you can complete Analysis 3.
-6. Save the resulting `chr_2023` tibble as an R data set, and you will share this new `.Rds` file with us as part of your Proposal.
+5. Pull into your `chr_2023` tibble data from the 2018 County Health Rankings on the fifth of the 5 variables selected in Task 3 using a data set we provide, so you can complete Analysis 3, and will now have 11 variables.
+6. Save the resulting `chr_2023` tibble as an R data set with 11 variables, and you will share this new `.Rds` file with us as part of your Proposal.
 
 
 
@@ -298,7 +298,7 @@ Revise the **chr_2023** tibble to arrange your final tibble's 11 variables in th
 10. your selected (and renamed) variable 5 (2018 measure),
 11. the `county_ranked` variable (whose values must all be 1)
 
-Save this final **chr_2023** tibble as an R data set (.Rds file) in your R Project, with the file name **chr_2023_YOURNAME.Rds**. You will share this file with us as part of your proposal. If you like, you can store this `.Rds` file in a `data` subdirectory within your R Project.
+Save this final **chr_2023** tibble with 11 variables as an R data set (.Rds file) in your R Project, with the file name **chr_2023_YOURNAME.Rds**. You will share this file with us as part of your proposal. If you like, you can store this `.Rds` file in a `data` subdirectory within your R Project.
 
 ::: {.callout-note}
 

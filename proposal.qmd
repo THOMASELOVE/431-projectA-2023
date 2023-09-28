@@ -96,11 +96,11 @@ Use the instructions in [Data Task 4](data.qmd) to develop the binary factor tha
 
 ## Section 7. Adding 2018 Data for the Analysis 3 Outcome
 
-Use the instructions in [Data Task 5](data.qmd) to include the 2018 version of your Analysis 3 outcome as a variable in your tibble. 
+Use the instructions in [Data Task 5](data.qmd) to include the 2018 version of your Analysis 3 outcome as a variable in your tibble. This should give you a total of 11 variables.
 
 ## Section 8. Arranging and Saving The Analytic Tibble
 
-After renaming your variables, arrange the variables in your **chr_2023** tibble into the order specified in [Data Task 6](data.qmd).
+After renaming your variables, arrange the 11 variables in your **chr_2023** tibble into the order specified in [Data Task 6](data.qmd).
 
 Then save the tibble as an R data set. Don't make any changes to the tibble after this point.
 
@@ -116,7 +116,7 @@ You will display the results of `describe()` from the `Hmisc` package, run on th
 
 ## Section 11. The Codebook
 
-Begin this section with a statement of the number of counties and variables (should be ten) in your tibble.
+Begin this section with a statement of the number of counties and variables (should be eleven) in your tibble.
 
 A codebook, including your revised and the original variable names, counts of distinct and missing values, definitions and a clear indication of the cutpoints for your binary factor is the next step. 
 

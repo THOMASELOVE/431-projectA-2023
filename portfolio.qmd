@@ -14,7 +14,7 @@ Your Final Submission involves three parts, a portfolio report, a "highlight" vi
 
 ## The Report
 
-You will submit a polished report in both Quarto and HTML, incorporating a total of 17 sections, as described below. You will also submit your main data file (`chr_2023_YOURNAME.Rds`). 
+You will submit a polished report in both Quarto and HTML, incorporating a total of 17 sections, as described below. You will also submit your main data file (`chr_2023_YOURNAME.Rds`) which should have 11 variables in it. 
 
 ## The Highlight Video
 
