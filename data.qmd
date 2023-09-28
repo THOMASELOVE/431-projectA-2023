@@ -156,7 +156,7 @@ Remember that each of your five selections must be a different variable.
 
 The [2023 CHR Analytic Data Documentation](https://www.countyhealthrankings.org/sites/default/files/media/document/2023%20Analytic%20Documentation.pdf) file (PDF), and the [2023 Data Dictionary](https://www.countyhealthrankings.org/sites/default/files/media/document/DataDictionary_2023.pdf) file (also PDF) are crucial here, as those are the ones that explain what the available variables mean, and how they should be labeled. 
 
-- In building your codebook for the Proposal, you will also need look up each measure you select at [this CHR 2023 Measures link](https://www.countyhealthrankings.org/2023-measures), so now would be a good time to do that, as well.
+- In building your codebook for the Proposal, you will also need look up each measure you select at [this CHR 2023 Measures link](https://www.countyhealthrankings.org/explore-health-rankings/county-health-rankings-measures), so now would be a good time to do that, as well.
 
 ## Table B. Variables You Can Select
 
