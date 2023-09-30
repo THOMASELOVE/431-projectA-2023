@@ -120,7 +120,7 @@ Begin this section with a statement of the number of counties and variables (sho
 
 A codebook, including your revised and the original variable names, counts of distinct and missing values, definitions and a clear indication of the cutpoints for your binary factor is the next step. 
 
-After you select your variables, use the [County Health Rankings website's 2023 Measures list](https://www.countyhealthrankings.org/2023-measures), and in particular the linked information on that page for full descriptions, definitions and limitations of the variables you have selected. 
+After you select your variables, use the [County Health Rankings website's 2023 Measures list](https://www.countyhealthrankings.org/explore-health-rankings/county-health-rankings-measures), and in particular the linked information on that page for full descriptions, definitions and limitations of the variables you have selected. 
 
 For more details of what we're looking for here, please refer to the sample codebook provided as part of the sample proposal and the proposal template in the [Examples](examples.qmd) section.
 
