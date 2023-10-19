@@ -91,7 +91,6 @@ At the end of your Approach section for Analysis 1, you'll need to:
 2. interpret the residual plots in terms of what they tell you about how well the assumptions of linearity and Normality hold for your setting, in complete English sentences.
 3. display your model's prediction for the original (untransformed) outcome you are studying for Cuyahoga County, in Ohio, and compare it to Cuyahoga's actual value of this outcome.
 4. identify the two counties (by name and state) where the model you've fit is least successful at predicting the outcome (in the sense of having the largest residual in absolute value.)
-5. assess whether fitting a robust linear model (using the `rlm()` function in the `MASS` package) produces a meaningfully different fit than an ordinary least squares model. (If so, this would indicate that your OLS model may be influenced by outliers.)
 
 ## Advice on Conclusions
 
