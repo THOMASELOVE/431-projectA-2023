@@ -22,8 +22,8 @@ knitr::opts_chunk$set(comment = NA)
 
 # Sample Analyses using the Favorite Movies Data
 
-5. [Favorite Movies: Analysis 1](431-movies-analysis1.qmd) (Simple Regression), with Quarto code available at [our 431-data site](https://raw.githubusercontent.com/THOMASELOVE/431-data/main/data-and-code/431-movies-analysis1.qmd).
+5. [Favorite Movies: Analysis 1](movies-analysis1.qmd) (Simple Regression), with Quarto code available at [our 431-data site](https://raw.githubusercontent.com/THOMASELOVE/431-data/main/data-and-code/431-movies-analysis1.qmd).
 
-6. [Favorite Movies: Analysis 2](431-movies-analysis2.qmd) (Independent Samples), with Quarto code available at [our 431-data site](https://raw.githubusercontent.com/THOMASELOVE/431-data/main/data-and-code/431-movies-analysis2.qmd).
+6. [Favorite Movies: Analysis 2](movies-analysis2.qmd) (Independent Samples), with Quarto code available at [our 431-data site](https://raw.githubusercontent.com/THOMASELOVE/431-data/main/data-and-code/431-movies-analysis2.qmd).
 
-7. [Favorite Movies: Analysis 3](431-movies-analysis3.qmd) (Paired Samples), with Quarto code available at [our 431-data site](https://raw.githubusercontent.com/THOMASELOVE/431-data/main/data-and-code/431-movies-analysis3.qmd).
+7. [Favorite Movies: Analysis 3](movies-analysis3.qmd) (Paired Samples), with Quarto code available at [our 431-data site](https://raw.githubusercontent.com/THOMASELOVE/431-data/main/data-and-code/431-movies-analysis3.qmd).
