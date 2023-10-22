@@ -19,7 +19,15 @@ website:
         text: Portfolio
       - href: examples.qmd
         text: Examples
-
+      - text: "Movies"
+        menu: 
+        - text: "Analysis 1"
+          href: 431-movies-analysis1.qmd
+        - text: "Analysis 2"
+          href: 431-movies-analysis2.qmd
+        - text: "Analysis 3"
+          href: 431-movies-analysis3.qmd
+      
     right:
       - href: https://thomaselove.github.io/431-2023/contact.html
         text: "Contact Us"
