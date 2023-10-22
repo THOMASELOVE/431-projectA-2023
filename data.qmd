@@ -282,6 +282,27 @@ The affected states are: CA (3 counties with missing 2018 data), CO (2), ID (1),
 As a result, depending on what states you selected, this joining may or may not produce missing values in your 2018 version of the Analysis 3 outcome.
 :::
 
+## Sources and Years for 2018 CHR Variables
+
+County Health Rankings data for 2018 variables eligible for use in Project A Analysis 3 are listed below, with their descriptions, including the source and year(s) in which they were gathered. Please incorporate this information into your codebook.
+
+Similar information for CHR 2023 variables is found at [this link](https://www.countyhealthrankings.org/explore-health-rankings/county-health-rankings-measures), and should also be placed in your codebook.
+
+
+Variable | Brief Label from CHR 2023 | Source | Year(s)
+------: | ---------------------- | --------------------------- | :-------:
+**`v001`** | Premature death | National Center for Health Statistics - Mortality Files | 2014-16
+**`v009`** | Adult smoking | Behavioral Risk Factor Surveillance System | 2016
+**`v011`** | Adult obesity | CDC Diabetes Interactive Atlas | 2014
+**`v036`** | Poor physical health days | Behavioral Risk Factor Surveillance System | 2016
+**`v042`** | Poor mental health days | Behavioral Risk Factor Surveillance System | 2016
+**`v049`** | Excessive drinking | Behavioral Risk Factor Surveillance System | 2016
+**`v060`** | Diabetes prevalence | CDC Diabetes Interactive Atlas | 2014
+**`v070`** | Physical inactivity | CDC Diabetes Interactive Atlas | 2014
+**`v139`** | Food insecurity | Map the Meal Gap	| 2015
+**`v143`** | Insufficient sleep | Behavioral Risk Factor Surveillance System | 2016
+
+
 # Data Task 6. Re-order variables and save the final `chr_2023` tibble
 
 Revise the **chr_2023** tibble to arrange your final tibble's 11 variables in the following order:

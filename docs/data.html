@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="431 Staff">
-<meta name="dcterms.date" content="2023-09-28">
+<meta name="dcterms.date" content="2023-10-22">
 
 <title>431 Project A - Project A Data</title>
 <style>
@@ -181,7 +181,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#clean-and-rename-your-selected-variables" id="toc-clean-and-rename-your-selected-variables" class="nav-link" data-scroll-target="#clean-and-rename-your-selected-variables"><span class="header-section-number">5.4</span> Clean and Rename Your Selected Variables</a></li>
   </ul></li>
   <li><a href="#data-task-4.-create-a-factor-for-the-analysis-2-predictor" id="toc-data-task-4.-create-a-factor-for-the-analysis-2-predictor" class="nav-link" data-scroll-target="#data-task-4.-create-a-factor-for-the-analysis-2-predictor"><span class="header-section-number">6</span> Data Task 4. Create a factor for the Analysis 2 predictor</a></li>
-  <li><a href="#data-task-5.-add-2018-data-for-your-analysis-3-outcome" id="toc-data-task-5.-add-2018-data-for-your-analysis-3-outcome" class="nav-link" data-scroll-target="#data-task-5.-add-2018-data-for-your-analysis-3-outcome"><span class="header-section-number">7</span> Data Task 5. Add 2018 data for your Analysis 3 outcome</a></li>
+  <li><a href="#data-task-5.-add-2018-data-for-your-analysis-3-outcome" id="toc-data-task-5.-add-2018-data-for-your-analysis-3-outcome" class="nav-link" data-scroll-target="#data-task-5.-add-2018-data-for-your-analysis-3-outcome"><span class="header-section-number">7</span> Data Task 5. Add 2018 data for your Analysis 3 outcome</a>
+  <ul class="collapse">
+  <li><a href="#sources-and-years-for-2018-chr-variables" id="toc-sources-and-years-for-2018-chr-variables" class="nav-link" data-scroll-target="#sources-and-years-for-2018-chr-variables"><span class="header-section-number">7.1</span> Sources and Years for 2018 CHR Variables</a></li>
+  </ul></li>
   <li><a href="#data-task-6.-re-order-variables-and-save-the-final-chr_2023-tibble" id="toc-data-task-6.-re-order-variables-and-save-the-final-chr_2023-tibble" class="nav-link" data-scroll-target="#data-task-6.-re-order-variables-and-save-the-final-chr_2023-tibble"><span class="header-section-number">8</span> Data Task 6. Re-order variables and save the final <code>chr_2023</code> tibble</a></li>
   </ul>
 </nav>
@@ -208,7 +211,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2023-09-28</p>
+      <p class="date">2023-10-22</p>
     </div>
   </div>
   
@@ -879,6 +882,89 @@ Note
 <p>As a result, depending on what states you selected, this joining may or may not produce missing values in your 2018 version of the Analysis 3 outcome.</p>
 </div>
 </div>
+<section id="sources-and-years-for-2018-chr-variables" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="sources-and-years-for-2018-chr-variables"><span class="header-section-number">7.1</span> Sources and Years for 2018 CHR Variables</h2>
+<p>County Health Rankings data for 2018 variables eligible for use in Project A Analysis 3 are listed below, with their descriptions, including the source and year(s) in which they were gathered. Please incorporate this information into your codebook.</p>
+<p>Similar information for CHR 2023 variables is found at <a href="https://www.countyhealthrankings.org/explore-health-rankings/county-health-rankings-measures">this link</a>, and should also be placed in your codebook.</p>
+<table class="table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 33%">
+<col style="width: 41%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Variable</th>
+<th>Brief Label from CHR 2023</th>
+<th>Source</th>
+<th style="text-align: center;">Year(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v001</code></strong></td>
+<td>Premature death</td>
+<td>National Center for Health Statistics - Mortality Files</td>
+<td style="text-align: center;">2014-16</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v009</code></strong></td>
+<td>Adult smoking</td>
+<td>Behavioral Risk Factor Surveillance System</td>
+<td style="text-align: center;">2016</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v011</code></strong></td>
+<td>Adult obesity</td>
+<td>CDC Diabetes Interactive Atlas</td>
+<td style="text-align: center;">2014</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v036</code></strong></td>
+<td>Poor physical health days</td>
+<td>Behavioral Risk Factor Surveillance System</td>
+<td style="text-align: center;">2016</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v042</code></strong></td>
+<td>Poor mental health days</td>
+<td>Behavioral Risk Factor Surveillance System</td>
+<td style="text-align: center;">2016</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v049</code></strong></td>
+<td>Excessive drinking</td>
+<td>Behavioral Risk Factor Surveillance System</td>
+<td style="text-align: center;">2016</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v060</code></strong></td>
+<td>Diabetes prevalence</td>
+<td>CDC Diabetes Interactive Atlas</td>
+<td style="text-align: center;">2014</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v070</code></strong></td>
+<td>Physical inactivity</td>
+<td>CDC Diabetes Interactive Atlas</td>
+<td style="text-align: center;">2014</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong><code>v139</code></strong></td>
+<td>Food insecurity</td>
+<td>Map the Meal Gap</td>
+<td style="text-align: center;">2015</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong><code>v143</code></strong></td>
+<td>Insufficient sleep</td>
+<td>Behavioral Risk Factor Surveillance System</td>
+<td style="text-align: center;">2016</td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 <section id="data-task-6.-re-order-variables-and-save-the-final-chr_2023-tibble" class="level1" data-number="8">
 <h1 data-number="8"><span class="header-section-number">8</span> Data Task 6. Re-order variables and save the final <code>chr_2023</code> tibble</h1>
